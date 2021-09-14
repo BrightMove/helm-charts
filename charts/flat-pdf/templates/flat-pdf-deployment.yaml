@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flat-pdf-deployment
-  namespace: tools
+  name: {{ .Chart.Name }}-deployment
+  namespace: {{ .Values.namespace }}
   labels:
-    app: flat-pdf-node
+    app: {{ .Chart.Name }}-node
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: flat-pdf-node
+      app: {{ .Chart.Name }}-node
   template:
     metadata:
       labels:
-        app: flat-pdf-node
+        app: {{ .Chart.Name }}-node
     spec:
       affinity:
         nodeAffinity:
@@ -25,11 +25,11 @@ spec:
                     values:
                       - amd64
       containers:
-        - name: flat-pdf-server
-          image: brightmove/flat-pdf:1.1.0
+        - name: {{ .Chart.Name }}-server
+          image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
           ports:
             - containerPort: 8080
-              name: flat-pdf-port
+              name: {{ .Chart.Name }}-port
           imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred
