@@ -1,4 +1,4 @@
-== Usage
+## Usage
 
 https://helm.sh[Helm] must be installed to use the charts. Please refer to
 Helm's https://helm.sh/docs[documentation] to get started.
@@ -13,21 +13,21 @@ brightmove` to see the charts.
 
 To install the flat-pdf chart:
 
-----
+```
 helm install my-flat-pdf brightmove/flat-pdf
-----
+```
 
 To uninstall the chart:
 
-----
+```
 helm delete my-flat-pdf
-----
+```
 
-== Charts available
+## Charts available
 
 - flat-pdf
 
-== Charts in the works
+## Charts in the works
 
 - beancounter
 - ats
