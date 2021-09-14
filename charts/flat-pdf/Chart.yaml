@@ -1,0 +1,18 @@
+apiVersion: v2
+name: BrightMove Flat PDF
+version: 1.0.0
+kubeVersion: ">= 1.19.0"
+description: Service for converting PDF forms to flattened PDF files.
+type: application
+keywords:
+  - pdf
+sources:
+  - https://github.com/BrightMove/flat-pdf.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+icon: https://commons.wikimedia.org/wiki/File:Adobe_PDF.svg
+appVersion: 1.1.0
+deprecated: false
+annotations:
+  created: "09/14/2021"
