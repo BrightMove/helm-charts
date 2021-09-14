@@ -1,7 +1,7 @@
 apiVersion: v2
 name: flat-pdf
 version: 1.0.0
-kubeVersion: ">= 1.19.0"
+kubeVersion: >= 1.19.0
 description: Service for converting PDF forms to flattened PDF files.
 type: application
 keywords:
