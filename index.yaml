@@ -4,6 +4,26 @@ entries:
   - annotations:
       created: 09/14/2021
     apiVersion: v2
+    appVersion: 1.1.2
+    created: "2021-09-17T12:53:30.380020281Z"
+    description: Service for converting PDF forms to flattened PDF files.
+    digest: 6a126e8f7975a137f5d4305d499dc67b6c934b05a1b04dbc89dd25693080bce4
+    icon: https://commons.wikimedia.org/wiki/File:Adobe_PDF.svg
+    keywords:
+    - pdf
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: flat-pdf
+    sources:
+    - https://github.com/BrightMove/flat-pdf.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.2/flat-pdf-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 09/14/2021
+    apiVersion: v2
     appVersion: 1.1.1
     created: "2021-09-14T19:06:28.940135842Z"
     description: Service for converting PDF forms to flattened PDF files.
@@ -42,4 +62,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.0/flat-pdf-1.0.0.tgz
     version: 1.0.0
-generated: "2021-09-14T19:06:28.940142842Z"
+generated: "2021-09-17T12:53:30.380030582Z"
