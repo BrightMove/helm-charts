@@ -1,6 +1,6 @@
 apiVersion: v2
 name: flat-pdf
-version: 1.0.3
+version: 1.0.4
 appVersion: 1.1.2
 description: Service for converting PDF forms to flattened PDF files.
 type: application
