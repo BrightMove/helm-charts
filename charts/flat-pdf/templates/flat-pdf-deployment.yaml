@@ -29,7 +29,7 @@ spec:
           image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
           ports:
             - containerPort: 8080
-              name: {{ .Release.Name }}-port
+              name: tc-port
           imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred
