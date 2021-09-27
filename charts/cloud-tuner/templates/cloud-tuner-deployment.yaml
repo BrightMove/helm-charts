@@ -29,7 +29,7 @@ spec:
           image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
           env:
             - name: CATALINA_OPTS
-              value: "-Xms{{ .Values.jvmHeapInit | default "300m" }} -Xmx{{ .Values.jvmHeapMax | default "301m" }} -Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
+              value: "-Xms{{ .Values.jvmHeapInit | default "256m" }} -Xmx{{ .Values.jvmHeapMax | default "256m" }} -Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
           ports:
             - containerPort: 8080
               name: tc-port
