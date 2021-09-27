@@ -27,6 +27,9 @@ spec:
       containers:
         - name: {{ .Release.Name }}-server
           image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+          env:
+            - name: JAVA_OPTS
+              value: "-Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
           ports:
             - containerPort: 8080
               name: tc-port
