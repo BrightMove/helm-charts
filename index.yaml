@@ -5,6 +5,25 @@ entries:
       created: 09/23/2021
     apiVersion: v2
     appVersion: 2.2.0
+    created: "2021-09-27T17:09:42.166861284Z"
+    description: Cloud Tuner Application.
+    digest: 588aa0dbdee568fc386e21f8dce66b20ecb1a1c6d22325ec82dec019a78079a0
+    keywords:
+    - aws
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: cloud-tuner
+    sources:
+    - https://github.com/BrightMove/cloud-tuner.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.5/cloud-tuner-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      created: 09/23/2021
+    apiVersion: v2
+    appVersion: 2.2.0
     created: "2021-09-27T17:03:13.712120325Z"
     description: Cloud Tuner Application.
     digest: e4b34539e022dee95a6cf960bd3ba3db4ef9b1bb846c5e78955ae302efe494d9
@@ -218,4 +237,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.0/flat-pdf-1.0.0.tgz
     version: 1.0.0
-generated: "2021-09-27T17:03:13.712155526Z"
+generated: "2021-09-27T17:09:42.166900085Z"
