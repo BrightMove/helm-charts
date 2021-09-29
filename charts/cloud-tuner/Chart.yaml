@@ -1,7 +1,7 @@
 apiVersion: v2
 name: cloud-tuner
-version: 1.0.5
-appVersion: 2.2.0
+version: 1.0.6
+appVersion: 2.2.1
 description: Cloud Tuner Application.
 type: application
 keywords:
