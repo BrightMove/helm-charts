@@ -5,6 +5,26 @@ entries:
       created: 09/23/2021
     apiVersion: v2
     appVersion: 2.2.2
+    created: "2022-09-06T17:28:04.549382628Z"
+    description: Cloud Tuner Application.
+    digest: 01a4470203b74341fc5ef42a28d1e26ccd23f14d33773946377595d1cc65093d
+    icon: https://bm-helm.s3.amazonaws.com/icons/logo-min.svg
+    keywords:
+    - aws
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: cloud-tuner
+    sources:
+    - https://github.com/BrightMove/cloud-tuner.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.8/cloud-tuner-1.0.8.tgz
+    version: 1.0.8
+  - annotations:
+      created: 09/23/2021
+    apiVersion: v2
+    appVersion: 2.2.2
     created: "2021-10-04T14:09:33.149516819Z"
     description: Cloud Tuner Application.
     digest: 2ad586961b080a8a2644f070831d8bcde7806ad1bfa3f337d68def10b8096003
@@ -158,6 +178,26 @@ entries:
       created: 09/14/2021
     apiVersion: v2
     appVersion: 1.1.3
+    created: "2022-09-06T17:28:04.705755106Z"
+    description: Service for converting PDF forms to flattened PDF files.
+    digest: 9f290756841164591acd8949914cf8ab65574baaae10e845c7f7f8910da9a782
+    icon: https://bm-helm.s3.amazonaws.com/icons/PDF_file_icon.svg
+    keywords:
+    - pdf
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: flat-pdf
+    sources:
+    - https://github.com/BrightMove/flat-pdf.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.6/flat-pdf-1.0.6.tgz
+    version: 1.0.6
+  - annotations:
+      created: 09/14/2021
+    apiVersion: v2
+    appVersion: 1.1.3
     created: "2021-09-20T17:55:38.055685124Z"
     description: Service for converting PDF forms to flattened PDF files.
     digest: 3c9aad7fe770233450d916040b21df29ef55ff490c63a54b35582815dc71670f
@@ -275,4 +315,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.0/flat-pdf-1.0.0.tgz
     version: 1.0.0
-generated: "2021-10-04T14:09:33.14956672Z"
+generated: "2022-09-06T17:28:04.706074707Z"
