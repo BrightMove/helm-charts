@@ -12,7 +12,6 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-icon: https://commons.wikimedia.org/wiki/File:Adobe_PDF.svg
 deprecated: false
 annotations:
   created: "09/14/2021"
