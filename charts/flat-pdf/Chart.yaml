@@ -4,6 +4,7 @@ version: 1.0.5
 appVersion: 1.1.3
 description: Service for converting PDF forms to flattened PDF files.
 type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/PDF_file_icon.svg
 keywords:
   - pdf
 sources:
