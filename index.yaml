@@ -5,6 +5,26 @@ entries:
       created: 09/23/2021
     apiVersion: v2
     appVersion: 2.2.2
+    created: "2022-09-22T18:34:16.564256033Z"
+    description: Cloud Tuner Application.
+    digest: 22f2af29bd704804005e76b527513f7fc6b00adb58b6c1a5091d5834ec5c3aa7
+    icon: https://bm-helm.s3.amazonaws.com/icons/cloud-tuner.svg
+    keywords:
+    - aws
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: cloud-tuner
+    sources:
+    - https://github.com/BrightMove/cloud-tuner.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.9/cloud-tuner-1.0.9.tgz
+    version: 1.0.9
+  - annotations:
+      created: 09/23/2021
+    apiVersion: v2
+    appVersion: 2.2.2
     created: "2022-09-06T17:28:04.549382628Z"
     description: Cloud Tuner Application.
     digest: 01a4470203b74341fc5ef42a28d1e26ccd23f14d33773946377595d1cc65093d
@@ -178,6 +198,26 @@ entries:
       created: 09/14/2021
     apiVersion: v2
     appVersion: 1.1.3
+    created: "2022-09-22T18:34:16.846820866Z"
+    description: Service for converting PDF forms to flattened PDF files.
+    digest: 6de3234797af7817977b5d62221c15a0e39b0e27e7d97c98fbc53387326bb4c0
+    icon: https://bm-helm.s3.amazonaws.com/icons/flat-pdf.svg
+    keywords:
+    - pdf
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: flat-pdf
+    sources:
+    - https://github.com/BrightMove/flat-pdf.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.7/flat-pdf-1.0.7.tgz
+    version: 1.0.7
+  - annotations:
+      created: 09/14/2021
+    apiVersion: v2
+    appVersion: 1.1.3
     created: "2022-09-06T17:28:04.705755106Z"
     description: Service for converting PDF forms to flattened PDF files.
     digest: 9f290756841164591acd8949914cf8ab65574baaae10e845c7f7f8910da9a782
@@ -315,4 +355,26 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.0/flat-pdf-1.0.0.tgz
     version: 1.0.0
-generated: "2022-09-06T17:28:04.706074707Z"
+  fmc-web-services:
+  - annotations:
+      created: 09/22/2022
+    apiVersion: v2
+    appVersion: 5.6.0
+    created: "2022-09-22T18:34:17.129799899Z"
+    description: Services for drug pricing and pharmacy locating
+    digest: b3f79baf9a5870d39dcb67899f15f8b756698c9972963574f2dd06068936403e
+    icon: https://bm-helm.s3.amazonaws.com/icons/uspc-logo.jpg
+    keywords:
+    - pricing
+    - drugs
+    maintainers:
+    - email: dwebb@prowave.io
+      name: David Webb
+    name: fmc-web-services
+    sources:
+    - https://github.com/prowave/fmc-web-services.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-09-22T18:34:17.129898699Z"
