@@ -29,8 +29,8 @@ spec:
           image: prowave/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
           resources:
             requests:
-              cpu: "1000m"
-              memory: "2Gi"
+              cpu: "500m"
+              memory: "1Gi"
           env:
             - name: JAVA_OPTS
               value: "-Dspring.profiles.active={{ .Values.profile }} -Denv={{ .Values.env }} -Xms1g -Xmx1g -Xrs -XX:+UseG1GC -XX:NewRatio=3 -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true"
