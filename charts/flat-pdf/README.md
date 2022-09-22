@@ -1,3 +1,3 @@
 # Flat PDF Chart
 
-The Help chart for deploying the Flat PDF project.
+The Helm chart for deploying the Flat PDF project.

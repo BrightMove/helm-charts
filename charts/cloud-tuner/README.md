@@ -1,3 +1,3 @@
 # Cloud Tuner Chart
 
-The Help chart for deploying the Cloud Tuner project.
+The Helm chart for deploying the Cloud Tuner project.
