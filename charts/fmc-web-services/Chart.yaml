@@ -1,7 +1,7 @@
 apiVersion: v2
 name: fmc-web-services
-version: 1.0.4
-appVersion: 5.6.0
+version: 1.0.5
+appVersion: 5.6.1
 description: Services for drug pricing and pharmacy locating
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/uspc-logo.jpg
