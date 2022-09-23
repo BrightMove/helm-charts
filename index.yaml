@@ -359,6 +359,27 @@ entries:
   - annotations:
       created: 09/22/2022
     apiVersion: v2
+    appVersion: 5.6.1
+    created: "2022-09-23T16:22:08.274813914Z"
+    description: Services for drug pricing and pharmacy locating
+    digest: a799aa14846f1aedb072bf7546bca0c7387237fe105e6388dd90233b6ec65f62
+    icon: https://bm-helm.s3.amazonaws.com/icons/uspc-logo.jpg
+    keywords:
+    - pricing
+    - drugs
+    maintainers:
+    - email: dwebb@prowave.io
+      name: David Webb
+    name: fmc-web-services
+    sources:
+    - https://github.com/prowave/fmc-web-services.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.5/fmc-web-services-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      created: 09/22/2022
+    apiVersion: v2
     appVersion: 5.6.0
     created: "2022-09-23T16:15:11.703814132Z"
     description: Services for drug pricing and pharmacy locating
@@ -461,4 +482,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
     version: 1.0.0
-generated: "2022-09-23T16:15:11.703891032Z"
+generated: "2022-09-23T16:22:08.275019314Z"
