@@ -1,3 +1,0 @@
-env: qa
-replicas: 1
-profile: qa

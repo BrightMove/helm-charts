@@ -1,6 +1,0 @@
-namespace: welldyne
-replicas: 2
-nodeSelector:
-  role: general
-env: default
-profile: default
