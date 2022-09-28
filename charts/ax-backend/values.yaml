@@ -1,0 +1,5 @@
+namespace: brightmove
+springProfiles: default
+env: default
+jvmHeapInit: 1g
+jvmHeapMax: 1g
