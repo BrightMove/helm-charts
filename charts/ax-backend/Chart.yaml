@@ -1,22 +1,19 @@
 apiVersion: v2
-name: ax-backend
-version: 1.0.2
-appVersion: 1.0.0-SNAPSHOT
-description: BrightMove Applicant Experience Application.
+name: admin-console
+version: 1.0.0
+appVersion: 1.0.4
+description: BrightMove admin console for billing.
 type: application
-icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
 keywords:
   - brightmove
-  - ax
-  - applicant
-  - portal
+  - admin
+  - billing
 sources:
-  - https://github.com/BrightMove/brightmove-ax-backend.git
+  - https://github.com/BrightMove/brightmove-billing-engine.git
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-  - name: Jake Pharr
-    email: jake.pharr@brightmove.com
 deprecated: false
 annotations:
   created: "09/28/2022"
