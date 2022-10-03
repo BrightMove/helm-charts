@@ -5,6 +5,28 @@ entries:
       created: 09/28/2022
     apiVersion: v2
     appVersion: 1.0.4
+    created: "2022-10-03T20:10:50.429479069Z"
+    description: BrightMove admin console for billing.
+    digest: 828e9a7aef04c835aab1318d493cc088473d333b99f95542f5954bbe6e19cfed
+    icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
+    keywords:
+    - brightmove
+    - admin
+    - billing
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: admin-console
+    sources:
+    - https://github.com/BrightMove/brightmove-billing-engine.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/admin-console-1.0.2/admin-console-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
+    appVersion: 1.0.4
     created: "2022-10-03T19:50:12.338518521Z"
     description: BrightMove admin console for billing.
     digest: fbffea58ed17612012d7bb0228277af1b4eac6c4058cea6e1891c69536c293a1
@@ -606,4 +628,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
     version: 1.0.0
-generated: "2022-10-03T20:04:10.870651283Z"
+generated: "2022-10-03T20:10:50.429549669Z"
