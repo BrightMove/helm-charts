@@ -1,0 +1,19 @@
+apiVersion: v2
+name: admin-console
+version: 1.0.0
+appVersion: 1.0.4
+description: BrightMove admin console for billing.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
+keywords:
+  - brightmove
+  - admin
+  - billing
+sources:
+  - https://github.com/BrightMove/brightmove-billing-engine.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "09/28/2022"
