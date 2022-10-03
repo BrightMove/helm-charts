@@ -26,7 +26,7 @@ spec:
                       - amd64
       containers:
         - name: {{ .Release.Name }}-server
-          image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+          image: brightmove/brightmove-billing-engine:{{ .Chart.AppVersion }}
           resources:
             requests:
               cpu: "500m"
