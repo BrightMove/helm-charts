@@ -72,6 +72,31 @@ entries:
       created: 09/28/2022
     apiVersion: v2
     appVersion: 1.0.0-SNAPSHOT
+    created: "2022-10-13T13:13:13.805903842Z"
+    description: BrightMove Applicant Experience Application.
+    digest: 1db11b372ac859027c04d8392dc32fcbdf1196ad739ded3beca3be530ca0a226
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: ax-backend
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-1.0.4/ax-backend-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
+    appVersion: 1.0.0-SNAPSHOT
     created: "2022-10-03T20:04:10.870443185Z"
     description: BrightMove Applicant Experience Application.
     digest: 5673fd785d382b880df44acba13a22c5d83ecc99918b2eaa43304e4565aed9ad
@@ -650,4 +675,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
     version: 1.0.0
-generated: "2022-10-03T23:58:12.218470752Z"
+generated: "2022-10-13T13:13:13.805969245Z"
