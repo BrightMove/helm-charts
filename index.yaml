@@ -719,4 +719,28 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
     version: 1.0.0
-generated: "2022-11-14T16:05:41.988697706Z"
+  solr-indexer:
+  - annotations:
+      created: 11/17/2022
+    apiVersion: v2
+    appVersion: 1.7.15
+    created: "2022-11-17T21:07:35.02777489Z"
+    description: BrightMove solr indexing engine
+    digest: 413d7292ba01012b3c6ce2dc9f8d854211f9201ab3b01c59ea5118db65d1792e
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_solr_logo.svg
+    keywords:
+    - brightmove
+    - admin
+    - solr
+    - devops
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: solr-indexer
+    sources:
+    - https://github.com/BrightMove/solr-indexer.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-11-17T21:07:35.027857793Z"
