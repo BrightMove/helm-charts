@@ -1,6 +1,6 @@
 apiVersion: v2
-name: admin-console
-version: 1.0.1
+name: solr-indexer
+version: 1.0.0
 appVersion: 1.7.15
 description: BrightMove solr indexing engine
 type: application
