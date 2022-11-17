@@ -1,0 +1,5 @@
+namespace: tools
+springProfiles: prod
+env: prod
+jvmHeapInit: 512m
+jvmHeapMax: 1g
