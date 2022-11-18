@@ -26,7 +26,7 @@ spec:
                       - amd64
       containers:
         - name: {{ .Release.Name }}-server
-          image: brightmove/solr-indexer:1.7.15
+          image: brightmove/solr-indexer:{{ .Chart.AppVersion}}
           resources:
             requests:
               cpu: "100m"
