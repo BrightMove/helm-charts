@@ -30,7 +30,6 @@ spec:
           env:
             - name: CATALINA_OPTS
               value: |
-                {{ .Values.javaagent | default "" }}
                 -DQRTZ_BSYNC_URL={{ .Values.quartzDatasource.url }}
                 -DQRTZ_BSYNC_USER={{ .Values.quartzDatasource.username }}
                 -DQRTZ_BSYNC_PASSWORD={{ .Values.quartzDatasource.password }}
