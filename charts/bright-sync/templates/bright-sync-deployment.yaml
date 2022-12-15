@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: "brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}"
+          env:
+            - name: CATALINA_OPTS
+              value: |
+                {{ .Values.javaagent | default "" }}
+                -DQRTZ_BSYNC_URL={{ .Values.quartzDatasource.url }}
+                -DQRTZ_BSYNC_USER={{ .Values.quartzDatasource.username }}
+                -DQRTZ_BSYNC_PASSWORD={{ .Values.quartzDatasource.password }}
+                -DATS_URL={{ .Values.atsDatasource.url }}
+                -DATS_USER={{ .Values.atsDatasource.username }}
+                -DATS_PASSWORD={{ .Values.atsDatasource.password }}
+                -Xms{{ .Values.jvmHeapInit | default "1g" }}
+                -Xmx{{ .Values.jvmHeapMax | default "1g" }}
+                -Dcom.sun.management.jmxremote
+                -Dcom.sun.management.jmxremote.port={{ .Values.jmxPort | default "9999" }}
+                -Dcom.sun.management.jmxremote.authenticate=false
+                -Dcom.sun.management.jmxremote.ssl=false
+                -Xrs
+                -Xss256k
+                -XX:+UseG1GC
+                -XX:NewRatio=3
+                -Dspring.profiles.active={{ .Values.springProfiles }}
+                -Denv={{ .Values.env }}
+          ports:
+            - containerPort: 8080
+              name: tc-port
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general
