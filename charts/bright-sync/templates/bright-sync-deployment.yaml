@@ -26,7 +26,7 @@ spec:
                       - amd64
       containers:
         - name: {{ .Release.Name }}-server
-          image: "brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}"
+          image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
           env:
             - name: CATALINA_OPTS
               value: |
