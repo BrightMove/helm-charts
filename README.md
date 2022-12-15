@@ -28,15 +28,17 @@ helm delete my-flat-pdf
 ## Charts available
 
 - flat-pdf
+- admin-console
+- ax backend
+- brightmove-odata
+- cloud-tuner
+- solr-indexer
+- bright-sync
 
 ## Charts in the works
 
-- beancounter
 - ats
-- ats-ax
 - engage
 - reports
-- email-sync
-- cloud-tuner
 - jasper
 - sourcejet
