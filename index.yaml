@@ -237,6 +237,29 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-1.0.0/ax-backend-1.0.0.tgz
     version: 1.0.0
+  bright-sync:
+  - annotations:
+      created: 12/15/2022
+    apiVersion: v2
+    appVersion: 4.5.0
+    created: "2022-12-15T18:04:57.224817521Z"
+    description: BrightSync Email Manager
+    digest: b81ba210596285722d4828d901a7e3ad50ff4f0bcecce32162256a763647b3ef
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.0/bright-sync-1.0.0.tgz
+    version: 1.0.0
   brightmove-odata:
   - annotations:
       created: 12/12/2022
@@ -881,4 +904,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2022-12-12T13:57:57.082803334Z"
+generated: "2022-12-15T18:04:57.224914622Z"
