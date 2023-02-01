@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ax-backend
-version: 1.0.5
+version: 1.0.6
 appVersion: 1.0.0-SNAPSHOT
 description: BrightMove Applicant Experience Application.
 type: application
