@@ -34,10 +34,10 @@ spec:
             - containerPort: 8080
               name: tc-port
           imagePullPolicy: Always
+          securityContext:
+            capabilities:
+              add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
       imagePullSecrets:
         - name: regcred
       nodeSelector:
         role: general
-      securityContext:
-        capabilities:
-          add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
