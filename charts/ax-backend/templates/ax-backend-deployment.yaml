@@ -38,3 +38,6 @@ spec:
         - name: regcred
       nodeSelector:
         role: general
+      securityContext:
+        capabilities:
+          add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
