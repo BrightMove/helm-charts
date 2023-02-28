@@ -137,6 +137,31 @@ entries:
   - annotations:
       created: 09/28/2022
     apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-28T17:40:45.31108323Z"
+    description: BrightMove Applicant Experience Application.
+    digest: 87d4d8a630969f8baf7341460655f7c35331a14d621c4a61d38d3f8e5be46268
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: ax-backend
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-1.0.7/ax-backend-1.0.7.tgz
+    version: 1.0.7
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
     appVersion: 1.0.0-SNAPSHOT
     created: "2023-02-01T18:24:22.671219521Z"
     description: BrightMove Applicant Experience Application.
@@ -1064,4 +1089,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-02-10T19:51:56.602090721Z"
+generated: "2023-02-28T17:40:45.31122313Z"
