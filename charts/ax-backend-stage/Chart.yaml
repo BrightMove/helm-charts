@@ -1,0 +1,23 @@
+apiVersion: v2
+name: ax-backend-stage
+version: 1.0.0
+appVersion: stage
+description: BrightMove Applicant Experience Application QA.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - ax
+  - applicant
+  - portal
+  - qa
+sources:
+  - https://github.com/BrightMove/brightmove-ax-backend.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+  - name: Jake Pharr
+    email: jake.pharr@brightmove.com
+deprecated: false
+annotations:
+  created: "03/17/2023"
