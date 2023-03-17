@@ -1,4 +1,5 @@
 namespace: brightmove
+dockerImageName: ax-backend
 springProfiles: default
 env: default
 jvmHeapInit: 1g
