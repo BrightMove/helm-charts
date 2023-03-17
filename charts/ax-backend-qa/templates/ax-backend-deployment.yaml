@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: brightmove/brightmove-{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+          env:
+            - name: JAVA_OPTS
+              value: "-Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xms{{ .Values.jvmHeapInit | default "256m" }} -Xmx{{ .Values.jvmHeapMax | default "256m" }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
+          ports:
+            - containerPort: 8080
+              name: tc-port
+          imagePullPolicy: Always
+          securityContext:
+            capabilities:
+              add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general
