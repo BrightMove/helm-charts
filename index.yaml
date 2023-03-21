@@ -530,6 +530,29 @@ entries:
       created: 03/20/2023
     apiVersion: v2
     appVersion: 2023.6.0-SNAPSHOT
+    created: "2023-03-21T04:22:01.513098147Z"
+    description: BrightMove ATS Application.
+    digest: eeb9a5068d95c4bab3b854ced0c2c858e57f854e5aa610cd0090558beb43c28d
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-dwebb
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-dwebb-1.0.1/brightmove-ats-dwebb-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 03/20/2023
+    apiVersion: v2
+    appVersion: 2023.6.0-SNAPSHOT
     created: "2023-03-21T03:33:53.481790142Z"
     description: BrightMove ATS Application.
     digest: afe299e376d51be4c8345816ce3958021e1b1babf9638c28b68cafcec63359d0
@@ -1193,4 +1216,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-03-21T03:33:53.482336449Z"
+generated: "2023-03-21T04:22:01.513326051Z"
