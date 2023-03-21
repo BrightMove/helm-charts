@@ -1077,6 +1077,28 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
     version: 1.0.0
+  jasperserver:
+  - annotations:
+      created: 03/21/2023
+    apiVersion: v2
+    appVersion: 7.8.0
+    created: "2023-03-21T18:13:18.734352985Z"
+    description: JasperServer
+    digest: 21d01341693306b07960a6497ea602a90b54adaaa3e629494895992de7b291ec
+    icon: https://bm-helm.s3.amazonaws.com/icons/jasperserver-logo.jpg
+    keywords:
+    - jasper
+    - reporting
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: jasperserver
+    sources:
+    - https://github.com/BrightMove/jasperserver.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jasperserver-1.0.0/jasperserver-1.0.0.tgz
+    version: 1.0.0
   solr-indexer:
   - annotations:
       created: 11/17/2022
@@ -1216,4 +1238,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-03-21T04:22:01.513326051Z"
+generated: "2023-03-21T18:13:18.734500484Z"
