@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ats-dwebb
-version: 1.0.0
+version: 1.0.1
 appVersion: 2023.6.0-SNAPSHOT
 description: BrightMove ATS Application.
 type: application
