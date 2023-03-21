@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+          env:
+            - name: JAVA_OPTS
+              value: >-
+                -Xms{{ .Values.jvmHeapInit | default "1g" }}
+                -Xmx{{ .Values.jvmHeapMax | default "1g" }}
+                -Xrs
+                -Xss256k
+                -XX:+UseG1GC
+                -XX:NewRatio=3
+                -Dats_url={{ .Values.atsDatasource.url }}
+                -Dats_user={{ .Values.atsDatasource.username }}
+                -Dats_password={{ .Values.atsDatasource.password }}
+                -Dmysql_connection={{ .Values.jasperDatasource.url }}
+                -Dks=/usr/local/tomcat/
+                -Dksp=/usr/local/tomcat/
+          ports:
+            - containerPort: 8080
+              name: tc-port
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general

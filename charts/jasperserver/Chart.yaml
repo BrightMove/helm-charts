@@ -1,0 +1,18 @@
+apiVersion: v2
+name: jasperserver
+version: 1.0.0
+appVersion: 7.8.0
+description: JasperServer
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/jasperserver-logo.jpg
+keywords:
+  - jasper
+  - reporting
+sources:
+  - https://github.com/BrightMove/jasperserver.git
+maintainers:
+  - name: Dane Woodall
+    email: dwoodall@brightmove.com
+deprecated: false
+annotations:
+  created: "03/21/2023"

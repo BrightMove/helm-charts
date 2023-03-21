@@ -1,0 +1,10 @@
+namespace: default
+jvmHeapInit: 2g
+jvmHeapMax: 2g
+jasperDatasource:
+  url: jdbc:mysql://prod.mysql.brightmove.com:3306/jasperserver6_dev?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&tinyInt1isBit=false
+atsDatasource:
+  url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
+  username: ats_d
+  password: ats4dev1pass
+
