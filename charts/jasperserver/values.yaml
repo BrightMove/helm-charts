@@ -7,4 +7,3 @@ atsDatasource:
   url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
   username: ats_d
   password: ats4dev1pass
-
