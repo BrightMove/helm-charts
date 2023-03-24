@@ -18,4 +18,4 @@ spec:
       port: 443
       targetPort: 8443
   selector:
-    app: {{ .Release.Name }}-{{ .Values.env}}-node
+    app: {{ .Release.Name }}-node
