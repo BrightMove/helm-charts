@@ -27,7 +27,11 @@ spec:
       containers:
         - name: {{ .Release.Name }}-server
           image: brightmove/brightmove-odata:{{ .Chart.AppVersion }}
-          resources: {{ .Values.resources }}
+          resources:
+          {{- range $key, $value := $.Values.resources }}
+              {{ $key }}:
+                {{ toYaml $value }}
+          {{- end }}
           env:
             - name: APP_ENV
               value: "production"
