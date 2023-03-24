@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-{{ .Values.env }}-deployment
+  name: {{ .Release.Name }}-deployment
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .Release.Name }}-{{ .Values.env }}-node
+    app: {{ .Release.Name }}-node
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-{{ .Values.env }}-node
+      app: {{ .Release.Name }}-node
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-{{ .Values.env }}-node
+        app: {{ .Release.Name }}-node
     spec:
       affinity:
         nodeAffinity:
@@ -25,7 +25,7 @@ spec:
                     values:
                       - amd64
       containers:
-        - name: {{ .Release.Name }}-{{ .Values.env }}-server
+        - name: {{ .Release.Name }}-server
           image: 'brightmove/{{ .Values.dockerImageName }}:{{ .Chart.AppVersion }}'
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
