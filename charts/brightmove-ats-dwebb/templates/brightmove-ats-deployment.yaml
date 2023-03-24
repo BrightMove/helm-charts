@@ -6,7 +6,7 @@ metadata:
   labels:
     app: {{ .Release.Name }}-{{ .Values.env }}-node
 spec:
-  replicas: 1
+  replicas: {{ default 1 .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-{{ .Values.env }}-node
