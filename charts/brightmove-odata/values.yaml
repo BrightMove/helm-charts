@@ -3,3 +3,9 @@ springProfiles: default
 env: default
 jvmHeapInit: 2g
 jvmHeapMax: 2g
+resources:
+  requests:
+    cpu: {{ default "100m" .Values.resources.requests.cpu }}
+    memory:  {{ default "256Mi" .Values.resources.requests.memory }}
+  limits:
+    memory:  {{ default "256Mi" .Values.resources.limits.memory }}

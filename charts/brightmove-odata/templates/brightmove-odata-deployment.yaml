@@ -27,12 +27,7 @@ spec:
       containers:
         - name: {{ .Release.Name }}-server
           image: brightmove/brightmove-odata:{{ .Chart.AppVersion }}
-          resources:
-            requests:
-              cpu: {{ default "100m" .Values.resources.requests.cpu }}
-              memory:  {{ default "256Mi" .Values.resources.requests.memory }}
-            limits:
-              memory:  {{ default "256Mi" .Values.resources.limits.memory }}
+          resources: {}
           env:
             - name: APP_ENV
               value: "production"
