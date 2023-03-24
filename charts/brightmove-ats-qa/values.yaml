@@ -2,5 +2,5 @@ namespace: brightmove
 dockerImageName: brightmove-ats
 springProfiles: qa
 env: qa
-jvmHeapInit: 2g
-jvmHeapMax: 2g
+jvmHeapInit: 1536m
+jvmHeapMax: 1536m
