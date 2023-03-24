@@ -27,6 +27,9 @@ spec:
       containers:
         - name: {{ .Release.Name }}-server
           image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
           env:
             - name: JAVA_OPTS
               value: >-

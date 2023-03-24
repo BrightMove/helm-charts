@@ -27,6 +27,9 @@ spec:
       containers:
         - name: {{ .Release.Name }}-server
           image: brightmove/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
           env:
             - name: CATALINA_OPTS
               value: "-Xms{{ .Values.jvmHeapInit | default "256m" }} -Xmx{{ .Values.jvmHeapMax | default "256m" }} -Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
