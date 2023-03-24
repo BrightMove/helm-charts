@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-odata
-version: 1.0.2
+version: 1.0.3
 appVersion: 1.2.0
 description: BrightMove OData feed engine.
 type: application
