@@ -5,6 +5,28 @@ entries:
       created: 09/28/2022
     apiVersion: v2
     appVersion: 1.0.7
+    created: "2023-03-24T02:06:38.283609905Z"
+    description: BrightMove admin console for billing.
+    digest: c4dceb6b3cb5d7efe5d7fdd8fc205017e2f7c437cd3c2c9dfbc51405e0b00fb0
+    icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
+    keywords:
+    - brightmove
+    - admin
+    - billing
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: admin-console
+    sources:
+    - https://github.com/BrightMove/brightmove-billing-engine.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/admin-console-1.0.7/admin-console-1.0.7.tgz
+    version: 1.0.7
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
+    appVersion: 1.0.7
     created: "2023-02-10T19:51:56.601864418Z"
     description: BrightMove admin console for billing.
     digest: 386701a1fdde6bb670a102153893fe7de7265a391fee6b2492e4f3cd9298a195
@@ -134,6 +156,31 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/admin-console-1.0.0/admin-console-1.0.0.tgz
     version: 1.0.0
   ax-backend:
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-24T02:06:38.440558338Z"
+    description: BrightMove Applicant Experience Application.
+    digest: 5802a8952a3d2f820e849b5762a5508e706cd4f2d4bed1c286992594784f26cf
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: ax-backend
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-1.0.8/ax-backend-1.0.8.tgz
+    version: 1.0.8
   - annotations:
       created: 09/28/2022
     apiVersion: v2
@@ -339,6 +386,32 @@ entries:
       created: 03/17/2023
     apiVersion: v2
     appVersion: qa
+    created: "2023-03-24T02:06:38.602428235Z"
+    description: BrightMove Applicant Experience Application QA.
+    digest: bb72473aebc65dc1eeed30c995f2b6903f6dd9afa997b32b565b4c5d12d4014d
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    - qa
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: ax-backend-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-qa-1.0.2/ax-backend-qa-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 03/17/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2023-03-17T18:56:01.732859878Z"
     description: BrightMove Applicant Experience Application QA.
     digest: 5f74061acbe3144c216bc5391f3ae3b6876cd2d8ea88c16b25d0c5c3248739ac
@@ -392,6 +465,32 @@ entries:
       created: 03/17/2023
     apiVersion: v2
     appVersion: stage
+    created: "2023-03-24T02:06:38.752818883Z"
+    description: BrightMove Applicant Experience Application QA.
+    digest: 9680b7e9a868571220634c8e3f46a4c219e9c71b382bd5e36223e26297fb7b75
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    - qa
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: ax-backend-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-stage-1.0.1/ax-backend-stage-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 03/17/2023
+    apiVersion: v2
+    appVersion: stage
     created: "2023-03-17T19:03:38.116180415Z"
     description: BrightMove Applicant Experience Application QA.
     digest: d55381c1c7482fd279e41403079fb9141b2aafb3915ec39d3e03496fcf111737
@@ -415,6 +514,28 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-stage-1.0.0/ax-backend-stage-1.0.0.tgz
     version: 1.0.0
   bright-sync:
+  - annotations:
+      created: 12/15/2022
+    apiVersion: v2
+    appVersion: 4.5.0
+    created: "2023-03-24T02:06:38.896834349Z"
+    description: BrightSync Email Manager
+    digest: c2996e79a22abdae7b0663ad4afd47c98cecb99132b26d9a63a5bfd0a0c70480
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.5/bright-sync-1.0.5.tgz
+    version: 1.0.5
   - annotations:
       created: 12/15/2022
     apiVersion: v2
@@ -526,6 +647,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.0/bright-sync-1.0.0.tgz
     version: 1.0.0
   brightmove-ats-dwebb:
+  - annotations:
+      created: 03/20/2023
+    apiVersion: v2
+    appVersion: 2023.6.0-SNAPSHOT
+    created: "2023-03-24T02:06:39.103176922Z"
+    description: BrightMove ATS Application.
+    digest: 6f27cd9e92c82f0001183cab22bdedb586223799e8222b1966bd14dbfead37e1
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-dwebb
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-dwebb-1.0.2/brightmove-ats-dwebb-1.0.2.tgz
+    version: 1.0.2
   - annotations:
       created: 03/20/2023
     apiVersion: v2
@@ -706,6 +850,26 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-odata-1.0.0/brightmove-odata-1.0.0.tgz
     version: 1.0.0
   cloud-tuner:
+  - annotations:
+      created: 09/23/2021
+    apiVersion: v2
+    appVersion: 2.2.2
+    created: "2023-03-24T02:06:39.304236727Z"
+    description: Cloud Tuner Application.
+    digest: 3fb8e14ca243abd1bb34d4fa5ec1eb80e9c480c0f1f77bc5969d7577d17dc340
+    icon: https://bm-helm.s3.amazonaws.com/icons/cloud-tuner.svg
+    keywords:
+    - aws
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: cloud-tuner
+    sources:
+    - https://github.com/BrightMove/cloud-tuner.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.10/cloud-tuner-1.0.10.tgz
+    version: 1.0.10
   - annotations:
       created: 09/23/2021
     apiVersion: v2
@@ -899,6 +1063,26 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.0/cloud-tuner-1.0.0.tgz
     version: 1.0.0
   flat-pdf:
+  - annotations:
+      created: 09/14/2021
+    apiVersion: v2
+    appVersion: 1.1.3
+    created: "2023-03-24T02:06:39.435300924Z"
+    description: Service for converting PDF forms to flattened PDF files.
+    digest: cdf1e4876bc673c825defbd1a00e71203b170a763c02806a6e2bdaf21f7043d0
+    icon: https://bm-helm.s3.amazonaws.com/icons/flat-pdf.svg
+    keywords:
+    - pdf
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: flat-pdf
+    sources:
+    - https://github.com/BrightMove/flat-pdf.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.8/flat-pdf-1.0.8.tgz
+    version: 1.0.8
   - annotations:
       created: 09/14/2021
     apiVersion: v2
@@ -1192,6 +1376,27 @@ entries:
       created: 03/21/2023
     apiVersion: v2
     appVersion: 7.8.0
+    created: "2023-03-24T02:06:39.591971354Z"
+    description: JasperServer
+    digest: 44e0b0274f6928f1b79b3d2a7406bf33c80154caf23e7137adc57a0b8d7178b6
+    icon: https://bm-helm.s3.amazonaws.com/icons/jasperserver-logo.jpg
+    keywords:
+    - jasper
+    - reporting
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: jasperserver
+    sources:
+    - https://github.com/BrightMove/jasperserver.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jasperserver-1.0.2/jasperserver-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 03/21/2023
+    apiVersion: v2
+    appVersion: 7.8.0
     created: "2023-03-21T18:31:52.922130381Z"
     description: JasperServer
     digest: 01e62b2e14334b77cdf34279cfbc6c4da39411ce56c6dbb125cfa619d5f99004
@@ -1231,6 +1436,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/jasperserver-1.0.0/jasperserver-1.0.0.tgz
     version: 1.0.0
   solr-indexer:
+  - annotations:
+      created: 11/17/2022
+    apiVersion: v2
+    appVersion: 1.7.19
+    created: "2023-03-24T02:06:39.744865235Z"
+    description: BrightMove solr indexing engine
+    digest: 4470047be5371d6ae59dce44caf8945820cb5bbf5062e9cfcd1805895b09bef0
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_solr_logo.svg
+    keywords:
+    - brightmove
+    - admin
+    - solr
+    - devops
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: solr-indexer
+    sources:
+    - https://github.com/BrightMove/solr-indexer.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.6/solr-indexer-1.0.6.tgz
+    version: 1.0.6
   - annotations:
       created: 11/17/2022
     apiVersion: v2
@@ -1369,4 +1597,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-03-24T01:26:28.461789152Z"
+generated: "2023-03-24T02:06:39.745154738Z"
