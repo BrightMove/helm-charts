@@ -767,7 +767,54 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.0/bright-sync-1.0.0.tgz
     version: 1.0.0
+  brightmove-ats:
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: 2023.6.0
+    created: "2023-03-24T18:59:03.4716074Z"
+    description: BrightMove ATS Application.
+    digest: 33ec426b07952b1b55af4eced54e4a91800256adb55ef6543b61427a3edb39ed
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.1/brightmove-ats-1.0.1.tgz
+    version: 1.0.1
   brightmove-ats-dwebb:
+  - annotations:
+      created: 03/20/2023
+    apiVersion: v2
+    appVersion: 2023.6.0-SNAPSHOT
+    created: "2023-03-24T18:59:03.597346509Z"
+    description: BrightMove ATS Application.
+    digest: ea40e6cac4c5874d9377c0e5ff7f3ecbf7e91438e56f4f744ba218d17e5d0adc
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-dwebb
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-dwebb-1.0.6/brightmove-ats-dwebb-1.0.6.tgz
+    version: 1.0.6
   - annotations:
       created: 03/20/2023
     apiVersion: v2
@@ -907,6 +954,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-dwebb-1.0.0/brightmove-ats-dwebb-1.0.0.tgz
     version: 1.0.0
   brightmove-ats-qa:
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: qa
+    created: "2023-03-24T18:59:03.742796762Z"
+    description: BrightMove ATS Application.
+    digest: 238e70e87144bbef8e15432da9d80bca065cfe639d94f81711f110403ff474e7
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-qa-1.0.2/brightmove-ats-qa-1.0.2.tgz
+    version: 1.0.2
   - annotations:
       created: 03/24/2023
     apiVersion: v2
@@ -1917,4 +1987,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-03-24T18:32:32.686153142Z"
+generated: "2023-03-24T18:59:03.743218365Z"
