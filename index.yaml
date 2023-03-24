@@ -577,6 +577,28 @@ entries:
       created: 12/12/2022
     apiVersion: v2
     appVersion: 1.2.0
+    created: "2023-03-24T00:30:48.524535284Z"
+    description: BrightMove OData feed engine.
+    digest: fedcdc0ddcaa6cc07b47f49921fa11a029dabac6b525529ce0858be125db2a2d
+    icon: https://bm-helm.s3.amazonaws.com/icons/odata.png
+    keywords:
+    - brightmove
+    - odata
+    - analytics
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-odata
+    sources:
+    - https://github.com/BrightMove/brightmove-odata.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-odata-1.0.2/brightmove-odata-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 12/12/2022
+    apiVersion: v2
+    appVersion: 1.2.0
     created: "2023-03-24T00:11:02.395037282Z"
     description: BrightMove OData feed engine.
     digest: 0919c59adcc65924006353c29a3530e9c9aec62bf419784f0c9190b0cfa3a5f2
@@ -1281,4 +1303,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-03-24T00:11:02.39513959Z"
+generated: "2023-03-24T00:30:48.524626185Z"
