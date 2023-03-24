@@ -6,7 +6,7 @@ metadata:
   labels:
     app: {{ .Release.Name }}-node
 spec:
-  replicas: 1
+  replicas: {{ default 1 .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -29,8 +29,11 @@ spec:
           image: brightmove/brightmove-odata:{{ .Chart.AppVersion }}
           resources:
             requests:
-              cpu: "500m"
-              memory: "2Gi"
+              cpu: {{ default "100m" .Values.resources.requests.cpu }}
+              memory:  {{ default "256Mi" .Values.resources.requests.memory }}
+            limits:
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory:  {{ default "256Mi" .Values.resources.limits.memory }}
           env:
             - name: APP_ENV
               value: "production"
