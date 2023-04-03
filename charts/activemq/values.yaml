@@ -1,0 +1,4 @@
+namespace: default
+broker_name: localhost
+jvmHeapInit: 1g
+jvmHeapMax: 1g
