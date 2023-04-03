@@ -1,0 +1,16 @@
+apiVersion: v2
+name: activemq
+version: 1.0.0
+appVersion: 5.13.4
+description: ActiveMQ
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/activemq-logo.png
+keywords:
+  - activemq
+  - queues
+maintainers:
+  - name: Dane Woodall
+    email: dwoodall@brightmove.com
+deprecated: false
+annotations:
+  created: "03/29/2023"
