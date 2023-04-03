@@ -39,6 +39,8 @@ spec:
                 -Xss256k
                 -XX:+UseG1GC
                 -XX:NewRatio=3
+            - name: broker_name
+              value: {{ .Values.broker_name | default "localhost" }}
           ports:
             - containerPort: 8161
               name: tc-port
