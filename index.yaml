@@ -5,6 +5,25 @@ entries:
       created: 03/29/2023
     apiVersion: v2
     appVersion: 5.13.4
+    created: "2023-04-03T14:06:38.984018313Z"
+    description: ActiveMQ
+    digest: 042f6c6331b66d549760b9ee13abfdd7a66d47fe3729701bc4764d496620e1d3
+    icon: https://bm-helm.s3.amazonaws.com/icons/activemq-logo.png
+    keywords:
+    - activemq
+    - queues
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: activemq
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/activemq-1.0.1/activemq-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 03/29/2023
+    apiVersion: v2
+    appVersion: 5.13.4
     created: "2023-04-03T13:46:30.955575338Z"
     description: ActiveMQ
     digest: a2114a59c5a695caf3ac915da8707c45ed3a3b33a7f32b3ad4da26ff63468c27
@@ -2076,4 +2095,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-03T13:46:30.955917839Z"
+generated: "2023-04-03T14:06:38.984379244Z"
