@@ -1,4 +1,6 @@
 namespace: tools
+replicaCount: 1
+revisionHistoryLimit: 0
 springProfiles: default
 env: default
 jvmHeapInit: 512m

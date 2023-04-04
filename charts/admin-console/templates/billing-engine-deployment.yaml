@@ -7,6 +7,7 @@ metadata:
     app: {{ .Release.Name }}-node
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
+  revisionHistoryLimit: {{ default 0 .Values.revisionHistoryLimit}}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -20,13 +21,13 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
               - matchExpressions:
-                  - key: beta.kubernetes.io/arch
+                  - key: kubernetes.io/arch
                     operator: In
                     values:
                       - amd64
       containers:
         - name: {{ .Release.Name }}-server
-          image: brightmove/brightmove-billing-engine:{{ .Chart.AppVersion }}
+          image: "brightmove/brightmove-billing-engine:{{ .Chart.AppVersion }}"
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
