@@ -1177,6 +1177,30 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-qa-1.0.1/brightmove-ats-qa-1.0.1.tgz
     version: 1.0.1
+  brightmove-ats-stage:
+  - annotations:
+      created: 04/10/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2023-04-10T15:24:13.351616143Z"
+    description: BrightMove ATS Application.
+    digest: f4dc702d81fd54e0ff3896d5b601f267d905288c69e266e89cc44a72cfae3a5c
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.0/brightmove-ats-stage-1.0.0.tgz
+    version: 1.0.0
   brightmove-odata:
   - annotations:
       created: 12/12/2022
@@ -2164,4 +2188,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-10T13:37:34.339348407Z"
+generated: "2023-04-10T15:24:13.352151457Z"
