@@ -43,6 +43,28 @@ entries:
   - annotations:
       created: 09/28/2022
     apiVersion: v2
+    appVersion: 1.0.8
+    created: "2023-04-10T13:37:34.339102404Z"
+    description: BrightMove admin console for billing.
+    digest: 3b474c14a8ab5835c60d96d66e7d76126a8ff8b0b3fd5036993ec9a95f2eeae8
+    icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
+    keywords:
+    - brightmove
+    - admin
+    - billing
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: admin-console
+    sources:
+    - https://github.com/BrightMove/brightmove-billing-engine.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/admin-console-1.0.10/admin-console-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
     appVersion: 1.0.7
     created: "2023-04-04T12:20:22.703877275Z"
     description: BrightMove admin console for billing.
@@ -2142,4 +2164,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-07T20:03:24.261423039Z"
+generated: "2023-04-10T13:37:34.339348407Z"
