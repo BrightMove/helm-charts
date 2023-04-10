@@ -1,0 +1,20 @@
+apiVersion: v2
+name: brightmove-ats-stage
+version: 1.0.0
+appVersion: stage
+description: BrightMove ATS Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - ats
+sources:
+  - https://github.com/BrightMove/brightmove-ats.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+  - name: Jake Pharr
+    email: jake.pharr@brightmove.com
+deprecated: false
+annotations:
+  created: "04/10/2023"
