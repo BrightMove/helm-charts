@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bright-reports
-version: 1.0.0
+version: 1.0.1
 appVersion: 1.7.2
 description: Bright Reports Application.
 type: application
