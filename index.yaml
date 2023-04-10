@@ -700,6 +700,30 @@ entries:
       created: 04/06/2023
     apiVersion: v2
     appVersion: 1.7.2
+    created: "2023-04-10T18:04:35.220876977Z"
+    description: Bright Reports Application.
+    digest: cdbb0f79d1cd730aab30f647972918a6b602cf380d6a444a230754031dea3fd6
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: bright-reports
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-1.0.1/bright-reports-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 04/06/2023
+    apiVersion: v2
+    appVersion: 1.7.2
     created: "2023-04-07T20:03:24.261251939Z"
     description: Bright Reports Application.
     digest: 9a57e9d9cec409a559e8eb2841cede01865ad461fe31f7a8ab45651168380965
@@ -2188,4 +2212,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-10T15:24:13.352151457Z"
+generated: "2023-04-10T18:04:35.221265677Z"
