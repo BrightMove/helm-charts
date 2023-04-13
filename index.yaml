@@ -2032,6 +2032,29 @@ entries:
       created: 11/17/2022
     apiVersion: v2
     appVersion: 1.7.19
+    created: "2023-04-13T21:47:30.118283356Z"
+    description: BrightMove solr indexing engine
+    digest: c619128ee9fc62b7f607bf2c25dc01d77fbc1542575ff57f62f8f78ff713132c
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_solr_logo.svg
+    keywords:
+    - brightmove
+    - admin
+    - solr
+    - devops
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: solr-indexer
+    sources:
+    - https://github.com/BrightMove/solr-indexer.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.8/solr-indexer-1.0.8.tgz
+    version: 1.0.8
+  - annotations:
+      created: 11/17/2022
+    apiVersion: v2
+    appVersion: 1.7.19
     created: "2023-03-24T02:38:19.699685448Z"
     description: BrightMove solr indexing engine
     digest: 778bc606ffd9239faef6daca14e37e6858c6097f8b7abaeabf6805cc3d214cdb
@@ -2212,4 +2235,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-10T18:04:35.221265677Z"
+generated: "2023-04-13T21:47:30.118692327Z"
