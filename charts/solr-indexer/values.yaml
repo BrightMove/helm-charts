@@ -1,5 +1,5 @@
 namespace: tools
 springProfiles: default
 env: default
-jvmHeapInit: 512m
-jvmHeapMax: 1g
+jvmHeapInit: 256m
+jvmHeapMax: 512m
