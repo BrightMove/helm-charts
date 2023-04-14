@@ -1225,6 +1225,32 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.0/brightmove-ats-stage-1.0.0.tgz
     version: 1.0.0
+  brightmove-ax-legacy:
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
+    appVersion: 2023.6.0
+    created: "2023-04-14T02:19:19.616759522Z"
+    description: BrightMove AX Legacy Application.
+    digest: 222f5826d61f04d57a3a1d2c67a4e8d39055af6cb8117cbaf13975fb6b51a326
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-0.0.1/brightmove-ax-legacy-0.0.1.tgz
+    version: 0.0.1
   brightmove-odata:
   - annotations:
       created: 12/12/2022
@@ -2235,4 +2261,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-13T21:47:30.118692327Z"
+generated: "2023-04-14T02:19:19.616991423Z"
