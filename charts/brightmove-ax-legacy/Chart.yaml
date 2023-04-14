@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ax-legacy
-version: 1.0.0
+version: 1.0.1
 appVersion: 2023.6.0
 description: BrightMove AX Legacy Application.
 type: application
