@@ -1230,6 +1230,31 @@ entries:
       created: 04/13/2023
     apiVersion: v2
     appVersion: 2023.6.0
+    created: "2023-04-20T17:15:18.698779996Z"
+    description: BrightMove AX Legacy Application.
+    digest: 18fcd94fde30f1757d1cc4d5306406b66cda8c94de8a66d31efff53cfb765a23
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-1.0.2/brightmove-ax-legacy-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
+    appVersion: 2023.6.0
     created: "2023-04-14T02:27:17.351111162Z"
     description: BrightMove AX Legacy Application.
     digest: 1d5c06e21de143c5256fac25eb6df95992f03d5473aa32213da8b1336a2ef0bd
@@ -2286,4 +2311,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-14T02:27:17.352499454Z"
+generated: "2023-04-20T17:15:18.699292202Z"
