@@ -35,6 +35,7 @@ spec:
               value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: >-
+                -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -DATS_MAX_ACTIVE={{ .Values.atsMaxActive }}
