@@ -2336,4 +2336,22 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-20T20:17:50.376711428Z"
+  tika:
+  - annotations:
+      created: 04/25/2023
+    apiVersion: v2
+    appVersion: latest-full
+    created: "2023-05-03T23:00:58.384030297Z"
+    description: Service for extracting structured text from various document types.
+    digest: 9373409c06ea27550b3ff98a087f11fdaef7962f8b96192b8bbaf08f93322aa2
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_tika_logo.svg
+    keywords:
+    - pdf
+    name: tika
+    sources:
+    - https://github.com/apache/tika.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-05-03T23:00:58.384383496Z"
