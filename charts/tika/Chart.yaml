@@ -1,0 +1,14 @@
+apiVersion: v2
+name: tika
+version: 1.0.0
+appVersion: latest-full
+description: Service for extracting structured text from various document types.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/apache_tika_logo.svg
+keywords:
+  - pdf
+sources:
+  - https://github.com/apache/tika.git
+deprecated: false
+annotations:
+  created: "04/25/2023"
