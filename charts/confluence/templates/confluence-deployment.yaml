@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: brightmove/confluence-mysql:latest
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
+          env:
+            - name: ATL_PROXY_NAME
+              value: {{ .Values.atlProxyName }}
+            - name: ATL_PROXY_PORT
+              value: {{ .Values.atlProxyPort }}
+            - name: ATL_TOMCAT_SCHEME
+              value: {{ .Values.atlTomcatScheme }}
+            - name: ATL_TOMCAT_SECURE
+              value: {{ .Values.atlTomcatSecure }}
+            - name: JVM_MINIMUM_MEMORY
+              value: {{ .Values.jvmMinimumMemory | default "2g" }}
+            - name: JVM_MAXIMUM_MEMORY
+              value: {{ .Values.jvmMaximumMemory | default "4g" }}
+            - name: JVM_RESERVED_CODE_CACHE_SIZE
+              value: {{ .Values.jvmReservedCodeCacheSize | default "256m" }}
+          volumeMounts:
+            - name: persistent-storage
+              mountPath: /var/atlassian/application-data/confluence
+          ports:
+            - containerPort: 80
+              name: unsecure-web
+            - containerPort: 443
+              name: secure-web
+          imagePullPolicy: Always
+      volumes:
+        - name: persistent-storage
+          persistentVolumeClaim:
+            claimName: confluence-efs-claim
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general

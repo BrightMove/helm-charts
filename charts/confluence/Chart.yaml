@@ -1,0 +1,12 @@
+apiVersion: v2
+name: confluence
+version: 1.0.0
+appVersion: latest
+description: Confluence is a web-based collaborative software developed by Atlassian.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/confluence-logo.svg
+keywords:
+  - wiki
+deprecated: false
+annotations:
+  created: "05/08/2023"
