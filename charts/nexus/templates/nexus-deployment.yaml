@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: sonatype/nexus3
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
+          volumeMounts:
+            - name: nexus-data-vol
+              mountPath: /nexus-data
+          ports:
+            - containerPort: 8090
+              name: nexus-port
+          imagePullPolicy: Always
+      volumes:
+        - name: nexus-data-vol
+          persistentVolumeClaim:
+            claimName: nexus-data-efs-claim
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general
