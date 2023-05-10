@@ -1,5 +1,5 @@
 atlProxyName: wiki.brightmove.com
-atlProxyPort: 443
+atlProxyPort: "443"
 atlTomcatScheme: https
 atlTomcatSecure: true
 jvmMinimumMemory: 2g
