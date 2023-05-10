@@ -1719,6 +1719,21 @@ entries:
       created: 05/08/2023
     apiVersion: v2
     appVersion: latest
+    created: "2023-05-10T02:30:19.290540874Z"
+    description: Confluence is a web-based collaborative software developed by Atlassian.
+    digest: 9223439610b1965f569171b943ed1dda51c7fda9323fb87663dc7a1a3090cc5b
+    icon: https://bm-helm.s3.amazonaws.com/icons/confluence-logo.svg
+    keywords:
+    - wiki
+    name: confluence
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/confluence-1.0.1/confluence-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 05/08/2023
+    apiVersion: v2
+    appVersion: latest
     created: "2023-05-09T19:34:47.943168693Z"
     description: Confluence is a web-based collaborative software developed by Atlassian.
     digest: 027a9873365b21d76fceeb422244970acc4aecb60c76fcd715613cb9b3c216fc
@@ -2387,4 +2402,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-10T00:41:34.842345409Z"
+generated: "2023-05-10T02:30:19.290886697Z"
