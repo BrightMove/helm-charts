@@ -1,7 +1,4 @@
 atlProxyName: "wiki.brightmove.com"
-atlProxyPort: "443"
-atlTomcatScheme: "https"
-atlTomcatSecure: "true"
 jvmMinimumMemory: "4g"
 jvmMaximumMemory: "4g"
 jvmReservedCodeCacheSize: "256m"

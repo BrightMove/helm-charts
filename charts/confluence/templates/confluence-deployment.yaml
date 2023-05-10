@@ -34,11 +34,11 @@ spec:
             - name: ATL_PROXY_NAME
               value: {{ .Values.atlProxyName }}
             - name: ATL_PROXY_PORT
-              value: {{ .Values.atlProxyPort }}
+              value: "443"
             - name: ATL_TOMCAT_SCHEME
-              value: {{ .Values.atlTomcatScheme }}
+              value: "https"
             - name: ATL_TOMCAT_SECURE
-              value: {{ .Values.atlTomcatSecure }}
+              value: "true"
             - name: JVM_MINIMUM_MEMORY
               value: {{ .Values.jvmMinimumMemory | default "4g" }}
             - name: JVM_MAXIMUM_MEMORY
