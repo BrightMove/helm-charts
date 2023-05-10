@@ -40,7 +40,7 @@ spec:
             - name: ATL_TOMCAT_SECURE
               value: {{ .Values.atlTomcatSecure }}
             - name: JVM_MINIMUM_MEMORY
-              value: {{ .Values.jvmMinimumMemory | default "2g" }}
+              value: {{ .Values.jvmMinimumMemory | default "4g" }}
             - name: JVM_MAXIMUM_MEMORY
               value: {{ .Values.jvmMaximumMemory | default "4g" }}
             - name: JVM_RESERVED_CODE_CACHE_SIZE
