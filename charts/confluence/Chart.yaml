@@ -1,7 +1,7 @@
 apiVersion: v2
 name: confluence
-version: 1.0.5
-appVersion: 7.19.5
+version: 1.0.6
+appVersion: 7.19.6
 description: Confluence is a web-based collaborative software developed by Atlassian.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/confluence-logo.svg
