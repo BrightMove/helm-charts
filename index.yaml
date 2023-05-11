@@ -43,6 +43,28 @@ entries:
   - annotations:
       created: 09/28/2022
     apiVersion: v2
+    appVersion: 1.0.9
+    created: "2023-05-11T12:25:46.047139043Z"
+    description: BrightMove admin console for billing.
+    digest: 18ee7e5355edc240abae09ce947e2c0b35c552725a32dcdf1262bb72cb512714
+    icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
+    keywords:
+    - brightmove
+    - admin
+    - billing
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: admin-console
+    sources:
+    - https://github.com/BrightMove/brightmove-billing-engine.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/admin-console-1.0.11/admin-console-1.0.11.tgz
+    version: 1.0.11
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
     appVersion: 1.0.8
     created: "2023-04-10T13:37:34.339102404Z"
     description: BrightMove admin console for billing.
@@ -2492,4 +2514,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-10T05:12:04.327051689Z"
+generated: "2023-05-11T12:25:46.047466151Z"
