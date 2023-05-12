@@ -2276,6 +2276,22 @@ entries:
       created: 05/09/2023
     apiVersion: v2
     appVersion: latest
+    created: "2023-05-12T03:40:08.875633288Z"
+    description: Sonatype Nexus is a repository manager for software components.
+    digest: f2982a38b4a7b46b46076eebd9c4ae6fd874a4ba83c50d599ef0112fe809842d
+    icon: https://bm-helm.s3.amazonaws.com/icons/sonatype-nexus-logo.png
+    keywords:
+    - nexus
+    - repository
+    name: nexus
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/nexus-1.0.1/nexus-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 05/09/2023
+    apiVersion: v2
+    appVersion: latest
     created: "2023-05-10T00:41:34.842073306Z"
     description: Sonatype Nexus is a repository manager for software components.
     digest: ce6ac4e7e92ff35d68156c244c8e01c9d8ba6fa2cc4531a301d880340a73825f
@@ -2514,4 +2530,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-11T12:25:46.047466151Z"
+generated: "2023-05-12T03:40:08.876165299Z"
