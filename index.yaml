@@ -743,6 +743,30 @@ entries:
   - annotations:
       created: 04/06/2023
     apiVersion: v2
+    appVersion: 1.8.2
+    created: "2023-07-08T14:27:32.270189553Z"
+    description: Bright Reports Application.
+    digest: af6d2fca5ee86c685042e6496c04b05de3da96d31c91f827a7e5b10f171126f0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: bright-reports
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-1.0.4/bright-reports-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      created: 04/06/2023
+    apiVersion: v2
     appVersion: 1.8.1
     created: "2023-06-24T02:39:30.032762634Z"
     description: Bright Reports Application.
@@ -2699,4 +2723,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-07-03T17:17:47.267199571Z"
+generated: "2023-07-08T14:27:32.272745688Z"
