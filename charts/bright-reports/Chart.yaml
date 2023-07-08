@@ -1,7 +1,7 @@
 apiVersion: v2
 name: bright-reports
-version: 1.0.3
-appVersion: 1.8.1
+version: 1.0.4
+appVersion: 1.8.2
 description: Bright Reports Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
@@ -14,6 +14,8 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
+  - name: Jake Pharr
+    email: jake.pharr@brightmove.com
 deprecated: false
 annotations:
   created: "04/06/2023"
