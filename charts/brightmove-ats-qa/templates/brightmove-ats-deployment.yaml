@@ -41,6 +41,9 @@ spec:
               value: >-
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
+                -Dmemcached.cluster.discovery.endpoint={{ .Values.memcached.cluster.discovery.endpoint }}
+                -Dmemcached.sessionManager.className={{ .Values.memcached.sessionManager.className }}
+                -Dmsm.kryo.bufferSize.max={{ .Values.msm.kryo.bufferSize.max }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
                 -Xmx{{ .Values.jvmHeapMax | default "256m" }}
                 -Xrs
