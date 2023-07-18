@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ats-qa
-version: 1.0.4
+version: 1.0.5
 appVersion: qa
 description: BrightMove ATS Application.
 type: application

@@ -7,6 +7,10 @@ jvmHeapMax: 1536m
 memcached:
   cluster:
     discovery:
-      endpoint: tomcat-sessions-prod.fsaqmz.cfg.use1.cache.amazonaws.com:11211
+      endpoint: tomcat-sessions-lle2.fsaqmz.cfg.use1.cache.amazonaws.com:11211
   sessionManager:
     className: de.javakaffee.web.msm.MemcachedBackupSessionManager
+msm:
+  kryo:
+    bufferSize:
+      max: 5242880
