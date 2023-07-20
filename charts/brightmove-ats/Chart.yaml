@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ats
-version: 1.0.5
+version: 1.0.6
 appVersion: 2023.6.1.664
 description: BrightMove ATS Application.
 type: application
