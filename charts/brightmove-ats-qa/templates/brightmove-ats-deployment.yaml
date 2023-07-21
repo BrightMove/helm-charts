@@ -50,6 +50,7 @@ spec:
               value: >-
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
+                -javaagent:/usr/local/tomcat/lib/appoptics-agent.jar=service-key=rymRY0ARZQUSkz9ccSPCzeNkqQSfZTkcD2rWmS6TFW4a_bpWz4Ol_KHuyYIBc_Pag87_7TM:brightmove-ats-qa
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
                 -Xmx{{ .Values.jvmHeapMax | default "256m" }}
                 -Xrs
