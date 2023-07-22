@@ -41,7 +41,7 @@ spec:
             successThreshold: 2
             failureThreshold: 10
             httpGet:
-              path: /ATS/app/heartbeat/basic
+              path: /app/heartbeat/basic
               port: 8080
           env:
             - name: ENV
