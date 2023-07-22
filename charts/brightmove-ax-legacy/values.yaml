@@ -1,20 +1,20 @@
 namespace: brightmove
 dockerImageName: brightmove-ax-legacy
-springProfiles: qa
-env: qa
-jvmHeapInit: 1g
-jvmHeapMax: 1g
+springProfiles: prod
+env: prod
+jvmHeapInit: 4g
+jvmHeapMax: 4g
 atsMaxActive: 150
-atsPassword: ats4qa1pass
-atsUrl: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
-atsUser: ats_q
-quartzPassword: ats_quartz4qa1pass
-quartzUrl: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
-quartzUser: ats_quartz_q
+atsPassword: ats4prod1pass
+atsUrl: jdbc:oracle:thin:@prod.oracle.brightmove.com:1521:BMP1
+atsUser: ats
+quartzPassword: ats_quartz4prod1pass
+quartzUrl: jdbc:oracle:thin:@prod.oracle.brightmove.com:1521:BMP1
+quartzUser: ats_quartz
 memcached:
   cluster:
     discovery:
-      endpoint: tomcat-sessions-lle2.fsaqmz.cfg.use1.cache.amazonaws.com:11211
+      endpoint: tomcat-sessions-prod.fsaqmz.cfg.use1.cache.amazonaws.com:11211
   sessionManager:
     className: de.javakaffee.web.msm.MemcachedBackupSessionManager
 msm:
