@@ -35,6 +35,7 @@ spec:
               value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: >-
+                -javaagent:/usr/local/tomcat/lib/solarwinds-apm-agent.jar
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
