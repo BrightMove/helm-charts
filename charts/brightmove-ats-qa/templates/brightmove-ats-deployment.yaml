@@ -48,7 +48,6 @@ spec:
               value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:/usr/local/tomcat/lib/appoptics-agent.jar=service_key=rymRY0ARZQUSkz9ccSPCzeNkqQSfZTkcD2rWmS6TFW4a_bpWz4Ol_KHuyYIBc_Pag87_7TM:brightmove-ats-qa
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
