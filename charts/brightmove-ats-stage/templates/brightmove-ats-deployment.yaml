@@ -33,11 +33,9 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
-            - name: APPOPTICS_SERVICE_KEY
-              value: "{{ .Values.appopticsServiceKey }}"
-            - name: APPOPTICS_SERVICE_NAME
-              value: "{{ .Values.appopticsServiceName }}"
-            - name: APPOPTICS_COLLECTOR
+            - name: SW_APM_SERVICE_KEY
+              value: "{{ .Values.appopticsService }}"
+            - name: SW_APM_COLLECTOR
               value: "{{ .Values.appopticsCollector }}"
             - name: JAVA_OPTS
               value: >-
