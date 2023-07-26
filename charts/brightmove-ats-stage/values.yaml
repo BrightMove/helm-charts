@@ -2,7 +2,5 @@ namespace: brightmove
 dockerImageName: brightmove-ats
 springProfiles: stage
 env: stage
-appopticsService: "rymRY0ARZQUSkz9ccSPCzeNkqQSfZTkcD2rWmS6TFW4a_bpWz4Ol_KHuyYIBc_Pag87_7TM:brightmove-ats-qa"
-appopticsCollector: "collector.appoptics.com:443"
 jvmHeapInit: 1536m
 jvmHeapMax: 1536m

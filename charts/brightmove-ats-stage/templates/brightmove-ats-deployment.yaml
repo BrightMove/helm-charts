@@ -7,6 +7,10 @@ metadata:
     app: {{ .Release.Name }}-node
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -30,16 +34,20 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 2
+            failureThreshold: 10
+            httpGet:
+              path: /ATS/app/heartbeat/basic
+              port: 8080
           env:
             - name: ENV
               value: "{{ .Values.env }}"
-            - name: SW_APM_SERVICE_KEY
-              value: "{{ .Values.appopticsService }}"
-            - name: SW_APM_COLLECTOR
-              value: "{{ .Values.appopticsCollector }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:/usr/local/tomcat/lib/solarwinds-apm-agent.jar
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
