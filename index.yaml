@@ -1390,6 +1390,29 @@ entries:
       created: 03/24/2023
     apiVersion: v2
     appVersion: qa
+    created: "2023-07-26T03:05:13.90030552Z"
+    description: BrightMove ATS Application.
+    digest: f85aaf4556956df0d921ea9c87cef215470de2915bdd9659a565b6d8bb8cd3b0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-qa-1.0.11/brightmove-ats-qa-1.0.11.tgz
+    version: 1.0.11
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2023-07-25T04:59:14.980885216Z"
     description: BrightMove ATS Application.
     digest: ae64e021ab893b5ffa9ed2dd0678ebcb3469cc2dad105f7fa6ca2bad59cb87f4
@@ -1617,6 +1640,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-qa-1.0.1/brightmove-ats-qa-1.0.1.tgz
     version: 1.0.1
   brightmove-ats-stage:
+  - annotations:
+      created: 04/10/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2023-07-26T03:05:14.057035424Z"
+    description: BrightMove ATS Application.
+    digest: 7cb6ab4778226ac5f252a3f74de7a81712837b80a00b90f6ede27eb827bbbfd2
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: brightmove-ats-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.4/brightmove-ats-stage-1.0.4.tgz
+    version: 1.0.4
   - annotations:
       created: 04/10/2023
     apiVersion: v2
@@ -3143,4 +3189,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-07-25T21:24:09.645301902Z"
+generated: "2023-07-26T03:05:14.057320226Z"
