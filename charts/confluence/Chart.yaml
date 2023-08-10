@@ -1,6 +1,6 @@
 apiVersion: v2
 name: confluence
-version: 1.0.8
+version: 1.0.7
 appVersion: 7.20.3
 description: Confluence is a web-based collaborative software developed by Atlassian.
 type: application
