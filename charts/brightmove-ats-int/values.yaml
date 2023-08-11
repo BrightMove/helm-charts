@@ -1,0 +1,6 @@
+namespace: brightmove
+dockerImageName: brightmove-ats
+springProfiles: int
+env: int
+jvmHeapInit: 1536m
+jvmHeapMax: 1536m
