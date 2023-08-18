@@ -1,0 +1,22 @@
+apiVersion: v2
+name: brightmove-ax-legacy-stage
+version: 1.0.0
+appVersion: stage
+description: BrightMove AX Legacy Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - ax
+  - applicant
+  - portal
+sources:
+  - https://github.com/BrightMove/brightmove-ax.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+  - name: Quintin Kerby
+    email: quintin.kerby@brightmove.com
+deprecated: false
+annotations:
+  created: "05/17/2023"
