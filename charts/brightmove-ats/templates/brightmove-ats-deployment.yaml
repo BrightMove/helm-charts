@@ -46,6 +46,10 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
+            - name: SW_APM_SERVICE_KEY
+              value: "{{ .Values.appopticsService }}"
+            - name: SW_APM_COLLECTOR
+              value: "{{ .Values.appopticsCollector }}"
             - name: JAVA_OPTS
               value: >-
                 -javaagent:/usr/local/tomcat/lib/solarwinds-apm-agent.jar
