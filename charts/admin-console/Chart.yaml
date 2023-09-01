@@ -1,7 +1,7 @@
 apiVersion: v2
 name: admin-console
-version: 1.0.12
-appVersion: 1.0.10
+version: 1.0.13
+appVersion: 1.0.11
 description: BrightMove admin console for billing.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
