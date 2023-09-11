@@ -905,6 +905,31 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-qa-1.0.0/bright-reports-qa-1.0.0.tgz
     version: 1.0.0
+  bright-reports-stage:
+  - annotations:
+      created: 09/11/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2023-09-11T18:21:59.359856021Z"
+    description: Bright Reports Application.
+    digest: 627cd6c7747485ad369af7fcb9faa27f7a7dd56db79aa0838eb61ae7b36ef4c6
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: quintin.kerby@brightmove.com
+      name: Quintin Kerby
+    name: bright-reports-stage
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-stage-1.0.0/bright-reports-stage-1.0.0.tgz
+    version: 1.0.0
   bright-sync:
   - annotations:
       created: 12/15/2022
@@ -3510,4 +3535,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-09-07T23:04:37.516768971Z"
+generated: "2023-09-11T18:21:59.360353529Z"
