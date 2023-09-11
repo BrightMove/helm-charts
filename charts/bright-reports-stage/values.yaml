@@ -1,0 +1,6 @@
+namespace: bright-reports
+dockerImageName: bright-reports
+springProfiles: stage
+env: stage
+jvmHeapInit: 1g
+jvmHeapMax: 1g
