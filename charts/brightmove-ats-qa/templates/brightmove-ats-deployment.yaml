@@ -58,7 +58,6 @@ spec:
                 -Dotel.logs.exporter=otlp
                 -Dotel.semconv-stability.opt-in=http
                 -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.instrumentation.logback-appender.experimental-log-attributes=true
                 -Dotel.service.name=ats-{{ .Values.env }}
                 -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightmove,service.instance.id=${HOSTNAME}
                 -Dspring.profiles.active={{ .Values.springProfiles }}
