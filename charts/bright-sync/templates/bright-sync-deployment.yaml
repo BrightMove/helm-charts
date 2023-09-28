@@ -41,11 +41,6 @@ spec:
               value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
-                -Dotel.logs.exporter=otlp
-                -Dotel.semconv-stability.opt-in=http
-                -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=bright-sync-{{ .Values.env }}
-                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightsync,service.instance.id=${HOSTNAME}
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -DQRTZ_BSYNC_URL={{ .Values.quartzDatasource.url }}
