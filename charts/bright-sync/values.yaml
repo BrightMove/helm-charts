@@ -7,6 +7,7 @@ otelExporterOtlpHeaders: "Authorization=Basic NDgwNzMxOmV5SnJJam9pT0RnMk9HTXlaVE
 jvmHeapInit: 1g
 jvmHeapMax: 1g
 jmxPort: 9999
+javaagent:
 quartzDatasource:
   url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
   username:

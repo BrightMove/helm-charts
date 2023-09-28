@@ -45,7 +45,7 @@ spec:
                 -Dotel.logs.exporter=otlp
                 -Dotel.semconv-stability.opt-in=http
                 -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=ats-{{ .Values.env }}
+                -Dotel.service.name=bright-sync-{{ .Values.env }}
                 -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightsync,service.instance.id=${HOSTNAME}
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
@@ -64,7 +64,7 @@ spec:
                 -Xrs
                 -Xss256k
                 -XX:+UseG1GC
-                -XX:NewRatio=3"
+                -XX:NewRatio=3
           ports:
             - containerPort: 8080
               name: tc-port
