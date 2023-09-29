@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bright-reports-qa
-version: 1.0.1
+version: 1.0.2
 appVersion: qa
 description: Bright Reports Application.
 type: application
