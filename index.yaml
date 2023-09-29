@@ -977,6 +977,28 @@ entries:
   - annotations:
       created: 12/15/2022
     apiVersion: v2
+    appVersion: 4.5.1
+    created: "2023-09-29T05:26:58.903856186Z"
+    description: BrightSync Email Manager
+    digest: d13e21dca9e1134d3d64664c18b94ada051d4373f6bff01bda02f05ca1e8bd27
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.11/bright-sync-1.0.11.tgz
+    version: 1.0.11
+  - annotations:
+      created: 12/15/2022
+    apiVersion: v2
     appVersion: 4.5.0
     created: "2023-09-28T04:38:05.535218389Z"
     description: BrightSync Email Manager
@@ -3962,4 +3984,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-09-28T04:38:05.536167201Z"
+generated: "2023-09-29T05:26:58.90441149Z"
