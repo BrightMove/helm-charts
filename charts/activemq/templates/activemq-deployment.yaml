@@ -39,7 +39,7 @@ spec:
               value: "{{ .Values.otelExporterOtlpEndpoint }}"
             - name: OTEL_EXPORTER_OTLP_HEADERS
               value: "{{ .Values.otelExporterOtlpHeaders }}"
-            - name: JAVA_OPTS
+            - name: ACTIVEMQ_OPTS
               value: >-
                 -javaagent:/opt/activemq/lib/opentelemetry-javaagent.jar
                 -Dotel.logs.exporter=otlp
@@ -48,6 +48,8 @@ spec:
                 -Dotel.service.name=activemq-{{ .Values.env }}
                 -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=tools,service.instance.id=${HOSTNAME}
                 -Denv={{ .Values.env }}
+            - name: ACTIVEMQ_OPTS_MEMORY
+              value: >-
                 -Xms{{ .Values.jvmHeapInit | default "1g" }}
                 -Xmx{{ .Values.jvmHeapMax | default "1g" }}
                 -Xrs

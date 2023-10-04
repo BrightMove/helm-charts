@@ -1,6 +1,6 @@
 apiVersion: v2
 name: activemq
-version: 1.0.2
+version: 1.0.3
 appVersion: 5.13.4
 description: ActiveMQ
 type: application
