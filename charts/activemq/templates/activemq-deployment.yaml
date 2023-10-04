@@ -48,8 +48,6 @@ spec:
                 -Dotel.service.name=activemq-{{ .Values.env }}
                 -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=tools,service.instance.id=${HOSTNAME}
                 -Denv={{ .Values.env }}
-            - name: ACTIVEMQ_OPTS_MEMORY
-              value: >-
                 -Xms{{ .Values.jvmHeapInit | default "1g" }}
                 -Xmx{{ .Values.jvmHeapMax | default "1g" }}
                 -Xrs
