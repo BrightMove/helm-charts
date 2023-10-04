@@ -39,7 +39,7 @@ spec:
               value: "{{ .Values.otelExporterOtlpEndpoint }}"
             - name: OTEL_EXPORTER_OTLP_HEADERS
               value: "{{ .Values.otelExporterOtlpHeaders }}"
-            - name: ACTIVEMQ_OPTS
+            - name: JAVA_OPTS
               value: >-
                 -javaagent:/opt/activemq/lib/opentelemetry-javaagent.jar
                 -Dotel.logs.exporter=otlp
