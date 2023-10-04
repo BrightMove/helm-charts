@@ -5,6 +5,25 @@ entries:
       created: 03/29/2023
     apiVersion: v2
     appVersion: 5.13.4
+    created: "2023-10-04T05:52:14.852701854Z"
+    description: ActiveMQ
+    digest: 3c2be376886a5c5e9c1bca453a0e5c35a8ad1b3c100f9eb71fc61d83392d45a4
+    icon: https://bm-helm.s3.amazonaws.com/icons/activemq-logo.png
+    keywords:
+    - activemq
+    - queues
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: activemq
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/activemq-1.0.4/activemq-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      created: 03/29/2023
+    apiVersion: v2
+    appVersion: 5.13.4
     created: "2023-10-04T05:43:57.082837344Z"
     description: ActiveMQ
     digest: 0871be7f8f585a1e54e2d441432de6db5fbea15298bfbb50193644b1d37d30dd
@@ -4191,4 +4210,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
-generated: "2023-10-04T05:43:57.083378066Z"
+generated: "2023-10-04T05:52:14.85329706Z"
