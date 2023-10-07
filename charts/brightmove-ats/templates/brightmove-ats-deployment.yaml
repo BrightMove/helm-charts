@@ -43,6 +43,15 @@ spec:
             httpGet:
               path: /ATS/app/heartbeat/basic
               port: 8080
+          livenessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 10
+            httpGet:
+              path: /ATS/app/heartbeat/basic
+              port: 8080
           env:
             - name: ENV
               value: "{{ .Values.env }}"
