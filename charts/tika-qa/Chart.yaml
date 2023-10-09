@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tika-qa
-version: 1.0.3
+version: 1.0.4
 appVersion: 1.0.0
 description: Service for extracting structured text from various document types.
 type: application
