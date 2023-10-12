@@ -6,7 +6,7 @@ metadata:
   labels:
     app: {{ .Release.Name }}-node
 spec:
-  replicas: {{ default 2 .Values.replicaCount }}
+  replicas: {{ default 1 .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -26,10 +26,28 @@ spec:
                       - amd64
       containers:
         - name: {{ .Release.Name }}-server
-          image: apache/tika:latest-full
+          image: 'brightmove/tika:{{ .Chart.AppVersion }}'
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
+          env:
+            - name: ENV
+              value: "{{ .Values.env }}"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "{{ .Values.otelExporterOtlpProtocol }}"
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "{{ .Values.otelExporterOtlpEndpoint }}"
+            - name: OTEL_EXPORTER_OTLP_HEADERS
+              value: "{{ .Values.otelExporterOtlpHeaders }}"
+            - name: JAVA_OPTS
+              value: >-
+                -javaagent:/lib/opentelemetry-javaagent.jar
+                -Dotel.logs.exporter=otlp
+                -Dotel.semconv-stability.opt-in=http
+                -Dotel.instrumentation.micrometer.base-time-unit=s
+                -Dotel.service.name=tika-{{ .Values.env }}
+                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=tools,service.instance.id=${HOSTNAME}
+                -Denv={{ .Values.env }}
           ports:
             - containerPort: 9998
               name: tika-port
