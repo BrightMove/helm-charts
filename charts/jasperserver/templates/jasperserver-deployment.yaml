@@ -46,7 +46,7 @@ spec:
                 -Dotel.semconv-stability.opt-in=http
                 -Dotel.instrumentation.micrometer.base-time-unit=s
                 -Dotel.service.name=jasperserver-{{ .Values.env }}
-                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=jasperserver,service.instance.id=$HOSTNAME
+                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=jasperserver,service.instance.id=${HOSTNAME}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "1g" }}
                 -Xmx{{ .Values.jvmHeapMax | default "1g" }}
