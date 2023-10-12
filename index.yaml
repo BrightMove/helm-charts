@@ -4320,6 +4320,23 @@ entries:
   - annotations:
       created: 04/25/2023
     apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-10-12T05:17:37.668902322Z"
+    description: Service for extracting structured text from various document types.
+    digest: 93028103766ec0034001edbab7a5252043858a1d623acbc4ed0cfa24aaf3d049
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_tika_logo.svg
+    keywords:
+    - pdf
+    name: tika
+    sources:
+    - https://github.com/apache/tika.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.4/tika-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      created: 04/25/2023
+    apiVersion: v2
     appVersion: latest-full
     created: "2023-05-03T23:00:58.384030297Z"
     description: Service for extracting structured text from various document types.
@@ -4420,4 +4437,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2023-10-09T21:21:53.640669451Z"
+generated: "2023-10-12T05:17:37.669554926Z"
