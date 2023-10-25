@@ -3370,6 +3370,27 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-odata-1.0.0/brightmove-odata-1.0.0.tgz
     version: 1.0.0
+  brightmove-wisdom-docs-prod:
+  - annotations:
+      created: 10/25/2023
+    apiVersion: v2
+    appVersion: prod
+    created: "2023-10-25T16:09:55.711280929Z"
+    description: BrightMove Wisdom Docs
+    digest: 4fd5462ff9af17d60d73293784bf67a372ce9ac7f51566dac6465989b8fabfc4
+    icon: https://bm-helm.s3.amazonaws.com/icons/docs.png
+    keywords:
+    - brightmove
+    - wisdom
+    - docs
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-wisdom-docs-prod
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-wisdom-docs-prod-1.0.0/brightmove-wisdom-docs-prod-1.0.0.tgz
+    version: 1.0.0
   brightmove-wisdom-docs-qa:
   - annotations:
       created: 10/25/2023
@@ -4619,4 +4640,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2023-10-25T15:26:04.271121961Z"
+generated: "2023-10-25T16:09:55.713290242Z"
