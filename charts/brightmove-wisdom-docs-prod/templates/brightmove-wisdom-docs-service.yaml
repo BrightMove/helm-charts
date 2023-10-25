@@ -10,8 +10,12 @@ spec:
   externalTrafficPolicy: Local
   ports:
     - protocol: TCP
-      name: http
+      name: http-temp
       port: 80
+      targetPort: 80
+    - protocol: TCP
+      name: https
+      port: 443
       targetPort: 80
   selector:
     app: {{ .Release.Name }}-node
