@@ -1,0 +1,17 @@
+apiVersion: v2
+name: brightmove-wisdom-docs-prod
+version: 1.0.0
+appVersion: prod
+description: BrightMove Wisdom Docs
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/docs.png
+keywords:
+  - brightmove
+  - wisdom
+  - docs
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "10/25/2023"
