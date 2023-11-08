@@ -11,6 +11,7 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
+      maxSurge: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
