@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ax-legacy
-version: 1.0.11
+version: 1.0.12
 appVersion: 2023.9.2.152
 description: BrightMove AX Legacy Application.
 type: application
@@ -15,8 +15,6 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-  - name: Jake Pharr
-    email: jake.pharr@brightmove.com
 deprecated: false
 annotations:
   created: "04/13/2023"

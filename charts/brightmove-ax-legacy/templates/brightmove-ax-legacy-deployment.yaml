@@ -11,6 +11,7 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
+      maxSurge: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -39,6 +40,15 @@ spec:
             periodSeconds: 15
             timeoutSeconds: 2
             successThreshold: 2
+            failureThreshold: 10
+            httpGet:
+              path: /app/heartbeat/basic
+              port: 8080
+          livenessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 1
             failureThreshold: 10
             httpGet:
               path: /app/heartbeat/basic
