@@ -6,7 +6,7 @@ otelExporterOtlpProtocol: "http/protobuf"
 otelExporterOtlpEndpoint: "https://otlp-gateway-prod-us-central-0.grafana.net/otlp"
 otelExporterOtlpHeaders: "Authorization=Basic NDgwNzMxOmV5SnJJam9pT0RnMk9HTXlaVEl3T1daak9EUTJOekJtWmpRMk5tTTFPR0V3WXpkak5UaGlPREU0TWpsa1lpSXNJbTRpT2lKUGNHVnVWR1ZzWlcxbGRISjVJaXdpYVdRaU9qYzBPRGMwTVgwPQ=="
 jasperDatasource:
-  url: jdbc:mysql://prod.mysql.brightmove.com:3306/jasperserver6_dev?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&tinyInt1isBit=false
+  url: jdbc:mysql://prod8.mysql.brightmove.com:3306/jasperserver6_dev?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&tinyInt1isBit=false
 atsDatasource:
   url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
   username: ats_d
