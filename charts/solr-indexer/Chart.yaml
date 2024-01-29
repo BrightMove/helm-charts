@@ -1,7 +1,7 @@
 apiVersion: v2
 name: solr-indexer
-version: 1.0.8
-appVersion: 1.7.19
+version: 1.0.9
+appVersion: 1.7.20
 description: BrightMove solr indexing engine
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/apache_solr_logo.svg
