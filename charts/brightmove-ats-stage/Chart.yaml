@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ats-stage
-version: 1.0.11
+version: 1.0.12
 appVersion: stage
 description: BrightMove ATS Application.
 type: application
@@ -13,8 +13,8 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-  - name: Jake Pharr
-    email: jake.pharr@brightmove.com
+  - name: Quintin Kerby
+    email: quintin.kerby@brightmove.com
 deprecated: false
 annotations:
   created: "04/10/2023"
