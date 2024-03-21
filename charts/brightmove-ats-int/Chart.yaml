@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ats-int
-version: 1.0.2
+version: 1.0.3
 appVersion: int
 description: BrightMove ATS Application.
 type: application
@@ -13,8 +13,6 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-  - name: Jake Pharr
-    email: jake.pharr@brightmove.com
 deprecated: false
 annotations:
   created: "03/24/2023"
