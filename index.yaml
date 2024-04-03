@@ -5442,6 +5442,29 @@ entries:
   - annotations:
       created: 11/17/2022
     apiVersion: v2
+    appVersion: 1.7.21
+    created: "2024-04-03T18:38:47.140391179Z"
+    description: BrightMove solr indexing engine
+    digest: 9df412ea3ce459c24321b6f81bb39bc48e687a7a3ae21734aec7441aade81920
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_solr_logo.svg
+    keywords:
+    - brightmove
+    - admin
+    - solr
+    - devops
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: solr-indexer
+    sources:
+    - https://github.com/BrightMove/solr-indexer.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.10/solr-indexer-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 11/17/2022
+    apiVersion: v2
     appVersion: 1.7.20
     created: "2024-01-29T18:02:28.904752488Z"
     description: BrightMove solr indexing engine
@@ -5790,4 +5813,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-03-25T23:04:18.61351021Z"
+generated: "2024-04-03T18:38:47.14131685Z"
