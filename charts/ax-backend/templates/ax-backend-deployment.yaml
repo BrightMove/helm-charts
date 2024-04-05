@@ -31,6 +31,8 @@ spec:
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
           env:
+            - name: ENV
+              value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: "-Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xms{{ .Values.jvmHeapInit | default "256m" }} -Xmx{{ .Values.jvmHeapMax | default "256m" }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
           ports:
