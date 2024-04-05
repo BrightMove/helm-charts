@@ -511,6 +511,31 @@ entries:
       created: 09/28/2022
     apiVersion: v2
     appVersion: 1.0.0
+    created: "2024-04-05T14:01:01.882213992Z"
+    description: BrightMove Applicant Experience Application.
+    digest: c1e6d459170f0d686997e426efefad3dc416069fc2d85121344d20929be13345
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: ax-backend
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-1.0.10/ax-backend-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-03-24T02:38:17.697052765Z"
     description: BrightMove Applicant Experience Application.
     digest: dcc62ab4cff560303501bdc075a1be9ede629bbd4fb7752de4e4f12ea37ade98
@@ -5839,4 +5864,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-04-05T13:56:04.745134001Z"
+generated: "2024-04-05T14:01:01.88304475Z"
