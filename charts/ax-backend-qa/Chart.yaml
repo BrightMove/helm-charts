@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ax-backend-qa
-version: 1.0.5
+version: 1.0.6
 appVersion: qa
 description: BrightMove Applicant Experience Application QA.
 type: application
