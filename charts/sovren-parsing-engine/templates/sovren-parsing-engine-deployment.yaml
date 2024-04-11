@@ -36,7 +36,7 @@ spec:
           ports:
             - containerPort: 80
               name: web-port
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
       imagePullSecrets:
         - name: regcred
       nodeSelector:

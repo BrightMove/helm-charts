@@ -42,7 +42,7 @@ spec:
               name: web-port
             - containerPort: 53000
               name: swagger-port
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
       imagePullSecrets:
         - name: regcred
       nodeSelector:

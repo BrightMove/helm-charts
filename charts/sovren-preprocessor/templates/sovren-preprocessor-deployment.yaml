@@ -33,7 +33,7 @@ spec:
           ports:
             - containerPort: 3000
               name: preproc-port
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
       imagePullSecrets:
         - name: regcred
       nodeSelector:
