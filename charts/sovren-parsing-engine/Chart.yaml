@@ -1,7 +1,7 @@
 apiVersion: v2
 name: sovren-parsing-engine
-version: 1.0.2
-appVersion: qa
+version: 1.0.3
+appVersion: 1242112794
 description: Sovren Parsing Engine
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
