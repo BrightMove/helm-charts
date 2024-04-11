@@ -38,10 +38,10 @@ spec:
             - name: TX_PREPROCESSOR
               value: "{{ .Values.txPreProcessor }}"
           ports:
-            - containerPort: 8161
-              name: tc-port
-            - containerPort: 61616
-              name: amq-port
+            - containerPort: 80
+              name: web-port
+            - containerPort: 53000
+              name: swagger-port
           imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred

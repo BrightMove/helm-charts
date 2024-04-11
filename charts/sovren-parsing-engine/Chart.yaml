@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sovren-parsing-engine
-version: 1.0.0
+version: 1.0.1
 appVersion: qa
 description: Sovren Parsing Engine
 type: application

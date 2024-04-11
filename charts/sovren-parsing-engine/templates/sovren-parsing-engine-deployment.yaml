@@ -34,10 +34,8 @@ spec:
             - name: TEXTKERNEL_LICENSE
               value: "{{ .Values.textkernelLicense }}"
           ports:
-            - containerPort: 8161
-              name: tc-port
-            - containerPort: 61616
-              name: amq-port
+            - containerPort: 80
+              name: web-port
           imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred
