@@ -5873,6 +5873,66 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.0/solr-indexer-1.0.0.tgz
     version: 1.0.0
+  sovren-api:
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: v10
+    created: "2024-04-11T00:22:50.892736212Z"
+    description: Sovren REST API
+    digest: b74887c69177196ec735a06a07f67b2df5ef3d342feec9c61060853f5be3a531
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parser
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-api
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-api-1.0.0/sovren-api-1.0.0.tgz
+    version: 1.0.0
+  sovren-parsing-engine:
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: qa
+    created: "2024-04-11T00:22:50.99982043Z"
+    description: Sovren Parsing Engine
+    digest: 575365648397d6d8b4bebcc8588e2cd740d41bceadedb401f4439f9cdcb285ef
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parsing
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-parsing-engine
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-parsing-engine-1.0.0/sovren-parsing-engine-1.0.0.tgz
+    version: 1.0.0
+  sovren-preprocessor:
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: qa
+    created: "2024-04-11T00:22:51.107429806Z"
+    description: Sovren PreProcessor
+    digest: 4653f045bb29bb695c1be92197f65ff2d5ca834ff6d195266dae996836deb1f4
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - preprocessor
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-preprocessor
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-preprocessor-1.0.0/sovren-preprocessor-1.0.0.tgz
+    version: 1.0.0
   tika:
   - annotations:
       created: 04/25/2023
@@ -5994,4 +6054,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-04-10T14:25:18.949905221Z"
+generated: "2024-04-11T00:22:51.108287891Z"
