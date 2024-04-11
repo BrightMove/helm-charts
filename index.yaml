@@ -5957,6 +5957,25 @@ entries:
   - annotations:
       created: 04/10/2024
     apiVersion: v2
+    appVersion: "1242112794"
+    created: "2024-04-11T21:40:52.014434049Z"
+    description: Sovren Parsing Engine
+    digest: 45b5d0f9cbdc43e055667ce6252fd2dfab28d04e7e7d9be716ac7378b6a0bc8b
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parsing
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-parsing-engine
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-parsing-engine-1.0.3/sovren-parsing-engine-1.0.3.tgz
+    version: 1.0.3
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
     appVersion: qa
     created: "2024-04-11T18:35:18.486817967Z"
     description: Sovren Parsing Engine
@@ -6012,6 +6031,25 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/sovren-parsing-engine-1.0.0/sovren-parsing-engine-1.0.0.tgz
     version: 1.0.0
   sovren-preprocessor:
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: "1242112794"
+    created: "2024-04-11T21:40:52.129643971Z"
+    description: Sovren PreProcessor
+    digest: 91dc104b2d0a5f3bd619aa04d932895ea477d1752637b059af2ee437ef3686a4
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - preprocessor
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-preprocessor
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-preprocessor-1.0.5/sovren-preprocessor-1.0.5.tgz
+    version: 1.0.5
   - annotations:
       created: 04/10/2024
     apiVersion: v2
@@ -6228,4 +6266,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-04-11T18:35:18.621186594Z"
+generated: "2024-04-11T21:40:52.130541065Z"
