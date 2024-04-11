@@ -30,6 +30,9 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
+          env:
+            - name: TEXTKERNEL_LICENSE
+              value: "{{ .Values.textkernelLicense }}"
           ports:
             - containerPort: 3000
               name: preprocessor-port
