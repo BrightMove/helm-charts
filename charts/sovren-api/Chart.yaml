@@ -1,0 +1,16 @@
+apiVersion: v2
+name: sovren-api
+version: 1.0.0
+appVersion: v10
+description: Sovren REST API
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+keywords:
+  - sovren
+  - parser
+maintainers:
+  - name: Dane Woodall
+    email: dwoodall@brightmove.com
+deprecated: false
+annotations:
+  created: "04/10/2024"
