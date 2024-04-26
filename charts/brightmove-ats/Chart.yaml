@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-ats
-version: 1.0.48
-appVersion: 2024.7.0.765
+version: 1.0.49
+appVersion: 2024.8.0.774
 description: BrightMove ATS Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
@@ -13,8 +13,6 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-  - name: Quintin Kerby
-    email: quintin.kerby@brightmove.com
 deprecated: false
 annotations:
   created: "03/24/2023"
