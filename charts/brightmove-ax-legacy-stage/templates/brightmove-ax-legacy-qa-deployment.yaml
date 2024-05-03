@@ -7,6 +7,11 @@ metadata:
     app: {{ .Release.Name }}-node
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -30,11 +35,41 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 2
+            failureThreshold: 10
+            httpGet:
+              path: /app/heartbeat/basic
+              port: 8080
+          livenessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 10
+            httpGet:
+              path: /app/heartbeat/basic
+              port: 8080
           env:
             - name: ENV
               value: "{{ .Values.env }}"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "{{ .Values.otelExporterOtlpProtocol }}"
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "{{ .Values.otelExporterOtlpEndpoint }}"
+            - name: OTEL_EXPORTER_OTLP_HEADERS
+              value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
+                -javaagent:/usr/local/tomcat/lib/opentelemetry-javaagent.jar
+                -Dotel.logs.exporter=otlp
+                -Dotel.semconv-stability.opt-in=http
+                -Dotel.instrumentation.micrometer.base-time-unit=s
+                -Dotel.service.name=ax-legacy-{{ .Values.env }}
+                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightmove,service.instance.id=${HOSTNAME}
                 -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
