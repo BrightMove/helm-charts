@@ -4840,6 +4840,116 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-odata-1.0.0/brightmove-odata-1.0.0.tgz
     version: 1.0.0
+  brightmove-processes:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-05-22T13:59:55.212029671Z"
+    description: BrightMove Processes Application.
+    digest: 8e1026643b4f367ed13bc470ce0de14292490256536ed5f79a19c4e3949cd90d
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-1.0.0/brightmove-processes-1.0.0.tgz
+    version: 1.0.0
+  brightmove-processes-dev:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: latest
+    created: "2024-05-22T13:59:55.321461634Z"
+    description: BrightMove Processes Application.
+    digest: 56de924ca5284923acd44a2cb491a1e78a220a58a787a6c87918b33d174e2fc0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-dev
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-dev-1.0.0/brightmove-processes-dev-1.0.0.tgz
+    version: 1.0.0
+  brightmove-processes-int:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: int
+    created: "2024-05-22T13:59:55.413934749Z"
+    description: BrightMove Processes Application.
+    digest: f76d6afc870be78c4b198255b498bc761809c34e3f3f6270bb34bd33bc834ed0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-int
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-int-1.0.0/brightmove-processes-int-1.0.0.tgz
+    version: 1.0.0
+  brightmove-processes-qa:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: qa
+    created: "2024-05-22T13:59:55.541534258Z"
+    description: BrightMove Processes Application.
+    digest: 362bd80d8793a057a89d81d73ffa7b2f78db31f43f41eb64532024c25b2b84a1
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-qa-1.0.0/brightmove-processes-qa-1.0.0.tgz
+    version: 1.0.0
+  brightmove-processes-stage:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: stage
+    created: "2024-05-22T13:59:55.660777053Z"
+    description: BrightMove Processes Application.
+    digest: b1e3f9f077b05e3df861a5f05830b810fc960863aa8d39c390abba755fe6591d
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-stage-1.0.0/brightmove-processes-stage-1.0.0.tgz
+    version: 1.0.0
   brightmove-wisdom-docs-prod:
   - annotations:
       created: 10/25/2023
@@ -6676,4 +6786,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-05-22T13:46:24.928864797Z"
+generated: "2024-05-22T13:59:55.661578441Z"
