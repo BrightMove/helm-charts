@@ -7,6 +7,11 @@ metadata:
     app: {{ .Release.Name }}-node
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 2
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -33,6 +38,12 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "{{ .Values.otelExporterOtlpProtocol }}"
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "{{ .Values.otelExporterOtlpEndpoint }}"
+            - name: OTEL_EXPORTER_OTLP_HEADERS
+              value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: "-Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xms{{ .Values.jvmHeapInit | default "256m" }} -Xmx{{ .Values.jvmHeapMax | default "256m" }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
           ports:
