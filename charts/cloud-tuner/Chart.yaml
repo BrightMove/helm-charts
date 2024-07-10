@@ -1,7 +1,7 @@
 apiVersion: v2
 name: cloud-tuner
-version: 1.0.11
-appVersion: 2.2.2
+version: 1.0.12
+appVersion: 2.3.0
 description: Cloud Tuner Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/cloud-tuner.svg
