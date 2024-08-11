@@ -1,7 +1,7 @@
 apiVersion: v2
 name: nexus
-version: 1.0.1
-appVersion: latest
+version: 1.0.2
+appVersion: 3.70.1
 description: Sonatype Nexus is a repository manager for software components.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/sonatype-nexus-logo.png
