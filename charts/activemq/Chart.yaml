@@ -1,7 +1,7 @@
 apiVersion: v2
 name: activemq
-version: 1.0.8
-appVersion: 5.18.4
+version: 1.0.9
+appVersion: 5.18.3
 description: ActiveMQ
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/activemq-logo.png
