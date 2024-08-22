@@ -1,0 +1,17 @@
+apiVersion: v2
+name: jobgorilla-qa
+version: 1.0.1
+appVersion: qa
+description: BrightMove JobGorilla.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+keywords:
+  - jobgorilla
+sources:
+  - https://github.com/BrightMove/jobgorilla.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "08/22/2024"
