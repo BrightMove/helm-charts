@@ -6810,6 +6810,27 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/jasperserver-1.0.0/jasperserver-1.0.0.tgz
     version: 1.0.0
+  jobgorilla-qa:
+  - annotations:
+      created: 08/22/2024
+    apiVersion: v2
+    appVersion: qa
+    created: "2024-08-22T17:00:15.003378142Z"
+    description: BrightMove JobGorilla.
+    digest: 56df587bf4b82fa7d3b84614cbff5da5d10f89295ee2c655363f935e41e4e1aa
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-qa
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-qa-1.0.1/jobgorilla-qa-1.0.1.tgz
+    version: 1.0.1
   nexus:
   - annotations:
       created: 05/09/2023
@@ -7732,4 +7753,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-08-21T22:01:41.277503025Z"
+generated: "2024-08-22T17:00:15.004995163Z"
