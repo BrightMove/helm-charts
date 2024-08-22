@@ -7,6 +7,7 @@ otelExporterOtlpEndpoint: "https://otlp-gateway-prod-us-central-0.grafana.net/ot
 otelExporterOtlpHeaders: "Authorization=Basic NDgwNzMxOmV5SnJJam9pT0RnMk9HTXlaVEl3T1daak9EUTJOekJtWmpRMk5tTTFPR0V3WXpkak5UaGlPREU0TWpsa1lpSXNJbTRpT2lKUGNHVnVWR1ZzWlcxbGRISjVJaXdpYVdRaU9qYzBPRGMwTVgwPQ=="
 jvmHeapInit: 4g
 jvmHeapMax: 4g
+replicaCount: 2
 atsMaxActive: 150
 atsPassword: ats4prod1pass
 atsUrl: jdbc:oracle:thin:@prod.oracle.brightmove.com:1521:BMP1

@@ -1,0 +1,18 @@
+apiVersion: v2
+name: brightmove-processes-qa
+version: 1.0.2
+appVersion: qa
+description: BrightMove Processes Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - processes
+sources:
+  - https://github.com/BrightMove/brightmove-processes.git
+maintainers:
+  - name: Dane Woodall
+    email: dwoodall@brightmove.com
+deprecated: false
+annotations:
+  created: "05/17/2024"

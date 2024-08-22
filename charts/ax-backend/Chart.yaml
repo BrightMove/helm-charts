@@ -1,7 +1,7 @@
 apiVersion: v2
 name: ax-backend
-version: 1.0.10
-appVersion: 1.0.0
+version: 1.0.13
+appVersion: prod
 description: BrightMove Applicant Experience Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
@@ -15,8 +15,6 @@ sources:
 maintainers:
   - name: David Webb
     email: dwebb@brightmove.com
-  - name: Jake Pharr
-    email: jake.pharr@brightmove.com
 deprecated: false
 annotations:
   created: "09/28/2022"

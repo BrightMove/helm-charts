@@ -7,6 +7,11 @@ metadata:
     app: {{ .Release.Name }}-node
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -30,19 +35,28 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
-          env:
-            - name: TXTOR_LICENSE_KEY
-              value: "{{ .Values.txtorLicenseKey }}"
-            - name: TXTOR_LICENSE_COMMENCEMENT
-              value: "{{ .Values.txtorLicenseCommencement }}"
-            - name: TXTOR_LICENSE_EXPIRATION
-              value: "{{ .Values.txtorLicenseExpiration }}"
+          readinessProbe:
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            timeoutSeconds: 5
+            successThreshold: 2
+            failureThreshold: 10
+            httpGet:
+              path: /health
+              port: 3000
+          livenessProbe:
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+            httpGet:
+              path: /health
+              port: 3000
           ports:
-            - containerPort: 8161
-              name: tc-port
-            - containerPort: 61616
-              name: amq-port
-          imagePullPolicy: Always
+            - containerPort: 3000
+              name: preproc-port
+          imagePullPolicy: IfNotPresent
       imagePullSecrets:
         - name: regcred
       nodeSelector:

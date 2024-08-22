@@ -10,7 +10,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 1
+      maxUnavailable: 0
       maxSurge: 1
   selector:
     matchLabels:
@@ -36,22 +36,22 @@ spec:
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
           readinessProbe:
-            initialDelaySeconds: 30
+            initialDelaySeconds: 20
             periodSeconds: 15
-            timeoutSeconds: 2
+            timeoutSeconds: 5
             successThreshold: 2
             failureThreshold: 10
             httpGet:
-              path: /app/heartbeat/basic
+              path: /actuator/health
               port: 8080
           livenessProbe:
-            initialDelaySeconds: 30
+            initialDelaySeconds: 60
             periodSeconds: 15
-            timeoutSeconds: 2
+            timeoutSeconds: 10
             successThreshold: 1
             failureThreshold: 10
             httpGet:
-              path: /app/heartbeat/basic
+              path: /actuator/health
               port: 8080
           env:
             - name: ENV
@@ -64,25 +64,13 @@ spec:
               value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:/usr/local/tomcat/lib/opentelemetry-javaagent.jar
                 -Dotel.logs.exporter=otlp
                 -Dotel.semconv-stability.opt-in=http
                 -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=ax-legacy-{{ .Values.env }}
+                -Dotel.service.name=processes-{{ .Values.env }}
                 -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightmove,service.instance.id=${HOSTNAME}
-                -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
-                -DATS_MAX_ACTIVE={{ .Values.atsMaxActive }}
-                -DATS_PASSWORD={{ .Values.atsPassword }}
-                -DATS_URL={{ .Values.atsUrl }}
-                -DATS_USER={{ .Values.atsUser }}
-                -DQUARTZ_PASSWORD={{ .Values.quartzPassword }}
-                -DQUARTZ_URL={{ .Values.quartzUrl }}
-                -DQUARTZ_USER={{ .Values.quartzUser }}
-                -Dmemcached.cluster.discovery.endpoint={{ .Values.memcached.cluster.discovery.endpoint }}
-                -Dmemcached.sessionManager.className={{ .Values.memcached.sessionManager.className }}
-                -Dmsm.kryo.bufferSize.max={{ .Values.msm.kryo.bufferSize.max }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
                 -Xmx{{ .Values.jvmHeapMax | default "256m" }}
                 -Xrs
