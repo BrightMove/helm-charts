@@ -6815,6 +6815,26 @@ entries:
       created: 08/22/2024
     apiVersion: v2
     appVersion: latest
+    created: "2024-08-23T01:27:32.366023866Z"
+    description: BrightMove JobGorilla.
+    digest: be50d76aaa2f8edd38a3377d9f5a9dc6e5a2ace2dd3d475611cb7fbae2bbb8a9
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-prod
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-prod-1.0.5/jobgorilla-prod-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      created: 08/22/2024
+    apiVersion: v2
+    appVersion: latest
     created: "2024-08-22T21:39:59.731144099Z"
     description: BrightMove JobGorilla.
     digest: 2e19ca4d66accfad7d72a96e626c99a101d993e38d61c5cc3e638b59dc6296a4
@@ -6892,6 +6912,26 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-prod-1.0.1/jobgorilla-prod-1.0.1.tgz
     version: 1.0.1
   jobgorilla-qa:
+  - annotations:
+      created: 08/22/2024
+    apiVersion: v2
+    appVersion: qa
+    created: "2024-08-23T01:27:32.550854684Z"
+    description: BrightMove JobGorilla.
+    digest: 26c9901c699297ccbe5eb911c861b3aebbbb9ee988bef744e10de15e47059c41
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-qa
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-qa-1.0.5/jobgorilla-qa-1.0.5.tgz
+    version: 1.0.5
   - annotations:
       created: 08/22/2024
     apiVersion: v2
@@ -7874,4 +7914,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-08-22T21:39:59.910292407Z"
+generated: "2024-08-23T01:27:32.552067872Z"
