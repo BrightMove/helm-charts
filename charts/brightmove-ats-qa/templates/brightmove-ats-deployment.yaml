@@ -42,7 +42,7 @@ spec:
             successThreshold: 2
             failureThreshold: 10
             httpGet:
-              path: /ATS/app/heartbeat/basic
+              path: /ATS/actuator/health
               port: 8080
           livenessProbe:
             initialDelaySeconds: 60
@@ -51,7 +51,7 @@ spec:
             successThreshold: 1
             failureThreshold: 10
             httpGet:
-              path: /ATS/app/heartbeat/basic
+              path: /ATS/actuator/health
               port: 8080
           env:
             - name: ENV
