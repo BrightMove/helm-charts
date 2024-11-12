@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-processes
-version: 1.0.7
+version: 1.0.8
 appVersion: 1.0.3.6
 description: BrightMove Processes Application.
 type: application
