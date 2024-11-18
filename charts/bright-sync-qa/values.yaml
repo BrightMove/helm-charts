@@ -1,4 +1,5 @@
 namespace: default
+dockerImageName: bright-sync
 springProfiles: default
 env: default
 otelExporterOtlpProtocol: "http/protobuf"
