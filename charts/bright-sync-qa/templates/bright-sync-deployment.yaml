@@ -41,6 +41,7 @@ spec:
               value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
+                -javaagent:opentelemetry-javaagent.jar
                 -Dotel.logs.exporter=otlp
                 -Dotel.semconv-stability.opt-in=http
                 -Dotel.instrumentation.micrometer.base-time-unit=s
