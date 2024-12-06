@@ -1608,6 +1608,28 @@ entries:
   - annotations:
       created: 12/15/2022
     apiVersion: v2
+    appVersion: 2024.1.0.7
+    created: "2024-12-06T17:39:03.389280478Z"
+    description: BrightSync Email Manager
+    digest: abc25f301ea409d7d55fb4251ff2bb02177404a52183a389b4daaf28e7ecc8d0
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.13/bright-sync-1.0.13.tgz
+    version: 1.0.13
+  - annotations:
+      created: 12/15/2022
+    apiVersion: v2
     appVersion: 4.5.1.15
     created: "2023-10-03T01:35:31.695616019Z"
     description: BrightSync Email Manager
@@ -2004,6 +2026,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-stage-1.0.0/bright-sync-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-ats:
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: 2024.20.0.997
+    created: "2024-12-06T17:39:03.503774493Z"
+    description: BrightMove ATS Application.
+    digest: b406907d3ff5f2aa771275b67814d7c6c09bfb405fccc3ca191c6b473f9c4e31
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.103/brightmove-ats-1.0.103.tgz
+    version: 1.0.103
   - annotations:
       created: 03/24/2023
     apiVersion: v2
@@ -9082,4 +9125,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2024-12-05T19:04:19.581691005Z"
+generated: "2024-12-06T17:39:03.505612745Z"
