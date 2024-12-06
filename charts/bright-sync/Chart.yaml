@@ -1,7 +1,7 @@
 apiVersion: v2
 name: bright-sync
-version: 1.0.15
-appVersion: 2024.1.0.7
+version: 1.0.16
+appVersion: 2024.1.1.12
 description: BrightSync Email Manager
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
