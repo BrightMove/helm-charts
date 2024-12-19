@@ -1,7 +1,7 @@
 apiVersion: v2
 name: jobgorilla-prod
-version: 1.0.10
-appVersion: 1.3.0.15
+version: 1.0.11
+appVersion: 1.3.0.19
 description: BrightMove JobGorilla
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
