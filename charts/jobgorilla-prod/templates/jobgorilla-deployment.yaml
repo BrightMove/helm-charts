@@ -5,6 +5,9 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Release.Name }}-node
+    tags.datadoghq.com/env: {{ .Values.env }}
+    tags.datadoghq.com/service: {{ .Release.Name }}
+    tags.datadoghq.com/version: {{ .Chart.AppVersion }}
 spec:
   replicas: {{ default 1 .Values.replicaCount }}
   strategy:
@@ -19,6 +22,12 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-node
+        tags.datadoghq.com/env: {{ .Values.env }}
+        tags.datadoghq.com/service: {{ .Release.Name }}
+        tags.datadoghq.com/version: {{ .Chart.AppVersion }}
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/java-lib.version: v1.46.0
     spec:
       affinity:
         nodeAffinity:
@@ -78,6 +87,8 @@ spec:
                 -Xrs
                 -XX:+UseG1GC
                 -XX:NewRatio=3
+            - name: DD_LOGS_INJECTION
+              value: "true"
           ports:
             - containerPort: 8080
               name: tc-port
