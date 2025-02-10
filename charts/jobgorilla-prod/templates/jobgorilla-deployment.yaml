@@ -73,7 +73,6 @@ spec:
               value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:opentelemetry-javaagent.jar
                 --add-opens=java.base/java.nio=ALL-UNNAMED
                 -Dotel.logs.exporter=otlp
                 -Dotel.semconv-stability.opt-in=http
