@@ -8,5 +8,3 @@ otelExporterOtlpHeaders: "Authorization=Basic NDgwNzMxOmV5SnJJam9pT0RnMk9HTXlaVE
 jvmHeapInit: 2g
 jvmHeapMax: 2g
 targetSystem: "linux"
-datadog:
-  apiKey: "806e7de0b53688ed3aa63e905a7b6ed9"
