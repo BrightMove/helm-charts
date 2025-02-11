@@ -88,6 +88,8 @@ spec:
                 -XX:NewRatio=3
             - name: DD_LOGS_INJECTION
               value: "true"
+            - name: DD_TRACE_HTTP_SERVER_REQUEST_IGNORED
+              value: "/,/actuator/health,/actuator/.+"
           ports:
             - containerPort: 8080
               name: tc-port
