@@ -89,7 +89,7 @@ spec:
             - name: DD_LOGS_INJECTION
               value: "true"
             - name: DD_APM_IGNORE_RESOURCES
-              value: "/,/actuator/.+"
+              value: "GET /,GET /actuator/health"
           ports:
             - containerPort: 8080
               name: tc-port
