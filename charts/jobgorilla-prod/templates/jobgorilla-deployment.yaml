@@ -65,20 +65,9 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
-            - name: OTEL_EXPORTER_OTLP_PROTOCOL
-              value: "{{ .Values.otelExporterOtlpProtocol }}"
-            - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: "{{ .Values.otelExporterOtlpEndpoint }}"
-            - name: OTEL_EXPORTER_OTLP_HEADERS
-              value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
                 --add-opens=java.base/java.nio=ALL-UNNAMED
-                -Dotel.logs.exporter=otlp
-                -Dotel.semconv-stability.opt-in=http
-                -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=jobgorilla-{{ .Values.env }}
-                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightmove,service.instance.id=${HOSTNAME}
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
@@ -86,10 +75,8 @@ spec:
                 -Xrs
                 -XX:+UseG1GC
                 -XX:NewRatio=3
-            - name: DD_LOGS_INJECTION
-              value: "true"
             - name: DD_APM_IGNORE_RESOURCES
-              value: "GET /,GET /actuator/health"
+              value: "GET /actuator/health"
           ports:
             - containerPort: 8080
               name: tc-port
