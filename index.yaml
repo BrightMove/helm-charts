@@ -2139,6 +2139,27 @@ entries:
   - annotations:
       created: 03/24/2023
     apiVersion: v2
+    appVersion: 2025.1.3.1071
+    created: "2025-02-13T18:47:27.015499613Z"
+    description: BrightMove ATS Application.
+    digest: 510da1c03ce089bbe72af16b0cbbd6faab6f22239219a6c5c957076bcf5d276c
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.123/brightmove-ats-1.0.123.tgz
+    version: 1.0.123
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
     appVersion: 2025.1.2.1067
     created: "2025-02-07T22:52:27.734352748Z"
     description: BrightMove ATS Application.
@@ -10150,4 +10171,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-12T20:58:01.818225424Z"
+generated: "2025-02-13T18:47:27.017482087Z"
