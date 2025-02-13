@@ -56,20 +56,8 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
-            - name: OTEL_EXPORTER_OTLP_PROTOCOL
-              value: "{{ .Values.otelExporterOtlpProtocol }}"
-            - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: "{{ .Values.otelExporterOtlpEndpoint }}"
-            - name: OTEL_EXPORTER_OTLP_HEADERS
-              value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:/usr/local/tomcat/lib/opentelemetry-javaagent.jar
-                -Dotel.logs.exporter=otlp
-                -Dotel.semconv-stability.opt-in=http
-                -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=ats-{{ .Values.env }}
-                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightmove,service.instance.id=${HOSTNAME}
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
