@@ -19,9 +19,6 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-node
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: /ATS/app/metrics/scrape
     spec:
       affinity:
         nodeAffinity:
