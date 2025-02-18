@@ -28,6 +28,8 @@ spec:
         admission.datadoghq.com/enabled: "true"
       annotations:
         admission.datadoghq.com/java-lib.version: v1.46.0
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /ATS/app/metrics/scrape
     spec:
       affinity:
         nodeAffinity:
