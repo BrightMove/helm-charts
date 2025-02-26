@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ax-legacy-stage
-version: 1.0.1
+version: 1.0.2
 appVersion: stage
 description: BrightMove AX Legacy Application.
 type: application
