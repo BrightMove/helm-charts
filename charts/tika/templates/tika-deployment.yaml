@@ -35,12 +35,6 @@ spec:
               value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:/lib/opentelemetry-javaagent.jar
-                -Dotel.logs.exporter=otlp
-                -Dotel.semconv-stability.opt-in=http
-                -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=tika-{{ .Values.env }}
-                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=tools,service.instance.id=${HOSTNAME}
                 -Denv={{ .Values.env }}
           ports:
             - containerPort: 9998
