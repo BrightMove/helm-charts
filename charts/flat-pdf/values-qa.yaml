@@ -1,5 +1,2 @@
 env: qa
 namespace: tools
-otelExporterOtlpProtocol: "http/protobuf"
-otelExporterOtlpEndpoint: "https://otlp-gateway-prod-us-central-0.grafana.net/otlp"
-otelExporterOtlpHeaders: "Authorization=Basic NDgwNzMxOmV5SnJJam9pT0RnMk9HTXlaVEl3T1daak9EUTJOekJtWmpRMk5tTTFPR0V3WXpkak5UaGlPREU0TWpsa1lpSXNJbTRpT2lKUGNHVnVWR1ZzWlcxbGRISjVJaXdpYVdRaU9qYzBPRGMwTVgwPQ=="
