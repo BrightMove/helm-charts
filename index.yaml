@@ -7668,6 +7668,27 @@ entries:
       created: 05/17/2024
     apiVersion: v2
     appVersion: 1.0.10.18
+    created: "2025-02-26T18:49:21.229061369Z"
+    description: BrightMove Processes Application.
+    digest: dc26d835d0152b8345e3946ad02758eec80e369e578ae4f815373cb0b2832f03
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-1.0.18/brightmove-processes-1.0.18.tgz
+    version: 1.0.18
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: 1.0.10.18
     created: "2025-02-26T15:28:41.02699982Z"
     description: BrightMove Processes Application.
     digest: 5fb7174ea6ef9bd86323d08ccea36e3456eb4c1af34bdea569de8c2e20d00f25
@@ -11110,4 +11131,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-26T18:47:37.511741431Z"
+generated: "2025-02-26T18:49:21.231247949Z"
