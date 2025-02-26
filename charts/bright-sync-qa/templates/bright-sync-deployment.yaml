@@ -33,21 +33,8 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
-            - name: OTEL_EXPORTER_OTLP_PROTOCOL
-              value: "{{ .Values.otelExporterOtlpProtocol }}"
-            - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: "{{ .Values.otelExporterOtlpEndpoint }}"
-            - name: OTEL_EXPORTER_OTLP_HEADERS
-              value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
-                -javaagent:opentelemetry-javaagent.jar
-                -Dotel.logs.exporter=otlp
-                -Dotel.semconv-stability.opt-in=http
-                -Dotel.instrumentation.micrometer.base-time-unit=s
-                -Dotel.service.name=brightsync-{{ .Values.env }}
-                -Dotel.resource.attributes=deployment.environment={{ .Values.env }},service.namespace=brightsync,service.instance.id=${HOSTNAME}
-                -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -DQRTZ_BSYNC_URL={{ .Values.quartzDatasource.url }}
                 -DQRTZ_BSYNC_USER={{ .Values.quartzDatasource.username }}
