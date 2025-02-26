@@ -35,6 +35,7 @@ spec:
               value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: >-
+                -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -DQRTZ_BSYNC_URL={{ .Values.quartzDatasource.url }}
                 -DQRTZ_BSYNC_USER={{ .Values.quartzDatasource.username }}
