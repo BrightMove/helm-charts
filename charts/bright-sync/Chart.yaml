@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bright-sync
-version: 1.0.16
+version: 1.0.17
 appVersion: 2024.1.1.12
 description: BrightSync Email Manager
 type: application
