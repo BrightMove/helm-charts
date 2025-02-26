@@ -33,12 +33,6 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
-            - name: OTEL_EXPORTER_OTLP_PROTOCOL
-              value: "{{ .Values.otelExporterOtlpProtocol }}"
-            - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: "{{ .Values.otelExporterOtlpEndpoint }}"
-            - name: OTEL_EXPORTER_OTLP_HEADERS
-              value: "{{ .Values.otelExporterOtlpHeaders }}"
             - name: JAVA_OPTS
               value: >-
                 -javaagent:/lib/opentelemetry-javaagent.jar
