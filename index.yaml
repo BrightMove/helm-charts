@@ -9180,6 +9180,27 @@ entries:
       created: 03/21/2023
     apiVersion: v2
     appVersion: 7.8.0.1
+    created: "2025-02-26T18:28:40.136636069Z"
+    description: JasperServer
+    digest: a86bedcb602499bbcdf6f77d1309b3750f2d0a40514586c09fa718ca11be8ed6
+    icon: https://bm-helm.s3.amazonaws.com/icons/jasperserver-logo.jpg
+    keywords:
+    - jasper
+    - reporting
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: jasperserver
+    sources:
+    - https://github.com/BrightMove/jasperserver.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jasperserver-1.0.8/jasperserver-1.0.8.tgz
+    version: 1.0.8
+  - annotations:
+      created: 03/21/2023
+    apiVersion: v2
+    appVersion: 7.8.0.1
     created: "2023-11-28T18:48:28.819416278Z"
     description: JasperServer
     digest: ab984997ae67fbf5ebe3bb6882227de15aba60ede60157dd890ed193c8c4830d
@@ -10909,4 +10930,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-26T18:27:06.166795155Z"
+generated: "2025-02-26T18:28:40.138528531Z"
