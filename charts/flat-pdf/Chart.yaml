@@ -1,7 +1,7 @@
 apiVersion: v2
 name: flat-pdf
-version: 1.0.11
-appVersion: 1.1.3
+version: 1.0.12
+appVersion: 1.1.2
 description: Service for converting PDF forms to flattened PDF files.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/flat-pdf.svg
