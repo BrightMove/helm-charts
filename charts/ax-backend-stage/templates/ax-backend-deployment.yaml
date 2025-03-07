@@ -30,6 +30,24 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
+          readinessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 15
+            timeoutSeconds: 5
+            successThreshold: 2
+            failureThreshold: 10
+            httpGet:
+              path: /actuator/health
+              port: 8080
+          livenessProbe:
+            initialDelaySeconds: 60
+            periodSeconds: 15
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+            httpGet:
+              path: /actuator/health
+              port: 8080
           env:
             - name: JAVA_OPTS
               value: "-Dspring.profiles.active={{ .Values.springProfiles }} -Denv={{ .Values.env }} -Xms{{ .Values.jvmHeapInit | default "256m" }} -Xmx{{ .Values.jvmHeapMax | default "256m" }} -Xrs -XX:+UseG1GC -XX:NewRatio=3"
