@@ -9264,6 +9264,26 @@ entries:
       created: 09/14/2021
     apiVersion: v2
     appVersion: 1.1.2
+    created: "2025-03-07T22:19:03.408044466Z"
+    description: Service for converting PDF forms to flattened PDF files.
+    digest: b195e3cdfcfce5c714c6df2b231ef4ec7508da6b5c6f3d75b994de8647ed6556
+    icon: https://bm-helm.s3.amazonaws.com/icons/flat-pdf.svg
+    keywords:
+    - pdf
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: flat-pdf
+    sources:
+    - https://github.com/BrightMove/flat-pdf.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.14/flat-pdf-1.0.14.tgz
+    version: 1.0.14
+  - annotations:
+      created: 09/14/2021
+    apiVersion: v2
+    appVersion: 1.1.2
     created: "2025-03-07T22:11:31.709830756Z"
     description: Service for converting PDF forms to flattened PDF files.
     digest: 86c188ea199ef03208fa27d14759ec1da279f7336c418bb2d49938174b2be7da
@@ -11534,4 +11554,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-03-07T22:11:31.712296817Z"
+generated: "2025-03-07T22:19:03.41013701Z"
