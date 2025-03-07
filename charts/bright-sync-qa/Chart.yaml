@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bright-sync-qa
-version: 1.0.7
+version: 1.0.8
 appVersion: qa
 description: BrightSync Email Manager
 type: application
