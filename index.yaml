@@ -11927,6 +11927,25 @@ entries:
       created: 04/10/2024
     apiVersion: v2
     appVersion: "1242112794"
+    created: "2025-05-30T13:59:51.663878405Z"
+    description: Sovren Parsing Engine
+    digest: 5faf29f109eee52b2d3dc407bbce45e589d399d8f51ceb78bfa97a80789d9128
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parsing
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-parsing-engine
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-parsing-engine-1.0.11/sovren-parsing-engine-1.0.11.tgz
+    version: 1.0.11
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: "1242112794"
     created: "2025-05-30T04:20:13.162401482Z"
     description: Sovren Parsing Engine
     digest: 22652bc57f00f02ba7640b3a5752c288836c1323938e3f60cc126d3e08889e66
@@ -12474,4 +12493,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-05-30T04:20:13.165442441Z"
+generated: "2025-05-30T13:59:51.666364542Z"
