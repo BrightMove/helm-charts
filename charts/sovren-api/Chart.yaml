@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sovren-api
-version: 1.0.6
+version: 1.0.7
 appVersion: v10
 description: Sovren REST API
 type: application
