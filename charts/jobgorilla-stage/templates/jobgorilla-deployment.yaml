@@ -58,6 +58,7 @@ spec:
               value: "{{ .Values.env }}"
             - name: JAVA_OPTS
               value: >-
+                --add-opens=java.base/java.nio=ALL-UNNAMED
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
