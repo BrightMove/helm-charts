@@ -1,7 +1,7 @@
 apiVersion: v2
 name: tika-qa
-version: 1.0.7
-appVersion: 1.0.1
+version: 1.0.8
+appVersion: 3.2.0
 description: Service for extracting structured text from various document types.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/apache_tika_logo.svg
