@@ -1,7 +1,7 @@
 apiVersion: v2
 name: sovren-preprocessor
-version: 1.0.7
-appVersion: 1242112794
+version: 1.0.8
+appVersion: 1647265111
 description: Sovren PreProcessor
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
