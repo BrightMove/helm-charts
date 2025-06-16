@@ -12339,6 +12339,25 @@ entries:
   - annotations:
       created: 04/10/2024
     apiVersion: v2
+    appVersion: "1647265111"
+    created: "2025-06-16T23:53:07.905294331Z"
+    description: Sovren PreProcessor
+    digest: 2beed2fdee944a783f1254f86da47ed71bfd8ffcf8bdb3b6d3a5a7a4a8d845a7
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - preprocessor
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-preprocessor
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-preprocessor-1.0.8/sovren-preprocessor-1.0.8.tgz
+    version: 1.0.8
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
     appVersion: "1242112794"
     created: "2024-04-12T15:10:52.0422775Z"
     description: Sovren PreProcessor
@@ -12728,4 +12747,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-06-16T17:50:53.354443902Z"
+generated: "2025-06-16T23:53:07.907861972Z"
