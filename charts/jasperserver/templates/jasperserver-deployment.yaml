@@ -65,7 +65,7 @@ spec:
                 -Dats_password={{ .Values.atsDatasource.password }}
                 -Dsnowflake_url={{ .Values.snowflakeDatasource.url }}
                 -Dsnowflake_user={{ .Values.snowflakeDatasource.username }}
-                -Dmysql_connection="{{ .Values.jasperDatasource.url }}"
+                -Dmysql_connection={{ .Values.jasperDatasource.url }}
                 -Dks=/usr/local/tomcat/
                 -Dksp=/usr/local/tomcat/
           ports:
