@@ -1,6 +1,6 @@
 apiVersion: v2
 name: jasperserver
-version: 1.0.11
+version: 1.0.12
 appVersion: 7.8.0.2
 description: JasperServer
 type: application
