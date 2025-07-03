@@ -44,7 +44,7 @@ spec:
             periodSeconds: 15
             timeoutSeconds: 10
             successThreshold: 1
-            failureThreshold: 5
+            failureThreshold: 2
             exec:
               command:
                 - /bin/sh
