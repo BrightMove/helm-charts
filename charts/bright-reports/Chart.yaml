@@ -1,7 +1,7 @@
 apiVersion: v2
 name: bright-reports
-version: 1.0.12
-appVersion: 2025.01.0.24
+version: 1.0.13
+appVersion: 2025.2.0.29
 description: Bright Reports Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
