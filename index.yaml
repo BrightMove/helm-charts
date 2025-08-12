@@ -11698,6 +11698,26 @@ entries:
   - annotations:
       created: 08/22/2024
     apiVersion: v2
+    appVersion: 2.1.0.44
+    created: "2025-08-12T18:44:30.831403048Z"
+    description: BrightMove JobGorilla
+    digest: 5ecb868219d8783512775f530d15fcd94cd562f39b9fea609c2e2ea4240b3950
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-prod
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-prod-1.0.34/jobgorilla-prod-1.0.34.tgz
+    version: 1.0.34
+  - annotations:
+      created: 08/22/2024
+    apiVersion: v2
     appVersion: 2.0.0.43
     created: "2025-08-08T19:41:42.30554127Z"
     description: BrightMove JobGorilla
@@ -13693,4 +13713,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-08-12T17:52:23.374754556Z"
+generated: "2025-08-12T18:44:30.834515587Z"
