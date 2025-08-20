@@ -8329,6 +8329,29 @@ entries:
   - annotations:
       created: 04/13/2023
     apiVersion: v2
+    appVersion: 2025.4.1.216
+    created: "2025-08-20T21:31:21.792992429Z"
+    description: BrightMove AX Legacy Application.
+    digest: f67c3c57a6bb21478074126b2c9052237f52a914886a30761def18268beca116
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-1.0.34/brightmove-ax-legacy-1.0.34.tgz
+    version: 1.0.34
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
     appVersion: 2025.4.0.212
     created: "2025-08-11T17:16:13.402426596Z"
     description: BrightMove AX Legacy Application.
@@ -13753,4 +13776,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-08-19T19:39:05.167094576Z"
+generated: "2025-08-20T21:31:21.795785453Z"
