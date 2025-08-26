@@ -1,0 +1,18 @@
+apiVersion: v2
+name: brightmove-engage
+version: 1.0.0
+appVersion: 2025.1.0.1
+description: BrightMove Engage Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - engage
+sources:
+  - https://github.com/BrightMove/brightmove-engage.git
+maintainers:
+  - name: Kayla Jones
+    email: kayla.jones@brightmove.com
+deprecated: false
+annotations:
+  created: "08/26/2025"
