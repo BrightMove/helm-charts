@@ -9484,6 +9484,27 @@ entries:
   - annotations:
       created: 08/26/2025
     apiVersion: v2
+    appVersion: 2025.1.1.2
+    created: "2025-08-28T15:40:46.967941109Z"
+    description: BrightMove Engage Application.
+    digest: 39c2a453c997ed9dec6f9916108eb099396f58b1750c786bc01da2079622b211
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - engage
+    maintainers:
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-engage
+    sources:
+    - https://github.com/BrightMove/brightmove-engage.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-1.0.1/brightmove-engage-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 08/26/2025
+    apiVersion: v2
     appVersion: 2025.1.0.1
     created: "2025-08-26T22:50:10.757491744Z"
     description: BrightMove Engage Application.
@@ -13861,4 +13882,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-08-28T13:34:38.036938247Z"
+generated: "2025-08-28T15:40:46.970642443Z"
