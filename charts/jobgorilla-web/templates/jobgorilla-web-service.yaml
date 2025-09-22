@@ -12,10 +12,10 @@ spec:
     - protocol: TCP
       name: http-temp
       port: 80
-      targetPort: 80
+      targetPort: 3000
     - protocol: TCP
       name: https
       port: 443
-      targetPort: 80
+      targetPort: 3000
   selector:
     app: {{ .Release.Name }}-node

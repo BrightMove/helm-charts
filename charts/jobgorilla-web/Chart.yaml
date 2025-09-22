@@ -1,6 +1,6 @@
 apiVersion: v2
 name: jobgorilla-web
-version: 1.0.0
+version: 1.0.1
 appVersion: latest
 description: BrightMove JobGorilla Web
 type: application
