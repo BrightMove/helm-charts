@@ -1,0 +1,18 @@
+apiVersion: v2
+name: brightmove-ats-postgres
+version: 1.0.0
+appVersion: 2025.14.0-SNAPSHOT.1474
+description: BrightMove ATS Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - ats
+sources:
+  - https://github.com/BrightMove/brightmove-ats.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "10/13/2025"
