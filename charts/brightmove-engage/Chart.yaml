@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-engage
-version: 1.0.1
-appVersion: 2025.1.1.2
+version: 1.0.2
+appVersion: 2025.1.2.3
 description: BrightMove Engage Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
