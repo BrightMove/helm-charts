@@ -50,9 +50,11 @@ spec:
             timeoutSeconds: 10
             successThreshold: 1
             failureThreshold: 10
-            httpGet:
-              path: /ATS/app/heartbeat/basic
-              port: 8080
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - test -f /Attachments/.touchFile && curl -sf http://localhost:8080/ATS/app/heartbeat/basic > /dev/null
           env:
             - name: ENV
               value: "{{ .Values.env }}"
