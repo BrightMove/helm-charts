@@ -41,15 +41,15 @@ spec:
               port: 8080
           livenessProbe:
             initialDelaySeconds: 60
-            periodSeconds: 15
-            timeoutSeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 5
             successThreshold: 1
             failureThreshold: 2
             exec:
               command:
                 - /bin/sh
                 - -c
-                - "findmnt /Attachments >/dev/null || exit 1"
+                - test -f /Attachments/.touchFile && curl -sf http://localhost:8080/app/heartbeat/basic > /dev/null
           env:
             - name: ENV
               value: "{{ .Values.env }}"
