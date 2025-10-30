@@ -46,10 +46,10 @@ spec:
               port: 8080
           livenessProbe:
             initialDelaySeconds: 60
-            periodSeconds: 15
-            timeoutSeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 5
             successThreshold: 1
-            failureThreshold: 10
+            failureThreshold: 2
             exec:
               command:
                 - /bin/sh
