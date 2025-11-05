@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-ats-postgres
-version: 1.0.1
-appVersion: 2025.14.0-SNAPSHOT.1475
+version: 1.0.2
+appVersion: 2025.15.0-SNAPSHOT.1488
 description: BrightMove ATS Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
