@@ -1,0 +1,27 @@
+namespace: brightmove
+dockerImageName: brightmove-ax-legacy
+springProfiles: postgres
+env: postgres
+jvmHeapInit: 1g
+jvmHeapMax: 1g
+atsMaxActive: 150
+atsPassword: ats4prod1pass
+atsUrl: jdbc:postgresql://test.postgres.brightmove.com:5432/bmp1?currentSchema=ats
+atsUser: ats
+quartzPassword: ats4prod1pass
+quartzUrl: jdbc:postgresql://test.postgres.brightmove.com:5432/bmp1?currentSchema=ats
+quartzUser: ats
+memcached:
+  cluster:
+    discovery:
+      endpoint: tomcat-sessions-prod.fsaqmz.cfg.use1.cache.amazonaws.com:11211
+  sessionManager:
+    className: de.javakaffee.web.msm.MemcachedBackupSessionManager
+msm:
+  kryo:
+    bufferSize:
+      max: 5242880
+driverClassName: org.postgresql.Driver
+validationQuery: SELECT 1
+xaDsType: org.postgresql.xa.PGXADataSource
+xaDsFactory: org.apache.tomcat.jdbc.pool.DataSourceFactory

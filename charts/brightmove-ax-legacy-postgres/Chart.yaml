@@ -1,0 +1,22 @@
+apiVersion: v2
+name: brightmove-ax-legacy-postgres
+version: 1.0.0
+appVersion: 2025.8.0-SNAPSHOT.183
+description: BrightMove AX Legacy Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - ax
+  - applicant
+  - portal
+sources:
+  - https://github.com/BrightMove/brightmove-ax.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+  - name: Kayla Jones
+    email: kayla.jones@brightmove.com
+deprecated: false
+annotations:
+  created: "11/18/2025"
