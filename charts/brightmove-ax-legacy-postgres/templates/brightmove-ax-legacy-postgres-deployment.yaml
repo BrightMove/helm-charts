@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: 'brightmove/{{ .Values.dockerImageName }}:{{ .Chart.AppVersion }}'
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 2
+            failureThreshold: 10
+            httpGet:
+              path: /app/heartbeat/basic
+              port: 8080
+          livenessProbe:
+            initialDelaySeconds: 60
+            periodSeconds: 5
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 2
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - test -f /Attachments/.touchFile && curl -sf http://localhost:8080/app/heartbeat/basic > /dev/null
+          env:
+            - name: ENV
+              value: "{{ .Values.env }}"
+            - name: JAVA_OPTS
+              value: >-
+                -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false
+                -Dspring.profiles.active={{ .Values.springProfiles }}
+                -Denv={{ .Values.env }}
+                -DATS_MAX_ACTIVE={{ .Values.atsMaxActive }}
+                -DATS_PASSWORD={{ .Values.atsPassword }}
+                -DATS_URL={{ .Values.atsUrl }}
+                -DATS_USER={{ .Values.atsUser }}
+                -DQUARTZ_PASSWORD={{ .Values.quartzPassword }}
+                -DQUARTZ_URL={{ .Values.quartzUrl }}
+                -DQUARTZ_USER={{ .Values.quartzUser }}
+                -Dmemcached.cluster.discovery.endpoint={{ .Values.memcached.cluster.discovery.endpoint }}
+                -Dmemcached.sessionManager.className={{ .Values.memcached.sessionManager.className }}
+                -Dmsm.kryo.bufferSize.max={{ .Values.msm.kryo.bufferSize.max }}
+                -DDRIVER_CLASS_NAME={{ .Values.driverClassName }}
+                -DVALIDATION_QUERY="{{ .Values.validationQuery }}"
+                -DXA_DS_TYPE={{ .Values.xaDsType }}
+                -DXA_DS_FACTORY={{ .Values.xaDsFactory }}
+                -Xms{{ .Values.jvmHeapInit | default "256m" }}
+                -Xmx{{ .Values.jvmHeapMax | default "256m" }}
+                -Xrs
+                -XX:+UseG1GC
+                -XX:NewRatio=3
+          ports:
+            - containerPort: 8080
+              name: tc-port
+          imagePullPolicy: Always
+          securityContext:
+            capabilities:
+              add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general
