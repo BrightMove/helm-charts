@@ -68,6 +68,10 @@ spec:
                 -Dmemcached.cluster.discovery.endpoint={{ .Values.memcached.cluster.discovery.endpoint }}
                 -Dmemcached.sessionManager.className={{ .Values.memcached.sessionManager.className }}
                 -Dmsm.kryo.bufferSize.max={{ .Values.msm.kryo.bufferSize.max }}
+                -DDRIVER_CLASS_NAME={{ .Values.driverClassName }}
+                -DVALIDATION_QUERY="{{ .Values.validationQuery }}"
+                -DXA_DS_TYPE={{ .Values.xaDsType }}
+                -DXA_DS_FACTORY={{ .Values.xaDsFactory }}
                 -Xms{{ .Values.jvmHeapInit | default "256m" }}
                 -Xmx{{ .Values.jvmHeapMax | default "256m" }}
                 -Xrs
