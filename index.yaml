@@ -7747,6 +7747,27 @@ entries:
   - annotations:
       created: 10/13/2025
     apiVersion: v2
+    appVersion: stage
+    created: "2025-12-11T15:05:50.795910609Z"
+    description: BrightMove ATS Application.
+    digest: b7a8ee75fd172b4459a524c3145d81148aab499d6aa7c5840e463f5e1a908f93
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats-postgres
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-postgres-1.0.10/brightmove-ats-postgres-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 10/13/2025
+    apiVersion: v2
     appVersion: 2025.14.5.1388
     created: "2025-12-10T20:31:52.980117506Z"
     description: BrightMove ATS Application.
@@ -15409,4 +15430,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-12-10T20:31:52.983964351Z"
+generated: "2025-12-11T15:05:50.800313416Z"
