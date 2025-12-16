@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-ax-legacy
-version: 1.0.41
-appVersion: 2025.7.1.237
+version: 1.0.42
+appVersion: 2025.7.2.239
 description: BrightMove AX Legacy Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
