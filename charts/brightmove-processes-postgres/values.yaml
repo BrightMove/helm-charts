@@ -1,0 +1,6 @@
+namespace: brightmove
+dockerImageName: brightmove-processes
+springProfiles: postgres
+env: postgres
+jvmHeapInit: 1g
+jvmHeapMax: 1g
