@@ -1,0 +1,19 @@
+apiVersion: v2
+name: bright-reports-postgres
+version: 1.0.0
+appVersion: stage
+description: Bright Reports Application.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - reports
+  - brightreports
+sources:
+  - https://github.com/BrightMove/bright-reports.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "04/06/2023"

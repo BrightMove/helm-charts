@@ -1,0 +1,6 @@
+namespace: bright-reports
+dockerImageName: bright-reports
+springProfiles: postgres
+env: postgres
+jvmHeapInit: 1g
+jvmHeapMax: 1g
