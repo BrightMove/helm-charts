@@ -1977,6 +1977,29 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-1.0.0/bright-reports-1.0.0.tgz
     version: 1.0.0
+  bright-reports-postgres:
+  - annotations:
+      created: 04/06/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2025-12-18T22:55:11.674687495Z"
+    description: Bright Reports Application.
+    digest: 68b236944908eec9daaf4e7e6a4920fd09f72a7664000e3a5e54a6db510cbd52
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-reports-postgres
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-postgres-1.0.0/bright-reports-postgres-1.0.0.tgz
+    version: 1.0.0
   bright-reports-qa:
   - annotations:
       created: 04/06/2023
@@ -15799,4 +15822,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-12-18T22:52:15.873556737Z"
+generated: "2025-12-18T22:55:11.679490258Z"
