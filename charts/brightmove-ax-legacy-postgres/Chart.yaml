@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-ax-legacy-postgres
-version: 1.0.3
-appVersion: 2025.8.0-SNAPSHOT.187
+version: 1.0.4
+appVersion: stage
 description: BrightMove AX Legacy Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
