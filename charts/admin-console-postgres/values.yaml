@@ -1,0 +1,7 @@
+namespace: tools
+replicaCount: 1
+revisionHistoryLimit: 0
+springProfiles: postgres
+env: postgres
+jvmHeapInit: 512m
+jvmHeapMax: 512m
