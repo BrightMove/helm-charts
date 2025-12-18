@@ -1,0 +1,16 @@
+namespace: brightsync
+springProfiles: postgres
+env: postgres
+jvmHeapInit: 1g
+jvmHeapMax: 1g
+jmxPort: 9999
+javaagent:
+quartzDatasource:
+  url: jdbc:postgresql://test.postgres.brightmove.com:5432/bmp1?currentSchema=quartz_bsync
+  username:
+  password:
+atsDatasource:
+  url: jdbc:postgresql://test.postgres.brightmove.com:5432/bmp1?currentSchema=ats
+  username:
+  password:
+

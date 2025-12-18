@@ -1,0 +1,19 @@
+apiVersion: v2
+name: bright-sync-postgres
+version: 1.0.0
+appVersion: stage
+description: BrightSync Email Manager
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+keywords:
+  - brightmove
+  - exchange
+  - email
+sources:
+  - https://github.com/BrightMove/bright-sync.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "12/18/2025"
