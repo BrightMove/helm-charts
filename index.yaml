@@ -11819,6 +11819,28 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-int-1.0.0/brightmove-processes-int-1.0.0.tgz
     version: 1.0.0
+  brightmove-processes-postgres:
+  - annotations:
+      created: 12/18/2025
+    apiVersion: v2
+    appVersion: stage
+    created: "2025-12-18T21:50:03.608422353Z"
+    description: BrightMove Processes Application.
+    digest: 008984606ac5e7d85b52b49198a0a86b2f1b66e51e4b539bba81a6b6948d80f7
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-postgres
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-postgres-1.0.0/brightmove-processes-postgres-1.0.0.tgz
+    version: 1.0.0
   brightmove-processes-qa:
   - annotations:
       created: 05/17/2024
@@ -15707,4 +15729,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-12-18T21:47:48.605023288Z"
+generated: "2025-12-18T21:50:03.613559053Z"
