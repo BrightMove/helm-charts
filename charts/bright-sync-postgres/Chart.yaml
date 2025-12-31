@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bright-sync-postgres
-version: 1.0.1
+version: 1.0.2
 appVersion: stage
 description: BrightSync Email Manager
 type: application
