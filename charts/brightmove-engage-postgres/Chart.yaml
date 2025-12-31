@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-engage-postgres
-version: 1.0.0
-appVersion: stage
+version: 1.0.1
+appVersion: postgres
 description: BrightMove Engage Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
