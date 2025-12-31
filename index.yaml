@@ -11205,6 +11205,27 @@ entries:
   - annotations:
       created: 12/18/2025
     apiVersion: v2
+    appVersion: postgres
+    created: "2025-12-31T21:22:20.358671521Z"
+    description: BrightMove Engage Application.
+    digest: 6794b5a0029a7a95f7a6c1b369018e9e771e4b76d2e54e0ad28fee1e8e7f82c7
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - engage
+    maintainers:
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-engage-postgres
+    sources:
+    - https://github.com/BrightMove/brightmove-engage.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-postgres-1.0.1/brightmove-engage-postgres-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 12/18/2025
+    apiVersion: v2
     appVersion: stage
     created: "2025-12-18T21:54:51.926115613Z"
     description: BrightMove Engage Application.
@@ -16028,4 +16049,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2025-12-31T21:07:05.584873778Z"
+generated: "2025-12-31T21:22:20.36159579Z"
