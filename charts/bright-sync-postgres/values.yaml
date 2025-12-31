@@ -1,4 +1,5 @@
 namespace: brightsync
+dockerImageName: bright-sync
 springProfiles: postgres
 env: postgres
 jvmHeapInit: 1g
