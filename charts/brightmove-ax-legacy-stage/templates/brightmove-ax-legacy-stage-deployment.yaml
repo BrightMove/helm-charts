@@ -46,10 +46,10 @@ spec:
               port: 8080
           livenessProbe:
             initialDelaySeconds: 60
-            periodSeconds: 5
-            timeoutSeconds: 5
+            periodSeconds: 15
+            timeoutSeconds: 10
             successThreshold: 1
-            failureThreshold: 2
+            failureThreshold: 5
             httpGet:
               path: /app/heartbeat/basic
               port: 8080
