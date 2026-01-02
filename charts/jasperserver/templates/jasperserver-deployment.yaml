@@ -60,9 +60,11 @@ spec:
                 -Xss256k
                 -XX:+UseG1GC
                 -XX:NewRatio=3
+                -Dats_driver_class={{ .Values.atsDatasource.driverClass }}
                 -Dats_url={{ .Values.atsDatasource.url }}
                 -Dats_user={{ .Values.atsDatasource.username }}
                 -Dats_password={{ .Values.atsDatasource.password }}
+                -Dats_validation_query="{{ .Values.atsDatasource.validationQuery }}"
                 -Dsnowflake_url="{{ .Values.snowflakeDatasource.url }}"
                 -Dsnowflake_user={{ .Values.snowflakeDatasource.username }}
                 -Dmysql_connection="{{ .Values.jasperDatasource.url }}"

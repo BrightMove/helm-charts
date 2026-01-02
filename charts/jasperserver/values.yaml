@@ -8,6 +8,8 @@ atsDatasource:
   url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
   username: ats_d
   password: ats4dev1pass
+  driverClass: oracle.jdbc.OracleDriver
+  validationQuery: "select 'ATSDataSource' from dual"
 snowflakeDatasource:
   url: jdbc:snowflake://kkb77084.us-east-1.snowflakecomputing.com/?db=recruiting&role=dbt&warehouse=recruiting&schema=public_q&private_key_file=/usr/local/tomcat/conf/bm_jasper.p8&authenticator=SNOWFLAKE_JWT&ssl=on
   username: jasper
