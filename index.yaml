@@ -10568,6 +10568,31 @@ entries:
       created: 11/18/2025
     apiVersion: v2
     appVersion: stage
+    created: "2026-01-05T13:55:29.859857065Z"
+    description: BrightMove AX Legacy Application.
+    digest: 25479f26336aa99ac080677874fd464d5532fa8bcee9d80dca72c1f5cac6b12e
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-ax-legacy-postgres
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-postgres-1.0.5/brightmove-ax-legacy-postgres-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      created: 11/18/2025
+    apiVersion: v2
+    appVersion: stage
     created: "2025-12-18T21:56:31.999046908Z"
     description: BrightMove AX Legacy Application.
     digest: 4831abf6360438756175e7d578d5a91e68907b275d42bcb03b920077dabfd115
@@ -16070,4 +16095,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2026-01-02T22:09:04.467498091Z"
+generated: "2026-01-05T13:55:29.863104561Z"
