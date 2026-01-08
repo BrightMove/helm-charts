@@ -22,3 +22,7 @@ msm:
   kryo:
     bufferSize:
       max: 5242880
+driverClassName: oracle.jdbc.driver.OracleDriver
+validationQuery: SELECT 1 FROM DUAL
+xaDsType: oracle.jdbc.xa.client.OracleXADataSource
+xaDsFactory: oracle.jdbc.pool.OracleDataSourceFactory
