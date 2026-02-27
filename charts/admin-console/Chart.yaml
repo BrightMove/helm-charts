@@ -1,6 +1,6 @@
 apiVersion: v2
 name: admin-console
-version: 1.0.30
+version: 1.0.31
 appVersion: 1.2.10
 description: BrightMove admin console for billing.
 type: application
