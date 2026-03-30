@@ -36,7 +36,7 @@ spec:
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
           readinessProbe:
-            initialDelaySeconds: 30
+            initialDelaySeconds: 60
             periodSeconds: 15
             timeoutSeconds: 2
             successThreshold: 2
