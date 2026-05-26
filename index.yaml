@@ -13873,6 +13873,26 @@ entries:
   - annotations:
       created: 09/23/2021
     apiVersion: v2
+    appVersion: 2.4.2.65
+    created: "2026-05-26T04:22:28.138460981Z"
+    description: Cloud Tuner Application.
+    digest: d5815d54a55eef6614f59f786b7549698fbb6bd9c060968fc2e31892651fe1d5
+    icon: https://bm-helm.s3.amazonaws.com/icons/cloud-tuner.svg
+    keywords:
+    - aws
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: cloud-tuner
+    sources:
+    - https://github.com/BrightMove/cloud-tuner.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.21/cloud-tuner-1.0.21.tgz
+    version: 1.0.21
+  - annotations:
+      created: 09/23/2021
+    apiVersion: v2
     appVersion: 2.4.1.64
     created: "2025-12-17T05:22:39.018497474Z"
     description: Cloud Tuner Application.
@@ -17826,4 +17846,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2026-05-25T22:59:36.827481787Z"
+generated: "2026-05-26T04:22:28.144398776Z"
