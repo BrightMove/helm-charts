@@ -17211,6 +17211,25 @@ entries:
       created: 04/10/2024
     apiVersion: v2
     appVersion: v10
+    created: "2026-06-05T07:05:21.406941908Z"
+    description: Sovren REST API
+    digest: adc9d6933ad7656671d8ce9794fe3e7192c48e0db55228a884e4a3015fd6c9b1
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parser
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-api
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-api-1.0.8/sovren-api-1.0.8.tgz
+    version: 1.0.8
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: v10
     created: "2025-05-30T03:19:01.045443832Z"
     description: Sovren REST API
     digest: 7e403397f36fe93ec1ea96c247c732232aab45d63499c4b48ada814f55a928ed
@@ -18000,4 +18019,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2026-06-03T20:44:02.424838171Z"
+generated: "2026-06-05T07:05:21.412662895Z"
