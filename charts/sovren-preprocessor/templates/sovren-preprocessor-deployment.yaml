@@ -53,6 +53,13 @@ spec:
             httpGet:
               path: /health
               port: 3000
+          env:
+            - name: TXTOR_LICENSE_COMMENCEMENT
+              value: "{{ .Values.txtorLicenseCommencement }}"
+            - name: TXTOR_LICENSE_EXPIRATION
+              value: "{{ .Values.txtorLicenseExpiration }}"
+            - name: TXTOR_LICENSE_KEY
+              value: "{{ .Values.txtorLicenseKey }}"
           ports:
             - containerPort: 3000
               name: preproc-port

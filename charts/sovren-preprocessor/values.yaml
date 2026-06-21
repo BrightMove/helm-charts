@@ -1,2 +1,5 @@
 namespace: sovren
 replicaCount: 2
+txtorLicenseCommencement: "Wed Apr 22 11:12:19 2026"
+txtorLicenseExpiration: "Mon Jun 21 11:12:19 2027"
+txtorLicenseKey: "e75369ca5fbb1615085a9fe5efa9609e93b2"
