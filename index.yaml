@@ -12927,6 +12927,29 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-stage-1.0.0/brightmove-engage-stage-1.0.0.tgz
     version: 1.0.0
+  brightmove-mcp-server:
+  - annotations:
+      created: 07/13/2026
+    apiVersion: v2
+    appVersion: latest
+    created: "2026-07-13T19:26:32.020118647Z"
+    description: BrightMove MCP Server.
+    digest: 8ad6cba46ce7734565e2369e4ce0929ec227e2798fadf475c5a4c8a94e469a4a
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - mcp
+    - ai
+    maintainers:
+    - email: david.webb@brightmove.com
+      name: David Webb
+    name: brightmove-mcp-server
+    sources:
+    - https://github.com/BrightMove/brightmove-mcp-server.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-mcp-server-1.0.0/brightmove-mcp-server-1.0.0.tgz
+    version: 1.0.0
   brightmove-odata:
   - annotations:
       created: 12/12/2022
@@ -18253,4 +18276,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2026-07-07T13:36:17.909863464Z"
+generated: "2026-07-13T19:26:32.025530415Z"
