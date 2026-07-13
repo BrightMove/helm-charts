@@ -1,0 +1,19 @@
+apiVersion: v2
+name: brightmove-mcp-server
+version: 1.0.0
+appVersion: latest
+description: BrightMove MCP Server.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - mcp
+  - ai
+sources:
+  - https://github.com/BrightMove/brightmove-mcp-server.git
+maintainers:
+  - name: David Webb
+    email: david.webb@brightmove.com
+deprecated: false
+annotations:
+  created: "07/13/2026"

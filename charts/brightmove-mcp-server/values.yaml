@@ -1,0 +1,2 @@
+namespace: brightmove
+dockerImageName: brightmove-mcp-server
