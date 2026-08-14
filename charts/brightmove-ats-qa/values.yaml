@@ -1,6 +1,13 @@
-namespace: brightmove
+namespace: brightmove-qa
 dockerImageName: brightmove-ats
 springProfiles: qa
 env: qa
 jvmHeapInit: 3g
 jvmHeapMax: 3g
+serviceAccount:
+  name: brightmove-ats-qa
+  roleArn: "arn:aws:iam::684955588137:role/brightmove-ats-qa-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/qa/ats
+appConfigSecretName: brightmove-ats-qa-app-config
