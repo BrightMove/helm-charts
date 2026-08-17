@@ -1,7 +1,14 @@
-namespace: brightmove
+namespace: brightmove-stage
 dockerImageName: brightmove-ats
 springProfiles: stage
 env: stage
 replicaCount: 1
 jvmHeapInit: 3g
 jvmHeapMax: 3g
+serviceAccount:
+  name: brightmove-ats-stage
+  roleArn: "arn:aws:iam::684955588137:role/brightmove-ats-stage-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/stage/ats
+appConfigSecretName: brightmove-ats-stage-app-config
