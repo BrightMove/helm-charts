@@ -65,6 +65,9 @@ spec:
                 -Xrs
                 -XX:+UseG1GC
                 -XX:NewRatio=3
+          envFrom:
+            - secretRef:
+                name: {{ .Values.appConfigSecretName }}
           ports:
             - containerPort: 8080
               name: tc-port
@@ -72,6 +75,7 @@ spec:
           securityContext:
             capabilities:
               add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       imagePullSecrets:
         - name: regcred
       nodeSelector:

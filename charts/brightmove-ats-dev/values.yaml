@@ -1,6 +1,13 @@
-namespace: brightmove
+namespace: brightmove-dev
 dockerImageName: brightmove-ats
 springProfiles: dev
 env: dev
 jvmHeapInit: 3g
 jvmHeapMax: 3g
+serviceAccount:
+  name: brightmove-ats-dev
+  roleArn: "arn:aws:iam::684955588137:role/brightmove-ats-dev-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/dev/ats
+appConfigSecretName: brightmove-ats-dev-app-config
