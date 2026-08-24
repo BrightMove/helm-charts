@@ -6,3 +6,10 @@ jvmHeapInit: 6g
 jvmHeapMax: 6g
 replicaCount: 4
 targetSystem: linux
+serviceAccount:
+  name: brightmove-ats-prod
+  roleArn: "arn:aws:iam::684955588137:role/brightmove-ats-prod-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/prod/ats
+appConfigSecretName: brightmove-ats-prod-app-config
