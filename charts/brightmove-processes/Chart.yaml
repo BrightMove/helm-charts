@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-processes
-version: 1.0.30
-appVersion: 2026.4.0.66
+version: 1.0.31
+appVersion: 2026.4.1.69
 description: BrightMove Processes Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
