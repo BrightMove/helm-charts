@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: 'brightmove/{{ .Values.dockerImageName }}:{{ .Chart.AppVersion }}'
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
+          readinessProbe:
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 5
+            httpGet:
+              path: /healthz
+              port: 8080
+          livenessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 5
+            httpGet:
+              path: /healthz
+              port: 8080
+          envFrom:
+            - secretRef:
+                name: {{ .Values.appConfigSecretName }}
+          ports:
+            - containerPort: 8080
+              name: node-port
+          imagePullPolicy: Always
+          securityContext:
+            capabilities:
+              add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general

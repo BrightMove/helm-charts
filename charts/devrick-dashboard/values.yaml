@@ -1,0 +1,9 @@
+namespace: devrick
+dockerImageName: devrick-dashboard
+serviceAccount:
+  name: devrick-dashboard
+  roleArn: "arn:aws:iam::684955588137:role/devrick-dashboard-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: devrick/dashboard
+appConfigSecretName: devrick-dashboard-app-config

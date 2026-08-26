@@ -1,0 +1,19 @@
+apiVersion: v2
+name: devrick-dashboard
+version: 1.0.0
+appVersion: latest
+description: Devrick Dashboard
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - mcp
+  - ai
+sources:
+  - https://github.com/BrightMove/devrick.git
+maintainers:
+  - name: David Webb
+    email: david.webb@brightmove.com
+deprecated: false
+annotations:
+  created: "08/26/2026"
