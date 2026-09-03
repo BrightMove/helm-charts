@@ -1,4 +1,4 @@
-namespace: default
+namespace: brightsync-qa
 dockerImageName: bright-sync
 springProfiles: default
 env: default
@@ -14,4 +14,11 @@ atsDatasource:
   url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
   username:
   password:
+serviceAccount:
+  name: brightsync-qa
+  roleArn: "arn:aws:iam::684955588137:role/brightsync-qa-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/qa/sync
+appConfigSecretName: brightsync-qa-app-config
 
