@@ -19,6 +19,14 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-node
+        tags.datadoghq.com/env: {{ .Values.env }}
+        tags.datadoghq.com/service: {{ .Release.Name }}
+        tags.datadoghq.com/version: {{ .Chart.AppVersion }}
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/java-lib.version: v1.46.0
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /ATS/app/metrics/scrape
     spec:
       affinity:
         nodeAffinity:
