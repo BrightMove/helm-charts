@@ -48,6 +48,9 @@ spec:
             httpGet:
               path: /actuator/health
               port: 8080
+          envFrom:
+            - secretRef:
+                name: {{ .Values.appConfigSecretName }}
           env:
             - name: ENV
               value: "{{ .Values.env }}"
@@ -75,6 +78,7 @@ spec:
             - containerPort: 8080
               name: tc-port
           imagePullPolicy: Always
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       imagePullSecrets:
         - name: regcred
       nodeSelector:
