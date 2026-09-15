@@ -13,4 +13,11 @@ atsDatasource:
   url: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
   username:
   password:
+serviceAccount:
+  name: brightsync-prod
+  roleArn: "arn:aws:iam::684955588137:role/brightsync-prod-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/prod/sync
+appConfigSecretName: brightsync-prod-app-config
 
