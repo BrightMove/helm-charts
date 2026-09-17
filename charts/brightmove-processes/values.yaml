@@ -2,5 +2,5 @@ namespace: brightmove
 dockerImageName: brightmove-processes
 springProfiles: prod
 env: prod
-jvmHeapInit: 1g
-jvmHeapMax: 1g
+jvmHeapInit: 2g
+jvmHeapMax: 2g
