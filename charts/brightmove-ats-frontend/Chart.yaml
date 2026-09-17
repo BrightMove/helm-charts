@@ -1,0 +1,19 @@
+apiVersion: v2
+name: brightmove-ats-frontend
+version: 1.0.0
+appVersion: latest
+description: BrightMove Filament UI.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - filament
+  - ui
+sources:
+  - https://github.com/BrightMove/brightmove-ats-frontend.git
+maintainers:
+  - name: David Webb
+    email: david.webb@brightmove.com
+deprecated: false
+annotations:
+  created: "09/17/2026"
