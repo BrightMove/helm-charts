@@ -1,0 +1,9 @@
+namespace: resume-parser
+replicaCount: 1
+image: brightmove/resume_parser
+
+# Uvicorn worker processes per pod. Each loads the model (about 170 MB each when working), so size memory with it.
+workers: 2
+
+# "learned" reads work history with the trained models; "rules" is the rules-only parser. The image never falls back on its own.
+parserMode: learned

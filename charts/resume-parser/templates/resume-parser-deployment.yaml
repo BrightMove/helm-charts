@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  replicas: {{ default 1 .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-node
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: {{ .Release.Name }}-server
+          image: '{{ .Values.image }}:{{ .Chart.AppVersion }}'
+          {{- if .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
+          env:
+            - name: PARSER_MODE
+              value: "{{ .Values.parserMode }}"
+            - name: WORKERS
+              value: "{{ .Values.workers }}"
+          ports:
+            - containerPort: 8080
+              name: web-port
+          # The service loads its models at startup and refuses to start if they are missing, so /health answering means it is ready.
+          readinessProbe:
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 6
+            httpGet:
+              path: /health
+              port: 8080
+          livenessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 15
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 6
+            httpGet:
+              path: /health
+              port: 8080
+      imagePullSecrets:
+        - name: regcred
+      nodeSelector:
+        role: general

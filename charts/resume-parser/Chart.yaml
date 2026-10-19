@@ -1,0 +1,16 @@
+apiVersion: v2
+name: resume-parser
+version: 1.0.0
+appVersion: latest
+description: BrightMove resume parser
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - resume
+  - parser
+maintainers:
+  - name: Dane Woodall
+    email: dwoodall@brightmove.com
+deprecated: false
+annotations:
+  created: "10/19/2026"
