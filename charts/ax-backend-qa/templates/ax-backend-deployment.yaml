@@ -60,6 +60,9 @@ spec:
                 -Xrs
                 -XX:+UseG1GC
                 -XX:NewRatio=3
+          envFrom:
+            - secretRef:
+                name: {{ .Values.appConfigSecretName }}
           ports:
             - containerPort: 8080
               name: tc-port

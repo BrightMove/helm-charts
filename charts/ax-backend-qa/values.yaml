@@ -1,6 +1,7 @@
-namespace: brightmove
+namespace: brightmove-qa
 dockerImageName: ax-backend
 springProfiles: qa
 env: qa
 jvmHeapInit: 1g
 jvmHeapMax: 1g
+appConfigSecretName: brightmove-ats-qa-app-config
