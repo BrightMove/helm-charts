@@ -1,0 +1,10 @@
+namespace: boiler
+dockerImageName: boiler
+dataDir: /app/data
+serviceAccount:
+  name: boiler
+  roleArn: "arn:aws:iam::684955588137:role/boiler-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/prod/boiler
+appConfigSecretName: boiler-app-config

@@ -1,0 +1,18 @@
+apiVersion: v2
+name: boiler
+version: 1.0.0
+appVersion: latest
+description: Boiler
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - boiler
+sources:
+  - https://github.com/BrightMove/boiler.git
+maintainers:
+  - name: David Webb
+    email: dwebb@brightmove.com
+deprecated: false
+annotations:
+  created: "10/21/2026"
