@@ -1,0 +1,19 @@
+{{- /*
+Shared ReadWriteMany volume (EFS) for session transcripts, mounted at ~/.claude/projects in every
+worker pod. This is what lets a planner pod resume (--resume) a session another pod started.
+*/}}
+{{- if and .Values.transcripts.enabled (not .Values.transcripts.existingClaim) }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "devrick.transcriptsClaim" . }}
+  labels: {{- include "devrick.labels" . | nindent 4 }}
+  annotations:
+    helm.sh/resource-policy: keep
+spec:
+  accessModes: ["ReadWriteMany"]
+  storageClassName: {{ required "transcripts.storageClassName is required (an EFS-backed, ReadWriteMany class)" .Values.transcripts.storageClassName | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.transcripts.size }}
+{{- end }}

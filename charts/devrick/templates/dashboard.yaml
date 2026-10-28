@@ -1,0 +1,98 @@
+{{- if .Values.dashboard.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "devrick.fullname" . }}-dashboard
+  labels:
+    app.kubernetes.io/name: devrick-dashboard
+    {{- include "devrick.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.dashboard.replicas }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: devrick-dashboard
+      {{- include "devrick.selector" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: devrick-dashboard
+        {{- include "devrick.labels" . | nindent 8 }}
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+    spec:
+      serviceAccountName: {{ include "devrick.fullname" . }}-dashboard
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+      containers:
+        - name: dashboard
+          image: {{ include "devrick.baseImage" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "devrick.configMap" . }}
+            - secretRef:
+                name: {{ include "devrick.coreSecret" . }}
+          env:
+            - name: ROLE
+              value: dashboard
+            - name: PORT
+              value: "8080"
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            httpGet: {path: /healthz, port: http}
+          livenessProbe:
+            httpGet: {path: /healthz, port: http}
+            initialDelaySeconds: 15
+          resources: {{- toYaml .Values.dashboard.resources | nindent 12 }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "devrick.fullname" . }}-dashboard
+  labels: {{- include "devrick.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.dashboard.service.type }}
+  ports:
+    - name: http
+      port: {{ .Values.dashboard.service.port }}
+      targetPort: http
+  selector:
+    app.kubernetes.io/name: devrick-dashboard
+    {{- include "devrick.selector" . | nindent 4 }}
+{{- if .Values.dashboard.ingress.enabled }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "devrick.fullname" . }}-dashboard
+  labels: {{- include "devrick.labels" . | nindent 4 }}
+  {{- with .Values.dashboard.ingress.annotations }}
+  annotations: {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- with .Values.dashboard.ingress.className }}
+  ingressClassName: {{ . }}
+  {{- end }}
+  rules:
+    - host: {{ required "dashboard.ingress.host is required when ingress is enabled" .Values.dashboard.ingress.host | quote }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "devrick.fullname" . }}-dashboard
+                port:
+                  name: http
+  {{- with .Values.dashboard.ingress.tls }}
+  tls: {{- toYaml . | nindent 4 }}
+  {{- end }}
+{{- end }}
+{{- end }}

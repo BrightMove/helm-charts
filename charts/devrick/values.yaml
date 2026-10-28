@@ -1,0 +1,158 @@
+# Devrick chart values. Every knob is here.
+#
+# Shape of the deployment: the coordinator and dashboard run continuously. There are NO standing
+# coder/planner workloads: the coordinator launches one Kubernetes Job per piece of work (using
+# the "agent" image), caps how many run at once, and deletes them when they finish.
+
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  # Repository you pushed with deploy/build-and-push.sh (IMAGE_REPO). For ECR this is
+  # <account>.dkr.ecr.<region>.amazonaws.com/devrick.
+  repository: brightmove/devrick
+  # The git short SHA you built (the script tags <sha> and <sha>-agent). Empty = Chart.appVersion.
+  tag: ""
+  # Workers run the "<tag><agentTagSuffix>" image (git, gh, claude CLI, JDK, Playwright...).
+  # The coordinator and dashboard run the smaller "<tag>" image.
+  agentTagSuffix: "-agent"
+  pullPolicy: IfNotPresent
+imagePullSecrets: []
+
+# ---- Coordinator: always on, always exactly one replica (Recreate strategy) -------------------
+coordinator:
+  # Set false to install everything else first (dashboard, secrets, volume, RBAC) and enable the
+  # coordinator at cutover, once the old long-lived coordinator and nodes are stopped. Two
+  # coordinators dispatching at once would split work between the old nodes and new pods.
+  enabled: true
+  agentId: "coordinator#1"
+  # Annotations for the coordinator's ServiceAccount, e.g. IRSA so it can read the SQS ingest queue:
+  #   eks.amazonaws.com/role-arn: arn:aws:iam::123456789012:role/devrick-coordinator
+  serviceAccountAnnotations: {}
+  resources:
+    requests: {cpu: 250m, memory: 512Mi}
+    limits: {memory: 1Gi}
+  nodeSelector: {}
+  tolerations: []
+  extraEnv: []        # extra container env entries, in Kubernetes EnvVar form
+
+# ---- Dashboard: always on, read-only web view of jobs, workers and queues ---------------------
+dashboard:
+  enabled: true
+  replicas: 1
+  resources:
+    requests: {cpu: 100m, memory: 256Mi}
+    limits: {memory: 512Mi}
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: false
+    className: ""
+    host: ""          # e.g. devrick.example.com
+    annotations: {}
+    tls: []
+
+# ---- Workers: launched by the coordinator as Jobs ---------------------------------------------
+workers:
+  serviceAccountAnnotations: {}
+  # A worker that has not started running after this long (image pull failure, no capacity) is
+  # deleted and its job requeued.
+  startTimeoutSeconds: 600
+  # Finished workers are deleted by the coordinator after this grace period (logs stay readable
+  # until then); ttlSecondsAfterFinished is the Kubernetes-side backstop if the coordinator is down.
+  cleanupGraceSeconds: 600
+  ttlSecondsAfterFinished: 3600
+  # Added to a role's timeoutSeconds to get the pod's hard activeDeadlineSeconds.
+  deadlineMarginSeconds: 300
+  # All pods of a role share ONE engine login. A rate-limit flag older than this stops blocking
+  # new work, so the next job probes whether the limit has lifted.
+  rateLimitCooldownSeconds: 1800
+  # One entry per role the coordinator can launch. "max" caps concurrent pods for the role: all
+  # pods share one subscription's usage limits, so raise it with care.
+  roles:
+    coder:
+      max: 2
+      timeoutSeconds: 7200      # keep in step with the coder archetype's engine timeout (120 min)
+      resources:
+        requests: {cpu: "1", memory: 4Gi}
+        limits: {cpu: "4", memory: 12Gi, ephemeralStorage: 30Gi}   # builds + Playwright + clones
+    planner:
+      max: 2
+      timeoutSeconds: 1200      # planner archetype timeout (20 min)
+      resources:
+        requests: {cpu: 500m, memory: 2Gi}
+        limits: {cpu: "2", memory: 6Gi, ephemeralStorage: 20Gi}
+
+# ---- Shared session transcripts (EFS) ---------------------------------------------------------
+# One ReadWriteMany volume for the whole swarm, mounted at ~/.claude/projects in every worker pod.
+# Planner resume (--resume) needs it: the pod that continues a session is rarely the pod that
+# started it. Only the transcripts directory is shared; the rest of ~/.claude is per-pod.
+transcripts:
+  enabled: true
+  # Use a claim you already have (must be ReadWriteMany), or leave empty to have the chart create one.
+  existingClaim: ""
+  # EFS CSI storage class. Use one backed by an EFS access point (or dynamic access points) with
+  # uid/gid 1000, since workers run as uid 1000 and EFS ignores fsGroup.
+  storageClassName: "efs-sc"
+  size: 50Gi          # required by Kubernetes, not enforced by EFS
+
+# ---- Non-secret settings ----------------------------------------------------------------------
+database:
+  url: ""             # jdbc:postgresql://HOST:5432/agent_coordination  (user/password go in secrets)
+
+rabbitmq:
+  # The dashboard reads queue depth from the Management API. In k8s launch mode the coordinator
+  # does not dispatch through RabbitMQ at all.
+  managementUrl: ""   # e.g. https://rabbitmq.example.com:15671
+  vhost: ""           # empty = not written to the ConfigMap; the code defaults to "/". Set only if not supplied by a Secret.
+
+config:
+  awsRegion: us-east-1
+  sqsIngestQueueUrl: ""          # coordinator ingest queue (the ingress Lambdas write here)
+  jiraBaseUrl: ""                # https://yourcompany.atlassian.net
+  jiraEngineeringPlanFieldId: "" # custom field id for the Engineering Plan
+  slackChannelId: ""
+  enginePreferenceOrder: "claude,cursor"
+  digestHour: 8
+  monthlyDigestDay: 1
+  subscriptionMonthlyCostUsd: "" # optional, e.g. "125.00"
+
+# What each worker clones before the engine runs. Pods start with an empty disk.
+workspace:
+  repoUrl: ""                    # e.g. https://github.com/prowave/brightmove-ats.git
+  cloneFilter: "blob:none"       # partial clone: all branches and history, file contents on demand
+  gitUserName: "Devrick"
+  gitUserEmail: "devrick@brightmove.com"
+
+# ---- Credentials ------------------------------------------------------------------------------
+# Two Secrets so the coordinator and dashboard never receive the engine tokens. For each, either let
+# the chart create the Secret from "data", or point at one you manage (external-secrets, sealed
+# secrets, ...) with existingSecret. Keys are the exact environment variable names. Empty values
+# are skipped. Do not commit real values; pass them with --set-file / a private values file.
+secrets:
+  core:                   # read by coordinator, dashboard AND workers
+    existingSecret: ""
+    data:
+      POSTGRES_USER: ""
+      POSTGRES_PASSWORD: ""
+      RABBITMQ_USER: ""
+      RABBITMQ_PASSWORD: ""
+      JIRA_API_EMAIL: ""
+      JIRA_API_TOKEN: ""
+      SLACK_BOT_TOKEN: ""
+  # MCP servers config for the engine (how `claude -p` reads Jira/Confluence). The long-lived nodes
+  # configure this by hand in ~/.claude.json; a fresh pod has nothing, so supply the JSON here
+  # (it is passed to `claude --mcp-config`). Either paste it as a string, or point existingSecret at
+  # a Secret that has a key named mcp.json. Leave both empty only if nothing needs MCP.
+  mcp:
+    existingSecret: ""
+    json: ""              # e.g. a {"mcpServers": {...}} document; use --set-file secrets.mcp.json=mcp.json
+  engine:                 # read by workers only
+    existingSecret: ""
+    data:
+      # Run `claude setup-token` once and paste the token: a one-year subscription token. All worker
+      # pods share it. Rotate it when it expires (workers then raise the normal needs-reauth alert).
+      CLAUDE_CODE_OAUTH_TOKEN: ""
+      GH_TOKEN: ""        # git push + gh CLI (the devrick-smart account's PAT: repo, workflow)
+      CURSOR_API_KEY: "" # optional: the Cursor failover engine

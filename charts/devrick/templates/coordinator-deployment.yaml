@@ -1,0 +1,115 @@
+{{- /*
+Exactly ONE coordinator, replaced (not rolled) on upgrade. The code is safe to run twice, but a
+single replica with Recreate means a rollout can never briefly run two coordinators and
+double-launch workers.
+*/}}
+{{- if .Values.coordinator.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "devrick.fullname" . }}-coordinator
+  labels:
+    app.kubernetes.io/name: devrick-coordinator
+    {{- include "devrick.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: devrick-coordinator
+      {{- include "devrick.selector" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: devrick-coordinator
+        {{- include "devrick.labels" . | nindent 8 }}
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+    spec:
+      serviceAccountName: {{ include "devrick.fullname" . }}-coordinator
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+      containers:
+        - name: coordinator
+          image: {{ include "devrick.baseImage" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "devrick.configMap" . }}
+            - secretRef:
+                name: {{ include "devrick.coreSecret" . }}
+          env:
+            - name: ROLE
+              value: coordinator
+            - name: AGENT_ID
+              value: {{ .Values.coordinator.agentId | quote }}
+            # Launch one ephemeral Job per piece of work instead of publishing to standing nodes.
+            - name: WORKER_LAUNCH_MODE
+              value: k8s
+            - name: WORKER_IMAGE
+              value: {{ include "devrick.agentImage" . | quote }}
+            - name: WORKER_IMAGE_PULL_POLICY
+              value: {{ .Values.image.pullPolicy }}
+            - name: WORKER_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: WORKER_SERVICE_ACCOUNT
+              value: {{ include "devrick.workerServiceAccount" . | quote }}
+            # Comma-separated: every worker pod gets both (core settings + engine tokens).
+            - name: WORKER_ENV_SECRET
+              value: {{ printf "%s,%s" (include "devrick.coreSecret" .) (include "devrick.engineSecret" .) | quote }}
+            - name: WORKER_ENV_CONFIGMAP
+              value: {{ include "devrick.configMap" . | quote }}
+            {{- if include "devrick.mcpEnabled" . }}
+            - name: WORKER_MCP_SECRET
+              value: {{ include "devrick.mcpSecret" . | quote }}
+            {{- end }}
+            {{- if .Values.transcripts.enabled }}
+            - name: WORKER_TRANSCRIPT_PVC
+              value: {{ include "devrick.transcriptsClaim" . | quote }}
+            {{- end }}
+            - name: WORKER_START_TIMEOUT_SECONDS
+              value: {{ .Values.workers.startTimeoutSeconds | quote }}
+            - name: WORKER_CLEANUP_GRACE_SECONDS
+              value: {{ .Values.workers.cleanupGraceSeconds | quote }}
+            - name: WORKER_TTL_SECONDS_AFTER_FINISHED
+              value: {{ .Values.workers.ttlSecondsAfterFinished | quote }}
+            - name: WORKER_DEADLINE_MARGIN_SECONDS
+              value: {{ .Values.workers.deadlineMarginSeconds | quote }}
+            - name: WORKER_RATE_LIMIT_COOLDOWN_SECONDS
+              value: {{ .Values.workers.rateLimitCooldownSeconds | quote }}
+            {{- range $role, $r := .Values.workers.roles }}
+            {{- $p := printf "WORKER_%s_" (upper $role) }}
+            - name: {{ $p }}MAX
+              value: {{ $r.max | quote }}
+            - name: {{ $p }}TIMEOUT_SECONDS
+              value: {{ $r.timeoutSeconds | quote }}
+            - name: {{ $p }}CPU_REQUEST
+              value: {{ $r.resources.requests.cpu | quote }}
+            - name: {{ $p }}MEMORY_REQUEST
+              value: {{ $r.resources.requests.memory | quote }}
+            - name: {{ $p }}CPU_LIMIT
+              value: {{ $r.resources.limits.cpu | quote }}
+            - name: {{ $p }}MEMORY_LIMIT
+              value: {{ $r.resources.limits.memory | quote }}
+            - name: {{ $p }}EPHEMERAL_STORAGE_LIMIT
+              value: {{ $r.resources.limits.ephemeralStorage | quote }}
+            {{- end }}
+            {{- with .Values.coordinator.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          resources: {{- toYaml .Values.coordinator.resources | nindent 12 }}
+      {{- with .Values.coordinator.nodeSelector }}
+      nodeSelector: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.coordinator.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}

@@ -1,0 +1,22 @@
+apiVersion: v2
+name: devrick
+version: 0.1.0
+# appVersion is the default image tag. In practice set image.tag to the git short SHA built with
+# deploy/build-and-push.sh in the devrick repo (it is also the version each node reports in the dashboard).
+appVersion: latest
+description: Devrick agent pipeline - always-on coordinator and dashboard, with the coordinator launching ephemeral coder/planner worker Jobs on demand.
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - devrick
+  - ai
+  - agents
+sources:
+  - https://github.com/BrightMove/devrick.git
+maintainers:
+  - name: Dane Woodall
+    email: dane.woodall@brightmove.com
+deprecated: false
+annotations:
+  created: "10/28/2026"

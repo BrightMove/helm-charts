@@ -1,0 +1,47 @@
+{{- /* Non-secret settings shared by the coordinator, dashboard and every worker pod (envFrom). */}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "devrick.configMap" . }}
+  labels: {{- include "devrick.labels" . | nindent 4 }}
+data:
+  {{- if .Values.secrets.core.existingSecret }}
+  {{- with .Values.database.url }}
+  POSTGRES_URL: {{ . | quote }}
+  {{- end }}
+  {{- else }}
+  POSTGRES_URL: {{ required "database.url is required unless secrets.core.existingSecret supplies POSTGRES_URL (jdbc:postgresql://HOST:5432/agent_coordination)" .Values.database.url | quote }}
+  {{- end }}
+  {{- if and .Values.dashboard.enabled (not .Values.secrets.core.existingSecret) }}
+  RABBITMQ_MANAGEMENT_URL: {{ required "rabbitmq.managementUrl is required when the dashboard is enabled (unless secrets.core.existingSecret supplies RABBITMQ_MANAGEMENT_URL)" .Values.rabbitmq.managementUrl | quote }}
+  {{- else if .Values.rabbitmq.managementUrl }}
+  RABBITMQ_MANAGEMENT_URL: {{ .Values.rabbitmq.managementUrl | quote }}
+  {{- end }}
+  {{- with .Values.rabbitmq.vhost }}
+  RABBITMQ_VHOST: {{ . | quote }}
+  {{- end }}
+  AWS_REGION: {{ .Values.config.awsRegion | quote }}
+  ENGINE_PREFERENCE_ORDER: {{ .Values.config.enginePreferenceOrder | quote }}
+  DIGEST_HOUR: {{ .Values.config.digestHour | quote }}
+  MONTHLY_DIGEST_DAY: {{ .Values.config.monthlyDigestDay | quote }}
+  {{- with .Values.config.sqsIngestQueueUrl }}
+  SQS_INGEST_QUEUE_URL: {{ . | quote }}
+  {{- end }}
+  {{- with .Values.config.jiraBaseUrl }}
+  JIRA_BASE_URL: {{ . | quote }}
+  {{- end }}
+  {{- with .Values.config.jiraEngineeringPlanFieldId }}
+  JIRA_ENGINEERING_PLAN_FIELD_ID: {{ . | quote }}
+  {{- end }}
+  {{- with .Values.config.slackChannelId }}
+  SLACK_CHANNEL_ID: {{ . | quote }}
+  {{- end }}
+  {{- with .Values.config.subscriptionMonthlyCostUsd }}
+  SUBSCRIPTION_MONTHLY_COST_USD: {{ . | quote }}
+  {{- end }}
+  {{- with .Values.workspace.repoUrl }}
+  WORKSPACE_REPO_URL: {{ . | quote }}
+  {{- end }}
+  WORKSPACE_CLONE_FILTER: {{ .Values.workspace.cloneFilter | quote }}
+  GIT_USER_NAME: {{ .Values.workspace.gitUserName | quote }}
+  GIT_USER_EMAIL: {{ .Values.workspace.gitUserEmail | quote }}
