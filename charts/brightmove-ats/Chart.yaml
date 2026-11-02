@@ -1,7 +1,7 @@
 apiVersion: v2
 name: brightmove-ats
-version: 1.0.259
-appVersion: 2026.13.3.1643
+version: 1.0.260
+appVersion: 2026.13.4.1646
 description: BrightMove ATS Application.
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
