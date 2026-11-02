@@ -1,6 +1,7 @@
 apiVersion: v2
 name: boiler
-version: 1.0.1
+version: 1.1.0
+# Default container tag when image.tag is empty. "latest" keeps imagePullPolicy Always.
 appVersion: latest
 description: Boiler
 type: application

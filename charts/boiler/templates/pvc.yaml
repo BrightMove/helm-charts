@@ -1,0 +1,26 @@
+{{- if and .Values.persistence.enabled (not .Values.persistence.existingClaim) }}
+{{- if not .Values.persistence.accessModes }}
+{{- fail "persistence.accessModes must list at least one access mode when persistence.enabled is true" }}
+{{- end }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "boiler.dataClaim" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+  annotations:
+    # Keep uploaded CSVs if the release is uninstalled or persistence is later turned off.
+    helm.sh/resource-policy: keep
+spec:
+  accessModes:
+    {{- range .Values.persistence.accessModes }}
+    - {{ . | quote }}
+    {{- end }}
+  {{- if .Values.persistence.storageClass }}
+  storageClassName: {{ .Values.persistence.storageClass | quote }}
+  {{- end }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.size | quote }}
+{{- end }}

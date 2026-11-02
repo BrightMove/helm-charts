@@ -8,3 +8,25 @@ awsSecretsManager:
   region: us-east-1
   secretName: brightmove/prod/boiler
 appConfigSecretName: boiler-app-config
+
+# Image tag defaults to Chart.appVersion. Set a versioned tag (not "latest") so a new
+# build changes the pod template and rolls the Deployment. imagePullPolicy is Always
+# when the resolved tag is "latest", and IfNotPresent otherwise. Set pullPolicy to
+# override that choice. tag: latest keeps the previous always-pull behavior.
+image:
+  tag: ""
+  pullPolicy: ""
+
+# Uploaded files live in BOILER_DATA_DIR (dataDir, default /app/data). Left off so the
+# pod keeps an emptyDir and existing installs do not change until values are set.
+# enabled: true creates a PersistentVolumeClaim, unless existingClaim names one to use.
+# ReadWriteOnce mounts on one node: the Deployment switches to Recreate and
+# replicaCount must stay 1. For more than one replica, use a ReadWriteMany class and
+# set accessModes to match.
+persistence:
+  enabled: false
+  size: 5Gi
+  storageClass: ""
+  accessModes:
+    - ReadWriteOnce
+  existingClaim: ""
