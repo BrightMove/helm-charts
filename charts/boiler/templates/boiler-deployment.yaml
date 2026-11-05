@@ -6,12 +6,20 @@ metadata:
   labels:
     app: {{ .Release.Name }}-node
 spec:
-  replicas: {{ default 1 .Values.replicaCount }}
+  {{- $replicas := int (default 1 .Values.replicaCount) }}
+  {{- if and (eq (include "boiler.rwoPersistence" .) "true") (gt $replicas 1) }}
+  {{- fail "persistence with ReadWriteOnce mounts on one node; set replicaCount to 1 (the Deployment uses Recreate) or set persistence.accessModes to ReadWriteMany" }}
+  {{- end }}
+  replicas: {{ $replicas }}
   strategy:
+{{- if eq (include "boiler.rwoPersistence" .) "true" }}
+    type: Recreate
+{{- else }}
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 0
       maxSurge: 1
+{{- end }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
@@ -33,7 +41,7 @@ spec:
         fsGroup: 1001
       containers:
         - name: {{ .Release.Name }}-server
-          image: 'brightmove/{{ .Values.dockerImageName }}:{{ .Chart.AppVersion }}'
+          image: 'brightmove/{{ .Values.dockerImageName }}:{{ include "boiler.imageTag" . }}'
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
@@ -46,13 +54,18 @@ spec:
           ports:
             - containerPort: 3000
               name: node-port
-          imagePullPolicy: Always
+          imagePullPolicy: {{ include "boiler.imagePullPolicy" . }}
           volumeMounts:
             - name: data
               mountPath: {{ .Values.dataDir }}
       volumes:
         - name: data
+{{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ include "boiler.dataClaim" . }}
+{{- else }}
           emptyDir: {}
+{{- end }}
       serviceAccountName: {{ .Values.serviceAccount.name }}
       imagePullSecrets:
         - name: regcred
