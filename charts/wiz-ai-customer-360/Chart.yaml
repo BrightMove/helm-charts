@@ -1,7 +1,7 @@
 apiVersion: v2
 name: wiz-ai-customer-360
-version: 1.0.0
-appVersion: 1.0.0
+version: 1.0.1
+appVersion: latest
 description: Wiz AI Customer 360
 type: application
 icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
