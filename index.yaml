@@ -1907,6 +1907,27 @@ entries:
       created: 10/21/2026
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-09T20:53:16.539041836Z"
+    description: Boiler
+    digest: 2c28c4a92c4e0699f1e6b5945c411c80ca593e6510eb7e06adb833778cfa9ec1
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - boiler
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: boiler
+    sources:
+    - https://github.com/BrightMove/boiler.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/boiler-1.0.2/boiler-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 10/21/2026
+    apiVersion: v2
+    appVersion: latest
     created: "2026-10-21T19:24:09.442689071Z"
     description: Boiler
     digest: 1d5ff521abe43b077f8aa7e30bb3504adfacb0363bef67998c18cef5e93c7164
@@ -19784,4 +19805,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-09T19:34:03.097368988Z"
+generated: "2026-11-09T20:53:16.543932571Z"
