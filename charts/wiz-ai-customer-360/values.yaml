@@ -1,0 +1,14 @@
+namespace: wiz-ai-customer-360
+dockerImageName: wiz-ai-customer-360
+# Public URL of the app (used by the backend for CORS)
+frontendUrl: https://wiz360.brightmove.io
+# Set false to deploy without pulling credentials from AWS Secrets Manager
+externalSecret:
+  enabled: true
+serviceAccount:
+  name: wiz-ai-customer-360
+  roleArn: "arn:aws:iam::684955588137:role/wiz-ai-customer-360-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/prod/wiz-ai-customer-360
+appConfigSecretName: wiz-ai-customer-360-app-config

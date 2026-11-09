@@ -1,0 +1,19 @@
+apiVersion: v2
+name: wiz-ai-customer-360
+version: 1.0.0
+appVersion: 1.0.0
+description: Wiz AI Customer 360
+type: application
+icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+keywords:
+  - brightmove
+  - wiz
+  - customer-360
+sources:
+  - https://github.com/BrightMove/wiz-ai-customer-360.git
+maintainers:
+  - name: Jimmy Hurff
+    email: jimmy@brightmove.com
+deprecated: false
+annotations:
+  created: "11/09/2026"
