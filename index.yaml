@@ -3613,6 +3613,27 @@ entries:
   - annotations:
       created: 03/24/2023
     apiVersion: v2
+    appVersion: 2026.14.4.1660
+    created: "2026-11-09T19:34:02.900999731Z"
+    description: BrightMove ATS Application.
+    digest: da4df7f3e48ccfcbadb6578dd16511685f5f9c0208911a8ba10c220c5d0a77cd
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.265/brightmove-ats-1.0.265.tgz
+    version: 1.0.265
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
     appVersion: 2026.14.3.1657
     created: "2026-11-05T19:39:02.610000085Z"
     description: BrightMove ATS Application.
@@ -11436,6 +11457,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.0/brightmove-ats-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-ax-legacy:
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
+    appVersion: 2026.10.1.308
+    created: "2026-11-09T19:34:03.090390392Z"
+    description: BrightMove AX Legacy Application.
+    digest: d1a8a4ac5c97784b563a33bbfb69d0339f21ba8439f49ca2c3346102b70c439d
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-1.0.70/brightmove-ax-legacy-1.0.70.tgz
+    version: 1.0.70
   - annotations:
       created: 04/13/2023
     apiVersion: v2
@@ -19740,4 +19784,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.0/tika-qa-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-05T19:39:02.614726927Z"
+generated: "2026-11-09T19:34:03.097368988Z"
