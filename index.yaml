@@ -19809,6 +19809,28 @@ entries:
   - annotations:
       created: 11/09/2026
     apiVersion: v2
+    appVersion: latest
+    created: "2026-11-09T22:58:56.806136868Z"
+    description: Wiz AI Customer 360
+    digest: 25c7146d3cb70d73b3009fd8a9a656f251ee5627927df08d12919c9eb05714ac
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - wiz
+    - customer-360
+    maintainers:
+    - email: jimmy@brightmove.com
+      name: Jimmy Hurff
+    name: wiz-ai-customer-360
+    sources:
+    - https://github.com/BrightMove/wiz-ai-customer-360.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.1/wiz-ai-customer-360-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 11/09/2026
+    apiVersion: v2
     appVersion: 1.0.0
     created: "2026-11-09T22:53:43.260552208Z"
     description: Wiz AI Customer 360
@@ -19828,4 +19850,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-09T22:53:43.264882348Z"
+generated: "2026-11-09T22:58:56.812226385Z"
