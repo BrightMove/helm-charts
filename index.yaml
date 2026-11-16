@@ -18562,6 +18562,27 @@ entries:
       created: 09/22/2025
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-16T19:33:08.393526975Z"
+    description: BrightMove JobGorilla Web
+    digest: 0e3f9a1145a0a83b304b00bc096b1f6b2838c9ff56810f2401c11b96d2ced565
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    - admin
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-web
+    sources:
+    - https://github.com/BrightMove/jobgorilla-web.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-web-1.0.2/jobgorilla-web-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 09/22/2025
+    apiVersion: v2
+    appVersion: latest
     created: "2025-09-22T19:24:16.367248529Z"
     description: BrightMove JobGorilla Web
     digest: d63b10967bfa67260570c4c55403fe32525de6d0c33beafcd8c04b911e2a35de
@@ -19973,4 +19994,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-16T18:17:52.956613022Z"
+generated: "2026-11-16T19:33:08.400816706Z"
