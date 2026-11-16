@@ -4,4 +4,10 @@ springProfiles: qa
 env: qa
 jvmHeapInit: 1g
 jvmHeapMax: 1g
-appConfigSecretName: brightmove-ats-qa-app-config
+serviceAccount:
+  name: ax-backend-qa
+  roleArn: "arn:aws:iam::684955588137:role/ax-qa-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/qa/ax
+appConfigSecretName: ax-backend-qa-app-config

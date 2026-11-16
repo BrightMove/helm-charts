@@ -1,6 +1,13 @@
-namespace: brightmove
+namespace: brightmove-stage
 dockerImageName: ax-backend
 springProfiles: default
 env: default
 jvmHeapInit: 1g
 jvmHeapMax: 1g
+serviceAccount:
+  name: ax-backend-stage
+  roleArn: "arn:aws:iam::684955588137:role/ax-stage-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/stage/ax
+appConfigSecretName: ax-backend-stage-app-config

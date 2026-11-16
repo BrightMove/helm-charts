@@ -1,16 +1,14 @@
-namespace: brightmove
+namespace: brightmove-qa
 dockerImageName: brightmove-ax-legacy
 springProfiles: qa
 env: qa
 jvmHeapInit: 1g
 jvmHeapMax: 1g
 atsMaxActive: 150
-atsPassword: ats4qa1pass
-atsUrl: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
+atsUrl: jdbc:postgresql://lle.postgres.brightmove.com:5432/bmq1?currentSchema=ats_q
 atsUser: ats_q
-quartzPassword: ats_quartz4qa1pass
-quartzUrl: jdbc:oracle:thin:@qa.oracle.brightmove.com:1521:BMQ1
-quartzUser: ats_quartz_q
+quartzUrl: jdbc:postgresql://lle.postgres.brightmove.com:5432/bmq1?currentSchema=ats_quartz_q
+quartzUser: ats_q
 memcached:
   cluster:
     discovery:
@@ -21,7 +19,14 @@ msm:
   kryo:
     bufferSize:
       max: 5242880
-driverClassName: oracle.jdbc.driver.OracleDriver
-validationQuery: SELECT 1 FROM DUAL
-xaDsType: oracle.jdbc.xa.client.OracleXADataSource
-xaDsFactory: oracle.jdbc.pool.OracleDataSourceFactory
+driverClassName: org.postgresql.Driver
+validationQuery: SELECT 1
+xaDsType: org.postgresql.xa.PGXADataSource
+xaDsFactory: org.apache.tomcat.jdbc.pool.DataSourceFactory
+serviceAccount:
+  name: brightmove-ax-legacy-qa
+  roleArn: "arn:aws:iam::684955588137:role/ax-qa-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: brightmove/qa/ax
+appConfigSecretName: brightmove-ax-legacy-qa-app-config

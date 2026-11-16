@@ -70,6 +70,7 @@ spec:
           securityContext:
             capabilities:
               add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       imagePullSecrets:
         - name: regcred
       nodeSelector:

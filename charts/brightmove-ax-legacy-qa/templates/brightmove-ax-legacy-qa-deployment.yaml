@@ -51,16 +51,26 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
+            - name: ATS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.appConfigSecretName }}
+                  key: DB_PASSWORD
+            - name: QUARTZ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.appConfigSecretName }}
+                  key: QUARTZ_DB_PASSWORD
             - name: JAVA_OPTS
               value: >-
                 -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false
                 -Dspring.profiles.active={{ .Values.springProfiles }}
                 -Denv={{ .Values.env }}
                 -DATS_MAX_ACTIVE={{ .Values.atsMaxActive }}
-                -DATS_PASSWORD={{ .Values.atsPassword }}
+                -DATS_PASSWORD=$(ATS_PASSWORD)
                 -DATS_URL={{ .Values.atsUrl }}
                 -DATS_USER={{ .Values.atsUser }}
-                -DQUARTZ_PASSWORD={{ .Values.quartzPassword }}
+                -DQUARTZ_PASSWORD=$(QUARTZ_PASSWORD)
                 -DQUARTZ_URL={{ .Values.quartzUrl }}
                 -DQUARTZ_USER={{ .Values.quartzUser }}
                 -Dmemcached.cluster.discovery.endpoint={{ .Values.memcached.cluster.discovery.endpoint }}
@@ -82,6 +92,7 @@ spec:
           securityContext:
             capabilities:
               add: ["SYS_ADMIN", "DAC_READ_SEARCH"]
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       imagePullSecrets:
         - name: regcred
       nodeSelector:
