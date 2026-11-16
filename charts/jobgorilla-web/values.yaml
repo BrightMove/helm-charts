@@ -1,2 +1,9 @@
 namespace: jobgorilla
 dockerImageName: jobgorilla-web
+serviceAccount:
+  name: jobgorilla-web-prod
+  roleArn: "arn:aws:iam::684955588137:role/jobgorilla-web-prod-secrets-role"
+awsSecretsManager:
+  region: us-east-1
+  secretName: jobgorilla/prod/admin
+appConfigSecretName: jobgorilla-web-prod-app-config
