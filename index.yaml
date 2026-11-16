@@ -1463,6 +1463,32 @@ entries:
       created: 03/17/2023
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-16T18:17:52.294351945Z"
+    description: BrightMove Applicant Experience Application QA.
+    digest: 116edc6ec92f8cc8b8be74d3b670394c27c11f9b064bff466766c39fc08ef67f
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    - qa
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: ax-backend-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-qa-1.0.13/ax-backend-qa-1.0.13.tgz
+    version: 1.0.13
+  - annotations:
+      created: 03/17/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2026-10-20T17:26:18.297269517Z"
     description: BrightMove Applicant Experience Application QA.
     digest: 1b5628e55f32b29082d581d4021b382e774072c492c7f24f15e67c704fc33cc0
@@ -1798,6 +1824,32 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-qa-1.0.0/ax-backend-qa-1.0.0.tgz
     version: 1.0.0
   ax-backend-stage:
+  - annotations:
+      created: 03/17/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2026-11-16T18:17:52.565908034Z"
+    description: BrightMove Applicant Experience Application QA.
+    digest: 509ec13847116adb83c8cf97c9919ecc5f1c1b2562e66077832f7624684c8189
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    - qa
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: ax-backend-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-stage-1.0.4/ax-backend-stage-1.0.4.tgz
+    version: 1.0.4
   - annotations:
       created: 03/17/2023
     apiVersion: v2
@@ -13312,6 +13364,31 @@ entries:
       created: 05/17/2023
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-16T18:17:52.798797698Z"
+    description: BrightMove AX Legacy Application.
+    digest: 7862dbb3aa9a6d38e80d9f14df3808d363f261ca6fd8fde606dd37148e925dc7
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-ax-legacy-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-qa-1.0.9/brightmove-ax-legacy-qa-1.0.9.tgz
+    version: 1.0.9
+  - annotations:
+      created: 05/17/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2026-01-08T14:24:24.831775114Z"
     description: BrightMove AX Legacy Application.
     digest: 3c5ebd3d26656cb948cc6060bd7eb9eb295e5c6d2fe54f943c1cbcf4deae0714
@@ -13534,6 +13611,31 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-qa-1.0.0/brightmove-ax-legacy-qa-1.0.0.tgz
     version: 1.0.0
   brightmove-ax-legacy-stage:
+  - annotations:
+      created: 05/17/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2026-11-16T18:17:52.953780243Z"
+    description: BrightMove AX Legacy Application.
+    digest: e2c1cfaae63d5e041f53031fed7fab28299bcf459d26aa01a7a7fbf11e47cea0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-ax-legacy-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-stage-1.0.9/brightmove-ax-legacy-stage-1.0.9.tgz
+    version: 1.0.9
   - annotations:
       created: 05/17/2023
     apiVersion: v2
@@ -19871,4 +19973,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-10T14:21:28.556606883Z"
+generated: "2026-11-16T18:17:52.956613022Z"
