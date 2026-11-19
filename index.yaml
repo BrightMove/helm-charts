@@ -3868,6 +3868,27 @@ entries:
       created: 03/24/2023
     apiVersion: v2
     appVersion: 2026.14.5.1664
+    created: "2026-11-19T06:16:53.67183332Z"
+    description: BrightMove ATS Application.
+    digest: 7f4c01fd3b5d550f6b245723fb41af6ae88633939003b6bdc63571426dc3abac
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.268/brightmove-ats-1.0.268.tgz
+    version: 1.0.268
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: 2026.14.5.1664
     created: "2026-11-17T14:04:31.952276171Z"
     description: BrightMove ATS Application.
     digest: c70f56eabe70ad069b0f23a8ac33781b7cb8260d1265ef9fbcb7eb1c6e0ccc52
@@ -9503,6 +9524,27 @@ entries:
       created: 03/20/2023
     apiVersion: v2
     appVersion: dev
+    created: "2026-11-19T06:16:53.83485397Z"
+    description: BrightMove ATS Application.
+    digest: 7fccee7d4db97dff391a6885afdfb17c8ac70e7c83f5ef9560724e7fd50a2761
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats-dev
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-dev-1.0.10/brightmove-ats-dev-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 03/20/2023
+    apiVersion: v2
+    appVersion: dev
     created: "2026-08-18T17:17:11.215569446Z"
     description: BrightMove ATS Application.
     digest: 8009f1fb047c6b921cec3e4d7c465bb110eda19e2873d3c9a5bf6dd7665c11c5
@@ -9945,6 +9987,28 @@ entries:
       created: 09/17/2026
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-19T06:16:54.047030224Z"
+    description: BrightMove Filament UI.
+    digest: 5401d6bde82d66871fb74bb472b1267456a550d241ee63c1935cbc3e631b31ed
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - filament
+    - ui
+    maintainers:
+    - email: david.webb@brightmove.com
+      name: David Webb
+    name: brightmove-ats-frontend
+    sources:
+    - https://github.com/BrightMove/brightmove-ats-frontend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-frontend-1.0.1/brightmove-ats-frontend-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 09/17/2026
+    apiVersion: v2
+    appVersion: latest
     created: "2026-09-17T19:43:08.981462174Z"
     description: BrightMove Filament UI.
     digest: 3127a80630cb43f81c0d2bc096880c4d5fa802a00617726d1db0e48e1e8e0904
@@ -9964,6 +10028,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-frontend-1.0.0/brightmove-ats-frontend-1.0.0.tgz
     version: 1.0.0
   brightmove-ats-int:
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: int
+    created: "2026-11-19T06:16:54.214012946Z"
+    description: BrightMove ATS Application.
+    digest: 30d3a8ffd6b510de60a92507f24a6c5981470180cad846ec30b47f6001263b6c
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats-int
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-int-1.0.9/brightmove-ats-int-1.0.9.tgz
+    version: 1.0.9
   - annotations:
       created: 03/24/2023
     apiVersion: v2
@@ -10371,6 +10456,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-postgres-1.0.0/brightmove-ats-postgres-1.0.0.tgz
     version: 1.0.0
   brightmove-ats-qa:
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: qa
+    created: "2026-11-19T06:16:54.374596992Z"
+    description: BrightMove ATS Application.
+    digest: 2a0be6ed5fda9c35c93c71ea6c6ce60b2c8a4cf031baa1cbb563aa533d232073
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-ats-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-qa-1.0.40/brightmove-ats-qa-1.0.40.tgz
+    version: 1.0.40
   - annotations:
       created: 03/24/2023
     apiVersion: v2
@@ -11273,6 +11381,29 @@ entries:
       created: 04/10/2023
     apiVersion: v2
     appVersion: stage
+    created: "2026-11-19T06:16:54.608455599Z"
+    description: BrightMove ATS Application.
+    digest: aeb4b90d2bc5193ce566c645959e13cfc6790cd007071c09b5b355743ec17802
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: quintin.kerby@brightmove.com
+      name: Quintin Kerby
+    name: brightmove-ats-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.21/brightmove-ats-stage-1.0.21.tgz
+    version: 1.0.21
+  - annotations:
+      created: 04/10/2023
+    apiVersion: v2
+    appVersion: stage
     created: "2026-08-17T20:22:55.784895031Z"
     description: BrightMove ATS Application.
     digest: f20aae01eff4d839a60e833f818b827df1dd22597a339ccf8650560fc2b4b0c3
@@ -11753,6 +11884,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.0/brightmove-ats-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-ax-legacy:
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
+    appVersion: 2026.10.1.308
+    created: "2026-11-19T06:16:54.764997744Z"
+    description: BrightMove AX Legacy Application.
+    digest: 23ace67d943e013925e1f7a951203bee2aa9a66617b92a3e0f8448f8e0c2d000
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-1.0.71/brightmove-ax-legacy-1.0.71.tgz
+    version: 1.0.71
   - annotations:
       created: 04/13/2023
     apiVersion: v2
@@ -13566,6 +13720,31 @@ entries:
       created: 05/17/2023
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T06:16:54.942093918Z"
+    description: BrightMove AX Legacy Application.
+    digest: e45ade144bd3c85283d007dc1485df34cd7dfd85bb4186a8804308e5e4769f28
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-ax-legacy-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-qa-1.0.10/brightmove-ax-legacy-qa-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 05/17/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2026-11-16T18:17:52.798797698Z"
     description: BrightMove AX Legacy Application.
     digest: 7862dbb3aa9a6d38e80d9f14df3808d363f261ca6fd8fde606dd37148e925dc7
@@ -13813,6 +13992,31 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-qa-1.0.0/brightmove-ax-legacy-qa-1.0.0.tgz
     version: 1.0.0
   brightmove-ax-legacy-stage:
+  - annotations:
+      created: 05/17/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2026-11-19T06:16:55.104784792Z"
+    description: BrightMove AX Legacy Application.
+    digest: ec32d227c7ebe3c728115867fa64dbbe5378df9a29731bee77081af09e4c37a0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-ax-legacy-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-stage-1.0.10/brightmove-ax-legacy-stage-1.0.10.tgz
+    version: 1.0.10
   - annotations:
       created: 05/17/2023
     apiVersion: v2
@@ -20714,4 +20918,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T05:08:35.715612119Z"
+generated: "2026-11-19T06:16:55.111630988Z"
