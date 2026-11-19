@@ -13887,6 +13887,27 @@ entries:
       created: 08/26/2025
     apiVersion: v2
     appVersion: 2026.11.0.16
+    created: "2026-11-19T02:27:53.067847985Z"
+    description: BrightMove Engage Application.
+    digest: 22f682b487e2086dccf045c7752d073804d0a7dc070946ebc9d8a02c44ad3195
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - engage
+    maintainers:
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-engage
+    sources:
+    - https://github.com/BrightMove/brightmove-engage.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-1.0.17/brightmove-engage-1.0.17.tgz
+    version: 1.0.17
+  - annotations:
+      created: 08/26/2025
+    apiVersion: v2
+    appVersion: 2026.11.0.16
     created: "2026-10-24T05:00:29.787024462Z"
     description: BrightMove Engage Application.
     digest: 043b81c15df119b9d946705641ad806b6f3de58ca5881fdfb5e599d984b20360
@@ -14288,6 +14309,27 @@ entries:
       created: 05/05/2025
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T02:27:53.236699554Z"
+    description: BrightMove Engage Application.
+    digest: 46be9308213eb5fc2ee73a532be8d5750ef78dc23f4b02509ec73a7d47e46f55
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - engage
+    maintainers:
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-engage-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-engage.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-qa-1.0.2/brightmove-engage-qa-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 05/05/2025
+    apiVersion: v2
+    appVersion: qa
     created: "2025-05-05T21:37:10.866246793Z"
     description: BrightMove Engage Application.
     digest: dd7d3030a5bbc41da3f6b11d647fcee31442bc630d21e1e6fe184107f9394dcf
@@ -14331,6 +14373,27 @@ entries:
       created: 05/09/2025
     apiVersion: v2
     appVersion: stage
+    created: "2026-11-19T02:27:53.44267315Z"
+    description: BrightMove Engage Application.
+    digest: 94576ef57663478e6025c06156e057c0aaa2980f5b7d27365dd71aa4dba7c3c4
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - engage
+    maintainers:
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: brightmove-engage-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-engage.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-stage-1.0.1/brightmove-engage-stage-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 05/09/2025
+    apiVersion: v2
+    appVersion: stage
     created: "2025-05-09T20:12:09.758486249Z"
     description: BrightMove Engage Application.
     digest: cbd7531955c32cd7746549357d09848d0f472bc187fb234a6e049c649f91176f
@@ -14349,6 +14412,28 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-engage-stage-1.0.0/brightmove-engage-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-mcp-server:
+  - annotations:
+      created: 07/13/2026
+    apiVersion: v2
+    appVersion: latest
+    created: "2026-11-19T02:27:53.594511135Z"
+    description: BrightMove MCP Server.
+    digest: 384dcede2321d13f7485a77b73c01b0b3ebd11669c4e029f655fc4d442aab89f
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - mcp
+    - ai
+    maintainers:
+    - email: david.webb@brightmove.com
+      name: David Webb
+    name: brightmove-mcp-server
+    sources:
+    - https://github.com/BrightMove/brightmove-mcp-server.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-mcp-server-1.0.1/brightmove-mcp-server-1.0.1.tgz
+    version: 1.0.1
   - annotations:
       created: 07/13/2026
     apiVersion: v2
@@ -19975,6 +20060,28 @@ entries:
       created: 11/09/2026
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-19T02:27:53.758970973Z"
+    description: Wiz AI Customer 360
+    digest: a23bef079ae09381c8d7b04c8cc0bd52a51dca03ca8b70d2097885ef12bdf2de
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - wiz
+    - customer-360
+    maintainers:
+    - email: jimmy@brightmove.com
+      name: Jimmy Hurff
+    name: wiz-ai-customer-360
+    sources:
+    - https://github.com/BrightMove/wiz-ai-customer-360.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.2/wiz-ai-customer-360-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 11/09/2026
+    apiVersion: v2
+    appVersion: latest
     created: "2026-11-09T22:58:56.806136868Z"
     description: Wiz AI Customer 360
     digest: 25c7146d3cb70d73b3009fd8a9a656f251ee5627927df08d12919c9eb05714ac
@@ -20015,4 +20122,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-17T14:04:31.955670956Z"
+generated: "2026-11-19T02:27:53.763296252Z"
