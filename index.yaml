@@ -17543,6 +17543,26 @@ entries:
       created: 08/22/2024
     apiVersion: v2
     appVersion: 2.11.0.88
+    created: "2026-11-19T03:16:11.099976227Z"
+    description: BrightMove JobGorilla
+    digest: 6f6f9178f8848ded73a6d4d4247fa7935cfd1047ffbb6de3e1c643cc117abd43
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-prod
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-prod-1.0.59/jobgorilla-prod-1.0.59.tgz
+    version: 1.0.59
+  - annotations:
+      created: 08/22/2024
+    apiVersion: v2
+    appVersion: 2.11.0.88
     created: "2026-09-15T23:27:54.413480252Z"
     description: BrightMove JobGorilla
     digest: 28e4f472577dc1d77b50425f1a65d4fe56f8f7a9ad73eb16487917072edb0784
@@ -18704,6 +18724,26 @@ entries:
       created: 08/22/2024
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T03:16:11.345709976Z"
+    description: BrightMove JobGorilla.
+    digest: 41d0b752f45fdbe96fd329723788362f34d9e949b709678a0db5fb13c95ac33a
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-qa
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-qa-1.0.9/jobgorilla-qa-1.0.9.tgz
+    version: 1.0.9
+  - annotations:
+      created: 08/22/2024
+    apiVersion: v2
+    appVersion: qa
     created: "2025-05-30T14:54:19.845511271Z"
     description: BrightMove JobGorilla.
     digest: 054c85d4c3a7123f01cf4912a69700ea319e849e6c0e1dcca0ef4b80f9280d9b
@@ -18845,6 +18885,26 @@ entries:
       created: 10/21/2024
     apiVersion: v2
     appVersion: stage
+    created: "2026-11-19T03:16:11.623630223Z"
+    description: BrightMove JobGorilla.
+    digest: e9f4e46b15dce3cf1eed2f5b0a98d38f7be7652cda27b5cc1f8f3861b17d48b8
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-stage
+    sources:
+    - https://github.com/BrightMove/jobgorilla.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-stage-1.0.4/jobgorilla-stage-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      created: 10/21/2024
+    apiVersion: v2
+    appVersion: stage
     created: "2025-05-30T14:55:25.352098082Z"
     description: BrightMove JobGorilla.
     digest: 5f64cf4558492987bdafb33accdb16958129cf509841b71a5f25a74b8432cd24
@@ -18902,6 +18962,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-stage-1.0.0/jobgorilla-stage-1.0.0.tgz
     version: 1.0.0
   jobgorilla-web:
+  - annotations:
+      created: 09/22/2025
+    apiVersion: v2
+    appVersion: latest
+    created: "2026-11-19T03:16:11.88514184Z"
+    description: BrightMove JobGorilla Web
+    digest: 31e94d5dd86ec029e5f73f08145b9268a9ebea134983bfc53ed5fbba2c3b1780
+    icon: https://bm-helm.s3.amazonaws.com/icons/job-gorilla.png
+    keywords:
+    - jobgorilla
+    - admin
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: jobgorilla-web
+    sources:
+    - https://github.com/BrightMove/jobgorilla-web.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jobgorilla-web-1.0.3/jobgorilla-web-1.0.3.tgz
+    version: 1.0.3
   - annotations:
       created: 09/22/2025
     apiVersion: v2
@@ -20402,4 +20483,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T02:50:34.062707101Z"
+generated: "2026-11-19T03:16:11.888557029Z"
