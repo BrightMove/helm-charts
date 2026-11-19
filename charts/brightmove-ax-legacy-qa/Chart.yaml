@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-ax-legacy-qa
-version: 1.0.9
+version: 1.0.10
 appVersion: qa
 description: BrightMove AX Legacy Application.
 type: application

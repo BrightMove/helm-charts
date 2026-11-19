@@ -19,6 +19,9 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-node
+      {{- with .Values.podAnnotations }}
+      annotations: {{- toYaml . | nindent 8 }}
+      {{- end }}
     spec:
       affinity:
         nodeAffinity:
@@ -29,9 +32,37 @@ spec:
                     operator: In
                     values:
                       - amd64
+      {{- if .Values.preStopSleepSeconds }}
+      terminationGracePeriodSeconds: {{ add (int .Values.preStopSleepSeconds) 25 }}
+      {{- end }}
+      {{- with .Values.topologySpread }}
+      topologySpreadConstraints:
+        {{- if .hostnameMaxSkew }}
+        - maxSkew: {{ .hostnameMaxSkew }}
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: {{ $.Release.Name }}-node
+        {{- end }}
+        {{- if .zoneMaxSkew }}
+        - maxSkew: {{ .zoneMaxSkew }}
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: {{ $.Release.Name }}-node
+        {{- end }}
+      {{- end }}
       containers:
         - name: {{ .Release.Name }}-server
           image: 'brightmove/{{ .Values.dockerImageName }}:{{ .Chart.AppVersion }}'
+          {{- if .Values.preStopSleepSeconds }}
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sleep", "{{ .Values.preStopSleepSeconds }}"]
+          {{- end }}
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
