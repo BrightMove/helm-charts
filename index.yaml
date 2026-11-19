@@ -3889,6 +3889,27 @@ entries:
   - annotations:
       created: 03/24/2023
     apiVersion: v2
+    appVersion: 2026.14.7.1668
+    created: "2026-11-19T18:40:04.403359437Z"
+    description: BrightMove ATS Application.
+    digest: 787ddffb7c90da55e24c8954624bd588d91b2639ada21e210d0bc8f55823cec9
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.270/brightmove-ats-1.0.270.tgz
+    version: 1.0.270
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
     appVersion: 2026.14.6.1666
     created: "2026-11-19T15:44:08.513226041Z"
     description: BrightMove ATS Application.
@@ -11927,6 +11948,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.0/brightmove-ats-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-ax-legacy:
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
+    appVersion: 2026.10.3.314
+    created: "2026-11-19T18:40:04.57048118Z"
+    description: BrightMove AX Legacy Application.
+    digest: c9b0ff19dafa53ac8872cf55103cc004ea26cec30c24786be7a6a95deef67783
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-1.0.73/brightmove-ax-legacy-1.0.73.tgz
+    version: 1.0.73
   - annotations:
       created: 04/13/2023
     apiVersion: v2
@@ -21008,4 +21052,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T15:44:08.714612907Z"
+generated: "2026-11-19T18:40:04.576430952Z"
