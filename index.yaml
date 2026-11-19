@@ -5,6 +5,25 @@ entries:
       created: 03/29/2023
     apiVersion: v2
     appVersion: 5.18.3
+    created: "2026-11-19T04:51:28.573087401Z"
+    description: ActiveMQ
+    digest: 4d0d7bd52102d4870f88d77d766aa6fc7979a6a27983d0c6a4935a0df47bc1a1
+    icon: https://bm-helm.s3.amazonaws.com/icons/activemq-logo.png
+    keywords:
+    - activemq
+    - queues
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: activemq
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/activemq-1.0.12/activemq-1.0.12.tgz
+    version: 1.0.12
+  - annotations:
+      created: 03/29/2023
+    apiVersion: v2
+    appVersion: 5.18.3
     created: "2025-02-26T18:08:57.727741924Z"
     description: ActiveMQ
     digest: fd70bb85217bdbd1d03b3c7147b486b870848d8ec878315bf343cb7c36419245
@@ -230,6 +249,28 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/activemq-1.0.0/activemq-1.0.0.tgz
     version: 1.0.0
   admin-console:
+  - annotations:
+      created: 09/28/2022
+    apiVersion: v2
+    appVersion: 1.4.3
+    created: "2026-11-19T04:51:28.697659673Z"
+    description: BrightMove admin console for billing.
+    digest: 1791012ec1b874a001927c32f0751e5bdaafd8b99bd572afab0307e2fc10f6b6
+    icon: https://bm-helm.s3.amazonaws.com/icons/admin-console-logo.png
+    keywords:
+    - brightmove
+    - admin
+    - billing
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: admin-console
+    sources:
+    - https://github.com/BrightMove/brightmove-billing-engine.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/admin-console-1.0.38/admin-console-1.0.38.tgz
+    version: 1.0.38
   - annotations:
       created: 09/28/2022
     apiVersion: v2
@@ -1459,6 +1500,32 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-1.0.0/ax-backend-1.0.0.tgz
     version: 1.0.0
   ax-backend-qa:
+  - annotations:
+      created: 03/17/2023
+    apiVersion: v2
+    appVersion: qa
+    created: "2026-11-19T04:51:28.898740719Z"
+    description: BrightMove Applicant Experience Application QA.
+    digest: ee12a26d5d4db7883e52202c3a343978fd0e2da02f7b7dd1f94fd2faa66efbdf
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    - qa
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: kayla.jones@brightmove.com
+      name: Kayla Jones
+    name: ax-backend-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-ax-backend.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/ax-backend-qa-1.0.14/ax-backend-qa-1.0.14.tgz
+    version: 1.0.14
   - annotations:
       created: 03/17/2023
     apiVersion: v2
@@ -16672,6 +16739,26 @@ entries:
       created: 09/14/2021
     apiVersion: v2
     appVersion: 1.1.2
+    created: "2026-11-19T04:51:29.044259882Z"
+    description: Service for converting PDF forms to flattened PDF files.
+    digest: ec44f960acdabcb6c65e0700bbe579029c517c5a1f3e8024d9ec5f1fef58d50d
+    icon: https://bm-helm.s3.amazonaws.com/icons/flat-pdf.svg
+    keywords:
+    - pdf
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: flat-pdf
+    sources:
+    - https://github.com/BrightMove/flat-pdf.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/flat-pdf-1.0.15/flat-pdf-1.0.15.tgz
+    version: 1.0.15
+  - annotations:
+      created: 09/14/2021
+    apiVersion: v2
+    appVersion: 1.1.2
     created: "2025-03-07T22:19:03.408044466Z"
     description: Service for converting PDF forms to flattened PDF files.
     digest: b195e3cdfcfce5c714c6df2b231ef4ec7508da6b5c6f3d75b994de8647ed6556
@@ -17097,6 +17184,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/fmc-web-services-1.0.0/fmc-web-services-1.0.0.tgz
     version: 1.0.0
   jasperserver:
+  - annotations:
+      created: 03/21/2023
+    apiVersion: v2
+    appVersion: 7.8.0.3
+    created: "2026-11-19T04:51:29.152649657Z"
+    description: JasperServer
+    digest: 6a64271031536e64bd2855e16e39588d100c6489e3d198c2bb9c800745220766
+    icon: https://bm-helm.s3.amazonaws.com/icons/jasperserver-logo.jpg
+    keywords:
+    - jasper
+    - reporting
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: jasperserver
+    sources:
+    - https://github.com/BrightMove/jasperserver.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/jasperserver-1.0.21/jasperserver-1.0.21.tgz
+    version: 1.0.21
   - annotations:
       created: 03/21/2023
     apiVersion: v2
@@ -19051,6 +19159,22 @@ entries:
       created: 05/09/2023
     apiVersion: v2
     appVersion: 3.70.1
+    created: "2026-11-19T04:51:29.26786307Z"
+    description: Sonatype Nexus is a repository manager for software components.
+    digest: 4adc16cc38a3e9b18ddfa3413ebebf93bb01873f8901aa67e4f2803153e5be0a
+    icon: https://bm-helm.s3.amazonaws.com/icons/sonatype-nexus-logo.png
+    keywords:
+    - nexus
+    - repository
+    name: nexus
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/nexus-1.0.4/nexus-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      created: 05/09/2023
+    apiVersion: v2
+    appVersion: 3.70.1
     created: "2024-08-11T19:24:56.543074016Z"
     description: Sonatype Nexus is a repository manager for software components.
     digest: d9a90488fde81c4ee2004c8b038d77c81af8ab143b82eb992440b157ba32b6e1
@@ -19570,6 +19694,25 @@ entries:
       created: 04/10/2024
     apiVersion: v2
     appVersion: v10
+    created: "2026-11-19T04:51:29.386595172Z"
+    description: Sovren REST API
+    digest: 3383f2dea764dbfc6fe90d7bdfdbaccbec0fffc6a0be72ecf79f49ffd363251b
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parser
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-api
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-api-1.0.9/sovren-api-1.0.9.tgz
+    version: 1.0.9
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: v10
     created: "2026-06-05T07:05:21.406941908Z"
     description: Sovren REST API
     digest: adc9d6933ad7656671d8ce9794fe3e7192c48e0db55228a884e4a3015fd6c9b1
@@ -19738,6 +19881,25 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/sovren-api-1.0.0/sovren-api-1.0.0.tgz
     version: 1.0.0
   sovren-parsing-engine:
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: "1242112794"
+    created: "2026-11-19T04:51:29.517802171Z"
+    description: Sovren Parsing Engine
+    digest: 1ba0bcff79c37791d171e55194d3d037fecf42b8b78c18b800020ef63deda7a4
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - parsing
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-parsing-engine
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-parsing-engine-1.0.13/sovren-parsing-engine-1.0.13.tgz
+    version: 1.0.13
   - annotations:
       created: 04/10/2024
     apiVersion: v2
@@ -19990,6 +20152,25 @@ entries:
       created: 04/10/2024
     apiVersion: v2
     appVersion: "1647265111"
+    created: "2026-11-19T04:51:29.652835059Z"
+    description: Sovren PreProcessor
+    digest: b1d71e6623fc7661d464143b8e0c497e5e4f852bcd6e8ef8067634a35c78c16e
+    icon: https://bm-helm.s3.amazonaws.com/icons/sovren.png
+    keywords:
+    - sovren
+    - preprocessor
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: sovren-preprocessor
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/sovren-preprocessor-1.0.10/sovren-preprocessor-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 04/10/2024
+    apiVersion: v2
+    appVersion: "1647265111"
     created: "2026-06-21T22:51:55.596315319Z"
     description: Sovren PreProcessor
     digest: 19e9760d77ff697cb9514e3c9f165ce8f70e2876147b5a362d6e0228a6392e5c
@@ -20181,6 +20362,23 @@ entries:
       created: 04/25/2023
     apiVersion: v2
     appVersion: 3.2.0
+    created: "2026-11-19T04:51:29.794219091Z"
+    description: Service for extracting structured text from various document types.
+    digest: aff042765f93674bd4eb4419d77199015d2902b6866218b0725a0bfb77a0245d
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_tika_logo.svg
+    keywords:
+    - pdf
+    name: tika
+    sources:
+    - https://github.com/apache/tika.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.9/tika-1.0.9.tgz
+    version: 1.0.9
+  - annotations:
+      created: 04/25/2023
+    apiVersion: v2
+    appVersion: 3.2.0
     created: "2025-06-10T15:01:53.894127093Z"
     description: Service for extracting structured text from various document types.
     digest: fd08a4f6890a81018465f1b375e265a9a78a02032ac8268769129d3bd80dbc45
@@ -20263,6 +20461,23 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/tika-1.0.0/tika-1.0.0.tgz
     version: 1.0.0
   tika-qa:
+  - annotations:
+      created: 04/25/2023
+    apiVersion: v2
+    appVersion: 3.2.0
+    created: "2026-11-19T04:51:29.91798647Z"
+    description: Service for extracting structured text from various document types.
+    digest: bf907d9376577abbba961d29db160958c121acb6457f38a83bc343fa0d3efde5
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_tika_logo.svg
+    keywords:
+    - pdf
+    name: tika-qa
+    sources:
+    - https://github.com/apache/tika.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/tika-qa-1.0.9/tika-qa-1.0.9.tgz
+    version: 1.0.9
   - annotations:
       created: 04/25/2023
     apiVersion: v2
@@ -20483,4 +20698,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T03:16:11.888557029Z"
+generated: "2026-11-19T04:51:29.92402185Z"
