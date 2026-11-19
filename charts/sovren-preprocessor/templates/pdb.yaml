@@ -1,0 +1,15 @@
+{{- if .Values.podDisruptionBudget }}
+# Limits how many pods the cluster autoscaler can evict at once.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ .Release.Name }}-pdb
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  maxUnavailable: {{ .Values.podDisruptionBudget.maxUnavailable }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+{{- end }}
