@@ -2763,6 +2763,28 @@ entries:
   - annotations:
       created: 12/15/2022
     apiVersion: v2
+    appVersion: 2026.4.0.45
+    created: "2026-11-19T15:44:08.289507595Z"
+    description: BrightSync Email Manager
+    digest: cd3b494cf52fc7acde7689946ba377d44619f14dc63f4759636ea57c1f69673d
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-1.0.30/bright-sync-1.0.30.tgz
+    version: 1.0.30
+  - annotations:
+      created: 12/15/2022
+    apiVersion: v2
     appVersion: 2026.3.0.43
     created: "2026-10-01T23:06:13.015983516Z"
     description: BrightSync Email Manager
@@ -3864,6 +3886,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-stage-1.0.0/bright-sync-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-ats:
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
+    appVersion: 2026.14.6.1666
+    created: "2026-11-19T15:44:08.513226041Z"
+    description: BrightMove ATS Application.
+    digest: 4a69ee27ce5b097b63cecee766f07300372586295ca36fc3ee5864de12ce91bb
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.269/brightmove-ats-1.0.269.tgz
+    version: 1.0.269
   - annotations:
       created: 03/24/2023
     apiVersion: v2
@@ -11884,6 +11927,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-stage-1.0.0/brightmove-ats-stage-1.0.0.tgz
     version: 1.0.0
   brightmove-ax-legacy:
+  - annotations:
+      created: 04/13/2023
+    apiVersion: v2
+    appVersion: 2026.10.2.312
+    created: "2026-11-19T15:44:08.709536648Z"
+    description: BrightMove AX Legacy Application.
+    digest: 93fc1cf1b7d84ca12229046b7b75ba374b3807de21a8dc302ee0ace1d38694fc
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ax
+    - applicant
+    - portal
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ax-legacy
+    sources:
+    - https://github.com/BrightMove/brightmove-ax.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ax-legacy-1.0.72/brightmove-ax-legacy-1.0.72.tgz
+    version: 1.0.72
   - annotations:
       created: 04/13/2023
     apiVersion: v2
@@ -20942,4 +21008,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T06:52:28.332694797Z"
+generated: "2026-11-19T15:44:08.714612907Z"
