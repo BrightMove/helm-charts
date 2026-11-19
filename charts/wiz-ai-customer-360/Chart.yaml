@@ -1,6 +1,6 @@
 apiVersion: v2
 name: wiz-ai-customer-360
-version: 1.0.1
+version: 1.0.2
 appVersion: latest
 description: Wiz AI Customer 360
 type: application

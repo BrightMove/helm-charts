@@ -30,6 +30,17 @@ spec:
                     operator: In
                     values:
                       - amd64
+      # Prefer different nodes so one autoscaler drain can't take out every replica.
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: {{ .Release.Name }}-node
+      # preStop sleep (20s) outlasts the ALB deregistration delay (15s) so the
+      # target is removed before the app stops; grace period covers both.
+      terminationGracePeriodSeconds: 45
       securityContext:
         fsGroup: 1001
       containers:
@@ -38,6 +49,10 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sleep", "20"]
           # /api/healthz is proxied by Next.js to the FastAPI backend, so it
           # only passes when both processes are up.
           readinessProbe:

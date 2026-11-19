@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-engage
-version: 1.0.16
+version: 1.0.17
 appVersion: 2026.11.0.16
 description: BrightMove Engage Application.
 type: application

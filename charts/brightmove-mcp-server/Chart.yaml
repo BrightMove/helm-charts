@@ -1,6 +1,6 @@
 apiVersion: v2
 name: brightmove-mcp-server
-version: 1.0.0
+version: 1.0.1
 appVersion: latest
 description: BrightMove MCP Server.
 type: application

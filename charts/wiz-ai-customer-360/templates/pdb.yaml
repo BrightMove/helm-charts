@@ -1,0 +1,17 @@
+{{- if gt (int (default 1 .Values.replicaCount)) 1 }}
+# Keeps at least one pod serving while the cluster autoscaler drains nodes.
+# Only rendered with 2+ replicas: with a single replica, minAvailable: 1
+# would block every drain of that pod's node.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ .Release.Name }}-pdb
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}-node
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-node
+{{- end }}
