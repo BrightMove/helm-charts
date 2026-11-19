@@ -2023,6 +2023,28 @@ entries:
       created: 04/06/2023
     apiVersion: v2
     appVersion: 2026.1.0.40
+    created: "2026-11-19T02:50:32.168276144Z"
+    description: Bright Reports Application.
+    digest: 4ee27409b7241c1864229e5d66b454fd244a1c74626e6cf7645fb84b69a1cacc
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-reports
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-1.0.17/bright-reports-1.0.17.tgz
+    version: 1.0.17
+  - annotations:
+      created: 04/06/2023
+    apiVersion: v2
+    appVersion: 2026.1.0.40
     created: "2026-10-01T23:05:29.007377316Z"
     description: Bright Reports Application.
     digest: 4337317e5e91c6a894a0a9c31c93d45617c242b46841607816ca8674e7eb78d5
@@ -2433,6 +2455,30 @@ entries:
       created: 04/06/2023
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T02:50:32.313111916Z"
+    description: Bright Reports Application.
+    digest: 4a2555df7b318cb09da672d9b6cd7709415140efbe1de234849786967f9df9c0
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: jake.pharr@brightmove.com
+      name: Jake Pharr
+    name: bright-reports-qa
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-qa-1.0.6/bright-reports-qa-1.0.6.tgz
+    version: 1.0.6
+  - annotations:
+      created: 04/06/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2025-03-07T20:32:07.412327342Z"
     description: Bright Reports Application.
     digest: 47ad55a9248c87e93049656334b378da6fa4b81a25c9c7e97858ecd2890551c2
@@ -2574,6 +2620,30 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-qa-1.0.0/bright-reports-qa-1.0.0.tgz
     version: 1.0.0
   bright-reports-stage:
+  - annotations:
+      created: 09/11/2023
+    apiVersion: v2
+    appVersion: stage
+    created: "2026-11-19T02:50:32.464774334Z"
+    description: Bright Reports Application.
+    digest: 9efe46f2cba634cdaf4a2df2d3331eec63ca5962b99bb863eb2500f8b4c2066e
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - reports
+    - brightreports
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    - email: quintin.kerby@brightmove.com
+      name: Quintin Kerby
+    name: bright-reports-stage
+    sources:
+    - https://github.com/BrightMove/bright-reports.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-reports-stage-1.0.2/bright-reports-stage-1.0.2.tgz
+    version: 1.0.2
   - annotations:
       created: 09/11/2023
     apiVersion: v2
@@ -3377,6 +3447,28 @@ entries:
       created: 12/15/2022
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T02:50:32.628594176Z"
+    description: BrightSync Email Manager
+    digest: e878448e0206094296b0614427b313e919b48343031730ce400bb3b4f0601fc5
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync-qa
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-qa-1.0.10/bright-sync-qa-1.0.10.tgz
+    version: 1.0.10
+  - annotations:
+      created: 12/15/2022
+    apiVersion: v2
+    appVersion: qa
     created: "2026-09-03T13:25:22.268008627Z"
     description: BrightSync Email Manager
     digest: ed80c455a343ac83b21e582c7207d71e62e934b1122927fa31ce5b28c2f44269
@@ -3572,6 +3664,28 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-qa-1.0.0/bright-sync-qa-1.0.0.tgz
     version: 1.0.0
   bright-sync-stage:
+  - annotations:
+      created: 12/5/2024
+    apiVersion: v2
+    appVersion: stage
+    created: "2026-11-19T02:50:32.792006993Z"
+    description: BrightSync Email Manager
+    digest: 6fcfa44a33678ebdef9ae8cc9a5b9b22c7424c59782b04b6270d006fc0e76e1a
+    icon: https://bm-helm.s3.amazonaws.com/icons/bright-sync-logo.svg
+    keywords:
+    - brightmove
+    - exchange
+    - email
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: bright-sync-stage
+    sources:
+    - https://github.com/BrightMove/bright-sync.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/bright-sync-stage-1.0.5/bright-sync-stage-1.0.5.tgz
+    version: 1.0.5
   - annotations:
       created: 12/5/2024
     apiVersion: v2
@@ -15331,6 +15445,27 @@ entries:
       created: 05/17/2024
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-19T02:50:32.952989892Z"
+    description: BrightMove Processes Application.
+    digest: 98a54f52cc6e9b0fe9cad32fecae25e137b054427321dc24a0107f43e9fb148a
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-dev
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-dev-1.0.5/brightmove-processes-dev-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: latest
     created: "2025-02-26T18:22:39.807177616Z"
     description: BrightMove Processes Application.
     digest: 485892ca8ba0b65ef730444bdc74d4e66c9b8b50199dbc5672c76b0765634226
@@ -15433,6 +15568,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-dev-1.0.0/brightmove-processes-dev-1.0.0.tgz
     version: 1.0.0
   brightmove-processes-int:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: int
+    created: "2026-11-19T02:50:33.10335334Z"
+    description: BrightMove Processes Application.
+    digest: b6c4b10f790a66ab0d786bd1f1db42139164d86e47a778b93f9d18db96bb603d
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-int
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-int-1.0.4/brightmove-processes-int-1.0.4.tgz
+    version: 1.0.4
   - annotations:
       created: 05/17/2024
     apiVersion: v2
@@ -15544,6 +15700,27 @@ entries:
       created: 05/17/2024
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T02:50:33.264244018Z"
+    description: BrightMove Processes Application.
+    digest: c188abc267d03ad324cdb908739e5a75029a8d66d370c3d16a163a1fd0ef62a7
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-qa
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-qa-1.0.5/brightmove-processes-qa-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: qa
     created: "2025-02-26T18:25:42.368033013Z"
     description: BrightMove Processes Application.
     digest: b0e6de620808ed409ee472818a5f572855967b2a650757434ae06a17dc3dbece
@@ -15646,6 +15823,27 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-qa-1.0.0/brightmove-processes-qa-1.0.0.tgz
     version: 1.0.0
   brightmove-processes-stage:
+  - annotations:
+      created: 05/17/2024
+    apiVersion: v2
+    appVersion: stage
+    created: "2026-11-19T02:50:33.418514492Z"
+    description: BrightMove Processes Application.
+    digest: e324167a0783488e08e92372f4d615800e028cd67eb46a224638bab997f65c1f
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - processes
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: brightmove-processes-stage
+    sources:
+    - https://github.com/BrightMove/brightmove-processes.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-processes-stage-1.0.4/brightmove-processes-stage-1.0.4.tgz
+    version: 1.0.4
   - annotations:
       created: 05/17/2024
     apiVersion: v2
@@ -15776,6 +15974,26 @@ entries:
       created: 10/25/2023
     apiVersion: v2
     appVersion: qa
+    created: "2026-11-19T02:50:33.583418547Z"
+    description: BrightMove Wisdom Docs
+    digest: bb341bdf9d1d0f701ff53d8d674ed72a9bcb7f40b6772e221ed8d50038e346c9
+    icon: https://bm-helm.s3.amazonaws.com/icons/docs.png
+    keywords:
+    - brightmove
+    - wisdom
+    - docs
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-wisdom-docs-qa
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-wisdom-docs-qa-1.0.2/brightmove-wisdom-docs-qa-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      created: 10/25/2023
+    apiVersion: v2
+    appVersion: qa
     created: "2023-10-25T17:04:02.856905078Z"
     description: BrightMove Wisdom Docs
     digest: dcaac1bb9a8f43e2171a34f3eaabbe78bb972dd92aeb924eb8685dcb343e81ac
@@ -15813,6 +16031,26 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/brightmove-wisdom-docs-qa-1.0.0/brightmove-wisdom-docs-qa-1.0.0.tgz
     version: 1.0.0
   cloud-tuner:
+  - annotations:
+      created: 09/23/2021
+    apiVersion: v2
+    appVersion: 2.4.2.65
+    created: "2026-11-19T02:50:33.754314163Z"
+    description: Cloud Tuner Application.
+    digest: 14cfbd2ad2d0d0e6984542def00de934d5ad571100d0cac5b07dfa222b18d6b1
+    icon: https://bm-helm.s3.amazonaws.com/icons/cloud-tuner.svg
+    keywords:
+    - aws
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: cloud-tuner
+    sources:
+    - https://github.com/BrightMove/cloud-tuner.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/cloud-tuner-1.0.22/cloud-tuner-1.0.22.tgz
+    version: 1.0.22
   - annotations:
       created: 09/23/2021
     apiVersion: v2
@@ -18797,6 +19035,25 @@ entries:
       created: 10/19/2026
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-19T02:50:33.90749796Z"
+    description: BrightMove resume parser
+    digest: 5aa0369f3ec5b27f57f0b7af64c7be9988e043a0471062a4f034281cbfc80490
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - resume
+    - parser
+    maintainers:
+    - email: dwoodall@brightmove.com
+      name: Dane Woodall
+    name: resume-parser
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/resume-parser-1.0.1/resume-parser-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      created: 10/19/2026
+    apiVersion: v2
+    appVersion: latest
     created: "2026-10-19T18:45:24.705222144Z"
     description: BrightMove resume parser
     digest: a206cabdc01500e33daf7a018ddcaac7748fccf72ea3f1ffdcae7fa366bbd46e
@@ -18813,6 +19070,29 @@ entries:
     - https://github.com/BrightMove/helm-charts/releases/download/resume-parser-1.0.0/resume-parser-1.0.0.tgz
     version: 1.0.0
   solr-indexer:
+  - annotations:
+      created: 11/17/2022
+    apiVersion: v2
+    appVersion: 1.8.4
+    created: "2026-11-19T02:50:34.057984133Z"
+    description: BrightMove solr indexing engine
+    digest: 21d2f2227938bb51627773d255a40e0ebab6facdb738357d424223f3b96a4eaa
+    icon: https://bm-helm.s3.amazonaws.com/icons/apache_solr_logo.svg
+    keywords:
+    - brightmove
+    - admin
+    - solr
+    - devops
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: solr-indexer
+    sources:
+    - https://github.com/BrightMove/solr-indexer.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/solr-indexer-1.0.17/solr-indexer-1.0.17.tgz
+    version: 1.0.17
   - annotations:
       created: 11/17/2022
     apiVersion: v2
@@ -20122,4 +20402,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T02:27:53.763296252Z"
+generated: "2026-11-19T02:50:34.062707101Z"
