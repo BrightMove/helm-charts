@@ -25,6 +25,9 @@ spec:
         app.kubernetes.io/name: devrick-coordinator
         {{- include "devrick.labels" . | nindent 8 }}
       annotations:
+        # Keep the cluster autoscaler from moving the coordinator mid-run (seen twice;
+        # the coder/planner worker pods already carry this annotation).
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
     spec:
       serviceAccountName: {{ include "devrick.fullname" . }}-coordinator

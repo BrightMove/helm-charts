@@ -1,6 +1,6 @@
 apiVersion: v2
 name: devrick
-version: 0.1.0
+version: 0.1.1
 # appVersion is the default image tag. In practice set image.tag to the git short SHA built with
 # deploy/build-and-push.sh in the devrick repo (it is also the version each node reports in the dashboard).
 appVersion: latest
