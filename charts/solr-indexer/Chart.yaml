@@ -1,6 +1,6 @@
 apiVersion: v2
 name: solr-indexer
-version: 1.0.16
+version: 1.0.17
 appVersion: 1.8.4
 description: BrightMove solr indexing engine
 type: application
