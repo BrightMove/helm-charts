@@ -7,6 +7,10 @@ metadata:
     app: {{ .Release.Name }}-node
 spec:
   replicas: 1
+  # Nexus cannot share its data directory between two running pods (the data is on one
+  # shared volume), so stop the old pod before starting the new one.
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: {{ .Release.Name }}-node
