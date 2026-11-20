@@ -3889,6 +3889,27 @@ entries:
   - annotations:
       created: 03/24/2023
     apiVersion: v2
+    appVersion: 2026.14.8.1670
+    created: "2026-11-20T21:20:29.193767999Z"
+    description: BrightMove ATS Application.
+    digest: 1036698dd11ad35b02a6ca65f98bf8420f3527e02d9540f579d05b45833832c1
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - ats
+    maintainers:
+    - email: dwebb@brightmove.com
+      name: David Webb
+    name: brightmove-ats
+    sources:
+    - https://github.com/BrightMove/brightmove-ats.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/brightmove-ats-1.0.271/brightmove-ats-1.0.271.tgz
+    version: 1.0.271
+  - annotations:
+      created: 03/24/2023
+    apiVersion: v2
     appVersion: 2026.14.7.1668
     created: "2026-11-19T18:40:04.403359437Z"
     description: BrightMove ATS Application.
@@ -21076,4 +21097,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-20T19:22:44.719975486Z"
+generated: "2026-11-20T21:20:29.198786309Z"
