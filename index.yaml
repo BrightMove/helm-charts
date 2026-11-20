@@ -17005,6 +17005,30 @@ entries:
       created: 10/28/2026
     apiVersion: v2
     appVersion: latest
+    created: "2026-11-20T19:22:44.71484164Z"
+    description: Devrick agent pipeline - always-on coordinator and dashboard, with
+      the coordinator launching ephemeral coder/planner worker Jobs on demand.
+    digest: 08dadbaa21df01f05914aba00264da76088c1f352f427519a031e11cb46194bb
+    icon: https://bm-helm.s3.amazonaws.com/icons/brightmove-icon.png
+    keywords:
+    - brightmove
+    - devrick
+    - ai
+    - agents
+    maintainers:
+    - email: dane.woodall@brightmove.com
+      name: Dane Woodall
+    name: devrick
+    sources:
+    - https://github.com/BrightMove/devrick.git
+    type: application
+    urls:
+    - https://github.com/BrightMove/helm-charts/releases/download/devrick-0.1.2/devrick-0.1.2.tgz
+    version: 0.1.2
+  - annotations:
+      created: 10/28/2026
+    apiVersion: v2
+    appVersion: latest
     created: "2026-11-19T06:52:28.328094446Z"
     description: Devrick agent pipeline - always-on coordinator and dashboard, with
       the coordinator launching ephemeral coder/planner worker Jobs on demand.
@@ -21052,4 +21076,4 @@ entries:
     urls:
     - https://github.com/BrightMove/helm-charts/releases/download/wiz-ai-customer-360-1.0.0/wiz-ai-customer-360-1.0.0.tgz
     version: 1.0.0
-generated: "2026-11-19T18:40:04.576430952Z"
+generated: "2026-11-20T19:22:44.719975486Z"
